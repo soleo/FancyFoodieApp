@@ -23,6 +23,13 @@
 		A093F1C116A7FEFC00EFF4BD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1C016A7FEFC00EFF4BD /* SecondViewController.m */; };
 		A093F1C316A7FEFC00EFF4BD /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A093F1C216A7FEFC00EFF4BD /* second.png */; };
 		A093F1C516A7FEFC00EFF4BD /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A093F1C416A7FEFC00EFF4BD /* second@2x.png */; };
+		A093F1D916A80B0200EFF4BD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1D816A80B0200EFF4BD /* HomeViewController.m */; };
+		A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */; };
+		A093F1DF16A8104C00EFF4BD /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1DE16A8104B00EFF4BD /* Events.m */; };
+		A093F1E116A810C400EFF4BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E016A810C400EFF4BD /* CoreData.framework */; };
+		A093F1E316A810CA00EFF4BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E216A810CA00EFF4BD /* CoreLocation.framework */; };
+		A093F1E516A8A54600EFF4BD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E416A8A54600EFF4BD /* MobileCoreServices.framework */; };
+		A093F1EC16A8D1BC00EFF4BD /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A093F1EB16A8D1BB00EFF4BD /* logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +55,15 @@
 		A093F1C016A7FEFC00EFF4BD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A093F1C216A7FEFC00EFF4BD /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		A093F1C416A7FEFC00EFF4BD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		A093F1D716A80B0200EFF4BD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A093F1D816A80B0200EFF4BD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fancyModel.xcdatamodel; sourceTree = "<group>"; };
+		A093F1DD16A8104B00EFF4BD /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Events.h; path = Model/Events.h; sourceTree = "<group>"; };
+		A093F1DE16A8104B00EFF4BD /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = Model/Events.m; sourceTree = "<group>"; };
+		A093F1E016A810C400EFF4BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A093F1E216A810CA00EFF4BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A093F1E416A8A54600EFF4BD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A093F1EB16A8D1BB00EFF4BD /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A093F1E516A8A54600EFF4BD /* MobileCoreServices.framework in Frameworks */,
+				A093F1E316A810CA00EFF4BD /* CoreLocation.framework in Frameworks */,
+				A093F1E116A810C400EFF4BD /* CoreData.framework in Frameworks */,
 				A093F19E16A7FEFC00EFF4BD /* UIKit.framework in Frameworks */,
 				A093F1A016A7FEFC00EFF4BD /* Foundation.framework in Frameworks */,
 				A093F1A216A7FEFC00EFF4BD /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +86,7 @@
 		A093F18E16A7FEFC00EFF4BD = {
 			isa = PBXGroup;
 			children = (
+				A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */,
 				A093F1A316A7FEFC00EFF4BD /* fancy */,
 				A093F19C16A7FEFC00EFF4BD /* Frameworks */,
 				A093F19A16A7FEFC00EFF4BD /* Products */,
@@ -84,6 +104,9 @@
 		A093F19C16A7FEFC00EFF4BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A093F1E416A8A54600EFF4BD /* MobileCoreServices.framework */,
+				A093F1E216A810CA00EFF4BD /* CoreLocation.framework */,
+				A093F1E016A810C400EFF4BD /* CoreData.framework */,
 				A093F19D16A7FEFC00EFF4BD /* UIKit.framework */,
 				A093F19F16A7FEFC00EFF4BD /* Foundation.framework */,
 				A093F1A116A7FEFC00EFF4BD /* CoreGraphics.framework */,
@@ -94,6 +117,11 @@
 		A093F1A316A7FEFC00EFF4BD /* fancy */ = {
 			isa = PBXGroup;
 			children = (
+				A093F1DD16A8104B00EFF4BD /* Events.h */,
+				A093F1DE16A8104B00EFF4BD /* Events.m */,
+				A093F1D716A80B0200EFF4BD /* HomeViewController.h */,
+				A093F1D816A80B0200EFF4BD /* HomeViewController.m */,
+				A093F1EB16A8D1BB00EFF4BD /* logo.jpg */,
 				A093F1AC16A7FEFC00EFF4BD /* AppDelegate.h */,
 				A093F1AD16A7FEFC00EFF4BD /* AppDelegate.m */,
 				A093F1B516A7FEFC00EFF4BD /* MainStoryboard.storyboard */,
@@ -184,6 +212,7 @@
 				A093F1BE16A7FEFC00EFF4BD /* first@2x.png in Resources */,
 				A093F1C316A7FEFC00EFF4BD /* second.png in Resources */,
 				A093F1C516A7FEFC00EFF4BD /* second@2x.png in Resources */,
+				A093F1EC16A8D1BC00EFF4BD /* logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +227,9 @@
 				A093F1AE16A7FEFC00EFF4BD /* AppDelegate.m in Sources */,
 				A093F1BA16A7FEFC00EFF4BD /* FirstViewController.m in Sources */,
 				A093F1C116A7FEFC00EFF4BD /* SecondViewController.m in Sources */,
+				A093F1D916A80B0200EFF4BD /* HomeViewController.m in Sources */,
+				A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */,
+				A093F1DF16A8104C00EFF4BD /* Events.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +348,20 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */,
+			);
+			currentVersion = A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */;
+			name = fancyModel.xcdatamodeld;
+			path = fancy/fancyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A093F19016A7FEFC00EFF4BD /* Project object */;
 }
