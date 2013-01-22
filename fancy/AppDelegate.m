@@ -61,7 +61,7 @@ UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.
     };
     
     [[UITabBarItem appearance] setTitleTextAttributes:normalState forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:selectedState forState:UIControlStateHighlighted];
+    [[UITabBarItem appearance] setTitleTextAttributes:selectedState forState:UIControlStateSelected];
 
     
     return YES;

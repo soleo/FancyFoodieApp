@@ -9,6 +9,7 @@
 #import "FoodieListViewController.h"
 #import "Events.h"
 #import "FoodieListCell.h"
+#import "FoodieDetailViewController.h"
 @interface FoodieListViewController ()
 
 @end
@@ -37,9 +38,6 @@
 {
     [super viewDidLoad];
     
-//    self.photoView = (UIImageView *)[self.view viewWithTag:100];
-//    self.dateLabel = (UILabel *)[self.view viewWithTag:101];
-//    self.locationLabel = (UILabel *)[self.view viewWithTag:102];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -61,7 +59,7 @@
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Events" ];
     self.events = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    NSLog(@"device array %@", self.events);
+    NSLog(@"events array %@", self.events);
     [self.tableView reloadData];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -164,6 +162,26 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark - Segue method
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        FoodieDetailViewController *destViewController = segue.destinationViewController;
+        NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
+        Event *passEvent = [Event new];
+        passEvent.locationName = [event valueForKey:@"locationName"];
+        passEvent.photo = [event valueForKey:@"photo"];
+        passEvent.creationDate = [event valueForKey:@"creationDate"];
+        passEvent.comment = [event valueForKey:@"comment"];
+        destViewController.event = passEvent;
+//        destViewController.event.locationName = [event valueForKey:@"locationName"];
+//        destViewController.event.photo = [event valueForKey:@"photo"];
+//        destViewController.event.creationDate = [event valueForKey:@"creationDate"];
+//        destViewController.event.comment = [event valueForKey:@"comment"];
+//        NSLog(@"prepareForSegue: %@",  destViewController.event);
+    }
 }
 
 @end

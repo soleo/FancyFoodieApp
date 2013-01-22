@@ -209,7 +209,15 @@
         UIActivityTypeAssignToContact,
         UIActivityTypePrint
     ];
-    [self saveEvent];
+    if ([self saveEvent]) {
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                             message:@"Failed to save"
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+        [errorAlert show];
+
+    }
     BOOL isRunningOniPhone =
     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone;
     if( isRunningOniPhone == YES){
@@ -296,12 +304,13 @@
                            NSLog(@"Found Placemarks:%@ error:%@", placemarks, error);
                            if( error == nil && [placemarks count] > 0){
                                placemark = [placemarks lastObject];
-                               self.locationLabel.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
+                               self.locationLabel.text = [NSString stringWithFormat:@"%@ %@, %@ %@, %@, %@",
                                                     placemark.subThoroughfare, placemark.thoroughfare,
                                                     placemark.postalCode, placemark.locality,
                                                     placemark.administrativeArea,
                                                     placemark.country];
-                               self.locationName = [self.locationName stringByAppendingString:@"bar"];;
+                               self.locationName = self.locationLabel.text;
+                               
                            } else {
                                NSLog(@"%@", error.debugDescription);
                            }
