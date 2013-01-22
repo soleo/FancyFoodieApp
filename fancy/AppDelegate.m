@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Util/Utility.h"
 
 @implementation AppDelegate
 
@@ -23,11 +24,46 @@
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
     UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+    UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
+    UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
     
     tabBarItem1.title = @"Home";
     tabBarItem2.title = @"Foodie List";
-    tabBarItem3.title = @"Settings";
+    tabBarItem3.title = @"Statistics";
+    tabBarItem4.title = @"Search";
+    tabBarItem5.title = @"Settings";
+    
     // @TODO: add icons for tabs
+    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home"]
+              withFinishedUnselectedImage:[UIImage imageNamed:@"home"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"foodielist"]
+              withFinishedUnselectedImage:[UIImage imageNamed:@"foodielist"]];
+    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"statistics"]
+              withFinishedUnselectedImage:[UIImage imageNamed:@"statistics"]];
+    [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"search"]
+              withFinishedUnselectedImage:[UIImage imageNamed:@"search"]];
+    [tabBarItem5 setFinishedSelectedImage:[UIImage imageNamed:@"settings"]
+              withFinishedUnselectedImage:[UIImage imageNamed:@"settings"]];
+    
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selection"]];
+
+    NSDictionary *normalState = @{
+    UITextAttributeTextColor : [UIColor colorWithWhite:0.213 alpha:1.000],
+UITextAttributeTextShadowColor: [UIColor whiteColor],
+UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
+    };
+    
+    NSDictionary *selectedState = @{
+    UITextAttributeTextColor : [UIColor blackColor],
+UITextAttributeTextShadowColor: [UIColor whiteColor],
+UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
+    };
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:normalState forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:selectedState forState:UIControlStateHighlighted];
+
+    
     return YES;
 }
 							
