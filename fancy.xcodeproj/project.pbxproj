@@ -52,6 +52,8 @@
 		A0E852C316AF088E00976786 /* photo_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C116AF088E00976786 /* photo_frame.png */; };
 		A0E852C416AF088E00976786 /* photo_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C216AF088E00976786 /* photo_frame@2x.png */; };
 		A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852C616AF101F00976786 /* FoodieDetailViewController.m */; };
+		A0E852CA16AF20C300976786 /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C916AF20C300976786 /* creme_brelee.jpg */; };
+		A0E852CD16AF2A1900976786 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852CC16AF2A1900976786 /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,9 @@
 		A0E852C216AF088E00976786 /* photo_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_frame@2x.png"; sourceTree = "<group>"; };
 		A0E852C516AF101F00976786 /* FoodieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodieDetailViewController.h; sourceTree = "<group>"; };
 		A0E852C616AF101F00976786 /* FoodieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodieDetailViewController.m; sourceTree = "<group>"; };
+		A0E852C916AF20C300976786 /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
+		A0E852CB16AF2A1900976786 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		A0E852CC16AF2A1900976786 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,7 @@
 		A091649116AC8116009FBF5F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0E852C816AF20A700976786 /* test */,
 				A0E852C116AF088E00976786 /* photo_frame.png */,
 				A0E852C216AF088E00976786 /* photo_frame@2x.png */,
 				A0E852BC16AF063100976786 /* location.png */,
@@ -207,6 +213,8 @@
 				A08D751116AB2E3800AD22B7 /* Events.h */,
 				A08D751216AB2E3800AD22B7 /* Events.m */,
 				A093F1D716A80B0200EFF4BD /* HomeViewController.h */,
+				A0E852CB16AF2A1900976786 /* Event.h */,
+				A0E852CC16AF2A1900976786 /* Event.m */,
 				A091648E16AC6563009FBF5F /* FoodieListViewController.h */,
 				A091648F16AC6563009FBF5F /* FoodieListViewController.m */,
 				A093F1D816A80B0200EFF4BD /* HomeViewController.m */,
@@ -245,6 +253,14 @@
 				A093F1B316A7FEFC00EFF4BD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0E852C816AF20A700976786 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				A0E852C916AF20C300976786 /* creme_brelee.jpg */,
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +340,7 @@
 				A0E852BF16AF063100976786 /* location@2x.png in Resources */,
 				A0E852C316AF088E00976786 /* photo_frame.png in Resources */,
 				A0E852C416AF088E00976786 /* photo_frame@2x.png in Resources */,
+				A0E852CA16AF20C300976786 /* creme_brelee.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +363,7 @@
 				A091649016AC6563009FBF5F /* FoodieListViewController.m in Sources */,
 				A09164B116ACAA65009FBF5F /* FoodieListCell.m in Sources */,
 				A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */,
+				A0E852CD16AF2A1900976786 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
