@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-#import "Events.h"
+#import "Model/Events.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 @interface HomeViewController ()
 
@@ -248,7 +248,11 @@
         }
     }
 }
-
+- (BOOL)textViewShouldReturn:(UITextView *)textView
+{
+    [textView resignFirstResponder];    //主要是[receiver resignFirstResponder]在哪调用就能把receiver对应的键盘往下收
+    return YES;
+}
 
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {

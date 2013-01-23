@@ -54,6 +54,19 @@
 		A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852C616AF101F00976786 /* FoodieDetailViewController.m */; };
 		A0E852CA16AF20C300976786 /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C916AF20C300976786 /* creme_brelee.jpg */; };
 		A0E852CD16AF2A1900976786 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852CC16AF2A1900976786 /* Event.m */; };
+		A0E852D016AF350400976786 /* Configs.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852CF16AF350300976786 /* Configs.m */; };
+		A0E852D416AF386A00976786 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852D316AF386900976786 /* SettingsViewController.m */; };
+		A0E852E416AF44A100976786 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DB16AF44A100976786 /* cell_bottom.png */; };
+		A0E852E516AF44A100976786 /* cell_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DC16AF44A100976786 /* cell_bottom@2x.png */; };
+		A0E852E616AF44A100976786 /* cell_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DD16AF44A100976786 /* cell_middle.png */; };
+		A0E852E716AF44A100976786 /* cell_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DE16AF44A100976786 /* cell_middle@2x.png */; };
+		A0E852E816AF44A100976786 /* cell_top_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DF16AF44A100976786 /* cell_top_tile.png */; };
+		A0E852E916AF44A100976786 /* cell_top.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852E016AF44A100976786 /* cell_top.png */; };
+		A0E852EA16AF44A100976786 /* cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852E116AF44A100976786 /* cell_top@2x.png */; };
+		A0E852EB16AF44A100976786 /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852E216AF44A100976786 /* common_bg.png */; };
+		A0E852EC16AF44A100976786 /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852E316AF44A100976786 /* common_bg@2x.png */; };
+		A0E852EE16AF4D9200976786 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E852ED16AF4D9100976786 /* MapKit.framework */; };
+		A0E852F116AF4EA400976786 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852F016AF4EA300976786 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +132,22 @@
 		A0E852C916AF20C300976786 /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
 		A0E852CB16AF2A1900976786 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		A0E852CC16AF2A1900976786 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		A0E852CE16AF350300976786 /* Configs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configs.h; path = Model/Configs.h; sourceTree = "<group>"; };
+		A0E852CF16AF350300976786 /* Configs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Configs.m; path = Model/Configs.m; sourceTree = "<group>"; };
+		A0E852D216AF386900976786 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		A0E852D316AF386900976786 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		A0E852DB16AF44A100976786 /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
+		A0E852DC16AF44A100976786 /* cell_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom@2x.png"; sourceTree = "<group>"; };
+		A0E852DD16AF44A100976786 /* cell_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_middle.png; sourceTree = "<group>"; };
+		A0E852DE16AF44A100976786 /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_middle@2x.png"; sourceTree = "<group>"; };
+		A0E852DF16AF44A100976786 /* cell_top_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top_tile.png; sourceTree = "<group>"; };
+		A0E852E016AF44A100976786 /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top.png; sourceTree = "<group>"; };
+		A0E852E116AF44A100976786 /* cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_top@2x.png"; sourceTree = "<group>"; };
+		A0E852E216AF44A100976786 /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
+		A0E852E316AF44A100976786 /* common_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_bg@2x.png"; sourceTree = "<group>"; };
+		A0E852ED16AF4D9100976786 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A0E852EF16AF4EA200976786 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		A0E852F016AF4EA300976786 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E852EE16AF4D9200976786 /* MapKit.framework in Frameworks */,
 				A08D751816AB529400AD22B7 /* AssetsLibrary.framework in Frameworks */,
 				A093F1E516A8A54600EFF4BD /* MobileCoreServices.framework in Frameworks */,
 				A093F1E316A810CA00EFF4BD /* CoreLocation.framework in Frameworks */,
@@ -152,6 +182,15 @@
 		A091649116AC8116009FBF5F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0E852DB16AF44A100976786 /* cell_bottom.png */,
+				A0E852DC16AF44A100976786 /* cell_bottom@2x.png */,
+				A0E852DD16AF44A100976786 /* cell_middle.png */,
+				A0E852DE16AF44A100976786 /* cell_middle@2x.png */,
+				A0E852DF16AF44A100976786 /* cell_top_tile.png */,
+				A0E852E016AF44A100976786 /* cell_top.png */,
+				A0E852E116AF44A100976786 /* cell_top@2x.png */,
+				A0E852E216AF44A100976786 /* common_bg.png */,
+				A0E852E316AF44A100976786 /* common_bg@2x.png */,
 				A0E852C816AF20A700976786 /* test */,
 				A0E852C116AF088E00976786 /* photo_frame.png */,
 				A0E852C216AF088E00976786 /* photo_frame@2x.png */,
@@ -194,6 +233,7 @@
 		A093F19C16A7FEFC00EFF4BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0E852ED16AF4D9100976786 /* MapKit.framework */,
 				A08D751716AB529400AD22B7 /* AssetsLibrary.framework */,
 				A093F1E416A8A54600EFF4BD /* MobileCoreServices.framework */,
 				A093F1E216A810CA00EFF4BD /* CoreLocation.framework */,
@@ -208,16 +248,15 @@
 		A093F1A316A7FEFC00EFF4BD /* fancy */ = {
 			isa = PBXGroup;
 			children = (
+				A0E852D116AF351100976786 /* Model */,
 				A091649116AC8116009FBF5F /* Resources */,
 				A091648916ABCC01009FBF5F /* Util */,
-				A08D751116AB2E3800AD22B7 /* Events.h */,
-				A08D751216AB2E3800AD22B7 /* Events.m */,
 				A093F1D716A80B0200EFF4BD /* HomeViewController.h */,
+				A093F1D816A80B0200EFF4BD /* HomeViewController.m */,
 				A0E852CB16AF2A1900976786 /* Event.h */,
 				A0E852CC16AF2A1900976786 /* Event.m */,
 				A091648E16AC6563009FBF5F /* FoodieListViewController.h */,
 				A091648F16AC6563009FBF5F /* FoodieListViewController.m */,
-				A093F1D816A80B0200EFF4BD /* HomeViewController.m */,
 				A093F1AC16A7FEFC00EFF4BD /* AppDelegate.h */,
 				A093F1AD16A7FEFC00EFF4BD /* AppDelegate.m */,
 				A093F1B516A7FEFC00EFF4BD /* MainStoryboard.storyboard */,
@@ -237,6 +276,10 @@
 				A09164B016ACAA64009FBF5F /* FoodieListCell.m */,
 				A0E852C516AF101F00976786 /* FoodieDetailViewController.h */,
 				A0E852C616AF101F00976786 /* FoodieDetailViewController.m */,
+				A0E852D216AF386900976786 /* SettingsViewController.h */,
+				A0E852D316AF386900976786 /* SettingsViewController.m */,
+				A0E852EF16AF4EA200976786 /* SearchViewController.h */,
+				A0E852F016AF4EA300976786 /* SearchViewController.m */,
 			);
 			path = fancy;
 			sourceTree = "<group>";
@@ -261,6 +304,17 @@
 				A0E852C916AF20C300976786 /* creme_brelee.jpg */,
 			);
 			name = test;
+			sourceTree = "<group>";
+		};
+		A0E852D116AF351100976786 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A08D751116AB2E3800AD22B7 /* Events.h */,
+				A08D751216AB2E3800AD22B7 /* Events.m */,
+				A0E852CE16AF350300976786 /* Configs.h */,
+				A0E852CF16AF350300976786 /* Configs.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +395,15 @@
 				A0E852C316AF088E00976786 /* photo_frame.png in Resources */,
 				A0E852C416AF088E00976786 /* photo_frame@2x.png in Resources */,
 				A0E852CA16AF20C300976786 /* creme_brelee.jpg in Resources */,
+				A0E852E416AF44A100976786 /* cell_bottom.png in Resources */,
+				A0E852E516AF44A100976786 /* cell_bottom@2x.png in Resources */,
+				A0E852E616AF44A100976786 /* cell_middle.png in Resources */,
+				A0E852E716AF44A100976786 /* cell_middle@2x.png in Resources */,
+				A0E852E816AF44A100976786 /* cell_top_tile.png in Resources */,
+				A0E852E916AF44A100976786 /* cell_top.png in Resources */,
+				A0E852EA16AF44A100976786 /* cell_top@2x.png in Resources */,
+				A0E852EB16AF44A100976786 /* common_bg.png in Resources */,
+				A0E852EC16AF44A100976786 /* common_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +427,9 @@
 				A09164B116ACAA65009FBF5F /* FoodieListCell.m in Sources */,
 				A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */,
 				A0E852CD16AF2A1900976786 /* Event.m in Sources */,
+				A0E852D016AF350400976786 /* Configs.m in Sources */,
+				A0E852D416AF386A00976786 /* SettingsViewController.m in Sources */,
+				A0E852F116AF4EA400976786 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

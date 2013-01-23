@@ -7,7 +7,7 @@
 //
 
 #import "FoodieListViewController.h"
-#import "Events.h"
+#import "Model/Events.h"
 #import "FoodieListCell.h"
 #import "FoodieDetailViewController.h"
 @interface FoodieListViewController ()
@@ -40,7 +40,10 @@
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    UIEdgeInsets inset = UIEdgeInsetsMake(5, 0, 0, 0);
+    self.tableView.contentInset = inset;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -60,6 +63,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Events" ];
     self.events = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
     NSLog(@"events array %@", self.events);
+    
     [self.tableView reloadData];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -75,6 +79,23 @@
     return self.events.count;
 }
 
+- (UIImage *)cellBackgroundForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger rowCount = [self tableView:[self tableView] numberOfRowsInSection:0];
+    NSInteger rowIndex = indexPath.row;
+    UIImage *background = nil;
+    
+    if (rowIndex == 0) {
+        background = [UIImage imageNamed:@"cell_top"];
+    } else if (rowIndex == rowCount - 1) {
+        background = [UIImage imageNamed:@"cell_bottom"];
+    } else {
+        background = [UIImage imageNamed:@"cell_middle"];
+    }
+    
+    return background;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"FoodieListCell";
@@ -85,6 +106,15 @@
     if (cell == nil) {
         cell = [[FoodieListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    // style change for elements in table view
+    UIImage *background = [self cellBackgroundForRowAtIndexPath:indexPath];
+    UIImageView *cellBackgroundView = [[UIImageView alloc] initWithImage:background];
+    cellBackgroundView.image = background;
+    cell.backgroundView = cellBackgroundView;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    // data set
     NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
     NSLog(@"date: %@, loc: %@",[event valueForKey:@"creationDate"], [event valueForKey:@"locationName"]);
     
