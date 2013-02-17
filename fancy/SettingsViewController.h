@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Util/Utility.h"
 @interface SettingsViewController : UITableViewController
 
 @end

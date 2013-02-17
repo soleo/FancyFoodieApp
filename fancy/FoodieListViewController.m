@@ -126,7 +126,8 @@
     NSString *location = [event valueForKey:@"locationName"];
     [cell.dateLabel setText:date];
     [cell.locationLabel setText:location];
-    UIImage *image = [UIImage imageWithData:[event valueForKey:@"photo"]];
+    NSManagedObject *photoBlob = [event valueForKey:@"photoBlob"];
+    UIImage *image = [UIImage imageWithData:[photoBlob valueForKey:@"bytes"]];
     cell.photoView.image = image;
     
     // more to show on the table
@@ -202,7 +203,7 @@
         NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
         Event *passEvent = [Event new];
         passEvent.locationName = [event valueForKey:@"locationName"];
-        passEvent.photo = [event valueForKey:@"photo"];
+        passEvent.photo = [[event valueForKey:@"photoBlob"] valueForKey:@"bytes"];
         passEvent.creationDate = [event valueForKey:@"creationDate"];
         passEvent.comment = [event valueForKey:@"comment"];
         destViewController.event = passEvent;

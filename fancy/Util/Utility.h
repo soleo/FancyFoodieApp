@@ -14,3 +14,5 @@
 #define PREFIXED(STRING1, STRING2) ([[STRING1 uppercaseString] hasPrefix:[STRING2 uppercaseString]])
 
 #pragma mark - Colors
+
+#pragma mark - Constants

@@ -19,6 +19,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -26,7 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -53,13 +55,59 @@
 {
 
     // Return the number of rows in the section.
-    return 2;
+    switch (section) {
+        case (0):
+            return 1;
+            break;
+        case (1):
+            return 3;
+            break;
+        default:
+            break;
+    }
+    return 0;
 }
-
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+    	case (0):
+    		return @"Settings";
+    		break;
+    	case (1):
+    		return @"About";
+    		break;
+    }
+    return nil;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ConfigCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    switch (indexPath.section) {
+        case 0:
+            cell.textLabel.text = @"Dummy";
+            cell.detailTextLabel.text = @"Yummy";
+            break;
+        case 1:
+            switch (indexPath.row) {
+                case 0:
+                    cell.textLabel.text = @"Version";
+                    cell.detailTextLabel.text = @"1.0";
+                    break;
+                case 1:
+                    cell.textLabel.text = @"Author";
+                    cell.detailTextLabel.text = @"Xinjiang";
+                    break;
+                case 2:
+                    cell.textLabel.text = @"E-mail";
+                    cell.detailTextLabel.text = @"shaoxinjiang@gmail.com";
+                    break;
+                default:
+                    break;
+            }
+        default:
+            break;
+    }
     
     // Configure the cell...
     

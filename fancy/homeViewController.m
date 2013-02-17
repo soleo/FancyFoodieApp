@@ -65,8 +65,11 @@
         return NO;
     }
     NSData *imageData = UIImagePNGRepresentation(self.imageViewField.image);
+    NSManagedObject *photoBlob = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoBlob" inManagedObjectContext:newEvent.managedObjectContext];
+    [photoBlob setValue:imageData forKey:@"bytes"];
+    [newEvent setValue:photoBlob forKey:@"photoBlob"];
     
-    [newEvent setValue:imageData forKey:@"photo"];
+    //[newEvent setValue:imageData forKey:@"photoBlob"];
     [newEvent setValue:[NSDate date] forKey:@"creationDate"];
     [newEvent setValue:self.latitude forKey:@"latitude"];
     [newEvent setValue:self.longitude forKey:@"longitude"];

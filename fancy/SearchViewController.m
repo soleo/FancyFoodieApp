@@ -43,14 +43,6 @@
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Events" ];
     self.events = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    for (NSManagedObject *event in self.events) {
-        NSLog(@"Found event : %@ %@", [event valueForKey:@"longitude"], [event valueForKey:@"latitude"]);
-        
-    }
-//    for (id item in self.events) {
-//        NSLog(@"Found Item : %@", item);
-//    }
-    //NSLog(@"events array %@", self.events);
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,13 +57,7 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
     
-    // Add an annotation
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate = userLocation.coordinate;
-    point.title = @"Where am I?";
-    point.subtitle = @"I'm here!!!";
-    [self.mapView addAnnotation:point];
-    
+    // add events to the map
     for (NSManagedObject *event in self.events) {
         NSLog(@"Found event : %@ %@", [event valueForKey:@"longitude"], [event valueForKey:@"latitude"]);
         MKPointAnnotation *eventpoint = [[MKPointAnnotation alloc] init];

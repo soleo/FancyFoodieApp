@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A08D750F16AB138E00AD22B7 /* SharingActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D750E16AB138E00AD22B7 /* SharingActivity.m */; };
-		A08D751316AB2E3800AD22B7 /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D751216AB2E3800AD22B7 /* Events.m */; };
 		A08D751816AB529400AD22B7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08D751716AB529400AD22B7 /* AssetsLibrary.framework */; };
 		A091648D16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = A091648C16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		A091649016AC6563009FBF5F /* FoodieListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A091648F16AC6563009FBF5F /* FoodieListViewController.m */; };
@@ -47,6 +46,11 @@
 		A093F1E116A810C400EFF4BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E016A810C400EFF4BD /* CoreData.framework */; };
 		A093F1E316A810CA00EFF4BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E216A810CA00EFF4BD /* CoreLocation.framework */; };
 		A093F1E516A8A54600EFF4BD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E416A8A54600EFF4BD /* MobileCoreServices.framework */; };
+		A0A0372116D04C74004FD29E /* fancy.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A0372016D04C74004FD29E /* fancy.png */; };
+		A0A0372316D04C7C004FD29E /* fancy@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A0372216D04C7C004FD29E /* fancy@2X.png */; };
+		A0A0373516D05C7D004FD29E /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373416D05C7D004FD29E /* Tag.m */; };
+		A0A0373816D05C7F004FD29E /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373716D05C7F004FD29E /* Events.m */; };
+		A0A0373B16D05C7F004FD29E /* PhotoBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373A16D05C7F004FD29E /* PhotoBlob.m */; };
 		A0E852BE16AF063100976786 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852BC16AF063100976786 /* location.png */; };
 		A0E852BF16AF063100976786 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852BD16AF063100976786 /* location@2x.png */; };
 		A0E852C316AF088E00976786 /* photo_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C116AF088E00976786 /* photo_frame.png */; };
@@ -72,8 +76,6 @@
 /* Begin PBXFileReference section */
 		A08D750D16AB138E00AD22B7 /* SharingActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingActivity.h; sourceTree = "<group>"; };
 		A08D750E16AB138E00AD22B7 /* SharingActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingActivity.m; sourceTree = "<group>"; };
-		A08D751116AB2E3800AD22B7 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Events.h; path = Model/Events.h; sourceTree = "<group>"; };
-		A08D751216AB2E3800AD22B7 /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = Model/Events.m; sourceTree = "<group>"; };
 		A08D751716AB529400AD22B7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		A091648B16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALAssetsLibrary+CustomPhotoAlbum.h"; path = "Util/ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
 		A091648C16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALAssetsLibrary+CustomPhotoAlbum.m"; path = "Util/ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 		A093F1E016A810C400EFF4BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A093F1E216A810CA00EFF4BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A093F1E416A8A54600EFF4BD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A0A0372016D04C74004FD29E /* fancy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fancy.png; sourceTree = "<group>"; };
+		A0A0372216D04C7C004FD29E /* fancy@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fancy@2X.png"; sourceTree = "<group>"; };
+		A0A0373316D05C7D004FD29E /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = Model/Tag.h; sourceTree = "<group>"; };
+		A0A0373416D05C7D004FD29E /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = Model/Tag.m; sourceTree = "<group>"; };
+		A0A0373616D05C7F004FD29E /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Events.h; path = Model/Events.h; sourceTree = "<group>"; };
+		A0A0373716D05C7F004FD29E /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = Model/Events.m; sourceTree = "<group>"; };
+		A0A0373916D05C7F004FD29E /* PhotoBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoBlob.h; path = Model/PhotoBlob.h; sourceTree = "<group>"; };
+		A0A0373A16D05C7F004FD29E /* PhotoBlob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoBlob.m; path = Model/PhotoBlob.m; sourceTree = "<group>"; };
 		A0E852BC16AF063100976786 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		A0E852BD16AF063100976786 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
 		A0E852C116AF088E00976786 /* photo_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_frame.png; sourceTree = "<group>"; };
@@ -215,6 +225,8 @@
 		A093F18E16A7FEFC00EFF4BD = {
 			isa = PBXGroup;
 			children = (
+				A0A0372216D04C7C004FD29E /* fancy@2X.png */,
+				A0A0372016D04C74004FD29E /* fancy.png */,
 				A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */,
 				A093F1A316A7FEFC00EFF4BD /* fancy */,
 				A093F19C16A7FEFC00EFF4BD /* Frameworks */,
@@ -309,8 +321,12 @@
 		A0E852D116AF351100976786 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A08D751116AB2E3800AD22B7 /* Events.h */,
-				A08D751216AB2E3800AD22B7 /* Events.m */,
+				A0A0373916D05C7F004FD29E /* PhotoBlob.h */,
+				A0A0373A16D05C7F004FD29E /* PhotoBlob.m */,
+				A0A0373616D05C7F004FD29E /* Events.h */,
+				A0A0373716D05C7F004FD29E /* Events.m */,
+				A0A0373316D05C7D004FD29E /* Tag.h */,
+				A0A0373416D05C7D004FD29E /* Tag.m */,
 				A0E852CE16AF350300976786 /* Configs.h */,
 				A0E852CF16AF350300976786 /* Configs.m */,
 			);
@@ -404,6 +420,8 @@
 				A0E852EA16AF44A100976786 /* cell_top@2x.png in Resources */,
 				A0E852EB16AF44A100976786 /* common_bg.png in Resources */,
 				A0E852EC16AF44A100976786 /* common_bg@2x.png in Resources */,
+				A0A0372116D04C74004FD29E /* fancy.png in Resources */,
+				A0A0372316D04C7C004FD29E /* fancy@2X.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +439,6 @@
 				A093F1D916A80B0200EFF4BD /* HomeViewController.m in Sources */,
 				A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */,
 				A08D750F16AB138E00AD22B7 /* SharingActivity.m in Sources */,
-				A08D751316AB2E3800AD22B7 /* Events.m in Sources */,
 				A091648D16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				A091649016AC6563009FBF5F /* FoodieListViewController.m in Sources */,
 				A09164B116ACAA65009FBF5F /* FoodieListCell.m in Sources */,
@@ -430,6 +447,9 @@
 				A0E852D016AF350400976786 /* Configs.m in Sources */,
 				A0E852D416AF386A00976786 /* SettingsViewController.m in Sources */,
 				A0E852F116AF4EA400976786 /* SearchViewController.m in Sources */,
+				A0A0373516D05C7D004FD29E /* Tag.m in Sources */,
+				A0A0373816D05C7F004FD29E /* Events.m in Sources */,
+				A0A0373B16D05C7F004FD29E /* PhotoBlob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
