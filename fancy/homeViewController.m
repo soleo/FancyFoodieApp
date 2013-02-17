@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "Model/Events.h"
+#import "ThirdParty/SVProgressHUD/SVProgressHUD.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 @interface HomeViewController ()
 
@@ -85,16 +86,9 @@
 }
 - (IBAction)save:(id)sender {
     if (![self saveEvent]) {
-        //[info show];
-        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                             message:@"Failed to save"
-                                                            delegate:nil
-                                                   cancelButtonTitle:@"OK"
-                                                   otherButtonTitles:nil];
-        [errorAlert show];
+        [SVProgressHUD showErrorWithStatus:@"Failed to Save!"];
     }
-    
-    
+    [SVProgressHUD showSuccessWithStatus:@"Added a New Event"];
     NSLog(@" added a new event");
     
     //[self dismissViewControllerAnimated:YES completion:nil];

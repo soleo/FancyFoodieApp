@@ -19,7 +19,6 @@
 		A091649D16AC81FD009FBF5F /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A091649716AC81FD009FBF5F /* home@2x.png */; };
 		A09164A016AC82BE009FBF5F /* foodielist.png in Resources */ = {isa = PBXBuildFile; fileRef = A091649E16AC82BE009FBF5F /* foodielist.png */; };
 		A09164A316AC83C2009FBF5F /* foodielist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A09164A216AC83C2009FBF5F /* foodielist@2x.png */; };
-		A09164A616AC8642009FBF5F /* AppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A09164A516AC8642009FBF5F /* AppSettings.bundle */; };
 		A09164A916AC8FBB009FBF5F /* tabbar_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = A09164A716AC8FBB009FBF5F /* tabbar_selection.png */; };
 		A09164AA16AC8FBB009FBF5F /* tabbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = A09164A816AC8FBB009FBF5F /* tabbar_bg.png */; };
 		A09164AD16AC9306009FBF5F /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = A09164AB16AC9305009FBF5F /* search.png */; };
@@ -41,7 +40,6 @@
 		A093F1C116A7FEFC00EFF4BD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1C016A7FEFC00EFF4BD /* SecondViewController.m */; };
 		A093F1C316A7FEFC00EFF4BD /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A093F1C216A7FEFC00EFF4BD /* second.png */; };
 		A093F1C516A7FEFC00EFF4BD /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A093F1C416A7FEFC00EFF4BD /* second@2x.png */; };
-		A093F1D916A80B0200EFF4BD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1D816A80B0200EFF4BD /* HomeViewController.m */; };
 		A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */; };
 		A093F1E116A810C400EFF4BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E016A810C400EFF4BD /* CoreData.framework */; };
 		A093F1E316A810CA00EFF4BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E216A810CA00EFF4BD /* CoreLocation.framework */; };
@@ -51,6 +49,11 @@
 		A0A0373516D05C7D004FD29E /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373416D05C7D004FD29E /* Tag.m */; };
 		A0A0373816D05C7F004FD29E /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373716D05C7F004FD29E /* Events.m */; };
 		A0A0373B16D05C7F004FD29E /* PhotoBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373A16D05C7F004FD29E /* PhotoBlob.m */; };
+		A0A0374516D071FF004FD29E /* README in Resources */ = {isa = PBXBuildFile; fileRef = A0A0374416D071FF004FD29E /* README */; };
+		A0A0375016D0728B004FD29E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0A0374D16D0728B004FD29E /* SVProgressHUD.bundle */; };
+		A0A0375116D0728B004FD29E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0374F16D0728B004FD29E /* SVProgressHUD.m */; };
+		A0A0375316D07448004FD29E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A0375216D07448004FD29E /* QuartzCore.framework */; };
+		A0A0375916D0A10E004FD29E /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0375816D0A10E004FD29E /* homeViewController.m */; };
 		A0E852BE16AF063100976786 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852BC16AF063100976786 /* location.png */; };
 		A0E852BF16AF063100976786 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852BD16AF063100976786 /* location@2x.png */; };
 		A0E852C316AF088E00976786 /* photo_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C116AF088E00976786 /* photo_frame.png */; };
@@ -90,14 +93,13 @@
 		A091649E16AC82BE009FBF5F /* foodielist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodielist.png; sourceTree = "<group>"; };
 		A09164A216AC83C2009FBF5F /* foodielist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foodielist@2x.png"; sourceTree = "<group>"; };
 		A09164A416AC85CD009FBF5F /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = Util/Utility.h; sourceTree = "<group>"; };
-		A09164A516AC8642009FBF5F /* AppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppSettings.bundle; sourceTree = "<group>"; };
 		A09164A716AC8FBB009FBF5F /* tabbar_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_selection.png; sourceTree = "<group>"; };
 		A09164A816AC8FBB009FBF5F /* tabbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_bg.png; sourceTree = "<group>"; };
 		A09164AB16AC9305009FBF5F /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		A09164AC16AC9305009FBF5F /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		A09164AF16ACAA64009FBF5F /* FoodieListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodieListCell.h; sourceTree = "<group>"; };
 		A09164B016ACAA64009FBF5F /* FoodieListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodieListCell.m; sourceTree = "<group>"; };
-		A093F19916A7FEFC00EFF4BD /* fancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A093F19916A7FEFC00EFF4BD /* Fancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A093F19D16A7FEFC00EFF4BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A093F19F16A7FEFC00EFF4BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A093F1A116A7FEFC00EFF4BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,7 +122,6 @@
 		A093F1C216A7FEFC00EFF4BD /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		A093F1C416A7FEFC00EFF4BD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		A093F1D716A80B0200EFF4BD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		A093F1D816A80B0200EFF4BD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fancyModel.xcdatamodel; sourceTree = "<group>"; };
 		A093F1E016A810C400EFF4BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A093F1E216A810CA00EFF4BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -133,6 +134,12 @@
 		A0A0373716D05C7F004FD29E /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = Model/Events.m; sourceTree = "<group>"; };
 		A0A0373916D05C7F004FD29E /* PhotoBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoBlob.h; path = Model/PhotoBlob.h; sourceTree = "<group>"; };
 		A0A0373A16D05C7F004FD29E /* PhotoBlob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoBlob.m; path = Model/PhotoBlob.m; sourceTree = "<group>"; };
+		A0A0374416D071FF004FD29E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ThirdParty/README; sourceTree = "<group>"; };
+		A0A0374D16D0728B004FD29E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A0A0374E16D0728B004FD29E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A0A0374F16D0728B004FD29E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		A0A0375216D07448004FD29E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A0A0375816D0A10E004FD29E /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		A0E852BC16AF063100976786 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		A0E852BD16AF063100976786 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
 		A0E852C116AF088E00976786 /* photo_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_frame.png; sourceTree = "<group>"; };
@@ -165,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A0375316D07448004FD29E /* QuartzCore.framework in Frameworks */,
 				A0E852EE16AF4D9200976786 /* MapKit.framework in Frameworks */,
 				A08D751816AB529400AD22B7 /* AssetsLibrary.framework in Frameworks */,
 				A093F1E516A8A54600EFF4BD /* MobileCoreServices.framework in Frameworks */,
@@ -237,7 +245,7 @@
 		A093F19A16A7FEFC00EFF4BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A093F19916A7FEFC00EFF4BD /* fancy.app */,
+				A093F19916A7FEFC00EFF4BD /* Fancy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 		A093F19C16A7FEFC00EFF4BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0A0375216D07448004FD29E /* QuartzCore.framework */,
 				A0E852ED16AF4D9100976786 /* MapKit.framework */,
 				A08D751716AB529400AD22B7 /* AssetsLibrary.framework */,
 				A093F1E416A8A54600EFF4BD /* MobileCoreServices.framework */,
@@ -260,11 +269,12 @@
 		A093F1A316A7FEFC00EFF4BD /* fancy */ = {
 			isa = PBXGroup;
 			children = (
+				A0A0375816D0A10E004FD29E /* homeViewController.m */,
+				A0A0373C16D06FEF004FD29E /* ThirdParty */,
 				A0E852D116AF351100976786 /* Model */,
 				A091649116AC8116009FBF5F /* Resources */,
 				A091648916ABCC01009FBF5F /* Util */,
 				A093F1D716A80B0200EFF4BD /* HomeViewController.h */,
-				A093F1D816A80B0200EFF4BD /* HomeViewController.m */,
 				A0E852CB16AF2A1900976786 /* Event.h */,
 				A0E852CC16AF2A1900976786 /* Event.m */,
 				A091648E16AC6563009FBF5F /* FoodieListViewController.h */,
@@ -283,7 +293,6 @@
 				A093F1A416A7FEFC00EFF4BD /* Supporting Files */,
 				A08D750D16AB138E00AD22B7 /* SharingActivity.h */,
 				A08D750E16AB138E00AD22B7 /* SharingActivity.m */,
-				A09164A516AC8642009FBF5F /* AppSettings.bundle */,
 				A09164AF16ACAA64009FBF5F /* FoodieListCell.h */,
 				A09164B016ACAA64009FBF5F /* FoodieListCell.m */,
 				A0E852C516AF101F00976786 /* FoodieDetailViewController.h */,
@@ -308,6 +317,26 @@
 				A093F1B316A7FEFC00EFF4BD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0A0373C16D06FEF004FD29E /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				A0A0374C16D0728B004FD29E /* SVProgressHUD */,
+				A0A0374416D071FF004FD29E /* README */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		A0A0374C16D0728B004FD29E /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A0A0374D16D0728B004FD29E /* SVProgressHUD.bundle */,
+				A0A0374E16D0728B004FD29E /* SVProgressHUD.h */,
+				A0A0374F16D0728B004FD29E /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = ThirdParty/SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		A0E852C816AF20A700976786 /* test */ = {
@@ -336,9 +365,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A093F19816A7FEFC00EFF4BD /* fancy */ = {
+		A093F19816A7FEFC00EFF4BD /* Fancy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A093F1C816A7FEFC00EFF4BD /* Build configuration list for PBXNativeTarget "fancy" */;
+			buildConfigurationList = A093F1C816A7FEFC00EFF4BD /* Build configuration list for PBXNativeTarget "Fancy" */;
 			buildPhases = (
 				A093F19516A7FEFC00EFF4BD /* Sources */,
 				A093F19616A7FEFC00EFF4BD /* Frameworks */,
@@ -348,9 +377,9 @@
 			);
 			dependencies = (
 			);
-			name = fancy;
+			name = Fancy;
 			productName = fancy;
-			productReference = A093F19916A7FEFC00EFF4BD /* fancy.app */;
+			productReference = A093F19916A7FEFC00EFF4BD /* Fancy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -374,7 +403,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A093F19816A7FEFC00EFF4BD /* fancy */,
+				A093F19816A7FEFC00EFF4BD /* Fancy */,
 			);
 		};
 /* End PBXProject section */
@@ -401,7 +430,6 @@
 				A091649D16AC81FD009FBF5F /* home@2x.png in Resources */,
 				A09164A016AC82BE009FBF5F /* foodielist.png in Resources */,
 				A09164A316AC83C2009FBF5F /* foodielist@2x.png in Resources */,
-				A09164A616AC8642009FBF5F /* AppSettings.bundle in Resources */,
 				A09164A916AC8FBB009FBF5F /* tabbar_selection.png in Resources */,
 				A09164AA16AC8FBB009FBF5F /* tabbar_bg.png in Resources */,
 				A09164AD16AC9306009FBF5F /* search.png in Resources */,
@@ -422,6 +450,8 @@
 				A0E852EC16AF44A100976786 /* common_bg@2x.png in Resources */,
 				A0A0372116D04C74004FD29E /* fancy.png in Resources */,
 				A0A0372316D04C7C004FD29E /* fancy@2X.png in Resources */,
+				A0A0374516D071FF004FD29E /* README in Resources */,
+				A0A0375016D0728B004FD29E /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +466,6 @@
 				A093F1AE16A7FEFC00EFF4BD /* AppDelegate.m in Sources */,
 				A093F1BA16A7FEFC00EFF4BD /* FirstViewController.m in Sources */,
 				A093F1C116A7FEFC00EFF4BD /* SecondViewController.m in Sources */,
-				A093F1D916A80B0200EFF4BD /* HomeViewController.m in Sources */,
 				A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */,
 				A08D750F16AB138E00AD22B7 /* SharingActivity.m in Sources */,
 				A091648D16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
@@ -450,6 +479,8 @@
 				A0A0373516D05C7D004FD29E /* Tag.m in Sources */,
 				A0A0373816D05C7F004FD29E /* Events.m in Sources */,
 				A0A0373B16D05C7F004FD29E /* PhotoBlob.m in Sources */,
+				A0A0375116D0728B004FD29E /* SVProgressHUD.m in Sources */,
+				A0A0375916D0A10E004FD29E /* homeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +563,8 @@
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -543,6 +576,8 @@
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -559,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A093F1C816A7FEFC00EFF4BD /* Build configuration list for PBXNativeTarget "fancy" */ = {
+		A093F1C816A7FEFC00EFF4BD /* Build configuration list for PBXNativeTarget "Fancy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A093F1C916A7FEFC00EFF4BD /* Debug */,
