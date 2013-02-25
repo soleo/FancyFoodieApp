@@ -10,6 +10,9 @@
 #import "Model/Events.h"
 #import "FoodieListCell.h"
 #import "FoodieDetailViewController.h"
+#import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
+#import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
+#import "ThirdParty/SORelativeDateTransformer/SORelativeDateTransformer.h"
 @interface FoodieListViewController ()
 
 @end
@@ -40,10 +43,12 @@
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
+    //[[UILabel appearance] setFont:[UIFont fontWithName:@"DroidSans" size:14.0]];
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     UIEdgeInsets inset = UIEdgeInsetsMake(5, 0, 0, 0);
     self.tableView.contentInset = inset;
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -118,14 +123,20 @@
     NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
     NSLog(@"date: %@, loc: %@",[event valueForKey:@"creationDate"], [event valueForKey:@"locationName"]);
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [formatter setTimeStyle:NSDateFormatterNoStyle];
-    NSString *date = [formatter stringFromDate:[event valueForKey:@"creationDate"]];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+//    [formatter setDateStyle:NSDateFormatterShortStyle];
+//    [formatter setTimeStyle:NSDateFormatterNoStyle];
+//    NSString *date = [formatter stringFromDate:[event valueForKey:@"creationDate"]];
+    
+    SORelativeDateTransformer *relativeDateTransformer = [[SORelativeDateTransformer alloc] init];
+    NSString *relativeDate = [relativeDateTransformer transformedValue:[event valueForKey:@"creationDate"]];
+    NSMutableAttributedString *dateWithIcon = [NSString stringWithFontAwesomeIcon:@"icon-time" withTextContent:relativeDate];
+    
     NSString *location = [event valueForKey:@"locationName"];
-    [cell.dateLabel setText:date];
-    [cell.locationLabel setText:location];
+    [cell.dateLabel setAttributedText:dateWithIcon];
+
+    [cell.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:location]];
     NSManagedObject *photoBlob = [event valueForKey:@"photoBlob"];
     UIImage *image = [UIImage imageWithData:[photoBlob valueForKey:@"bytes"]];
     cell.photoView.image = image;

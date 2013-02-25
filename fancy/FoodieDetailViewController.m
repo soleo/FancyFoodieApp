@@ -7,7 +7,8 @@
 //
 
 #import "FoodieDetailViewController.h"
-
+#import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
+#import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
 @interface FoodieDetailViewController ()
 
 @end
@@ -32,18 +33,20 @@
     //self.commentLabel    = (UILabel *)[self.view viewWithTag:103];
 
     NSLog(@"Event passed: %@", self.event);
-    self.locationLabel.text = self.event.locationName;
+    //self.locationLabel.text = self.event.locationName;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [formatter setDateStyle:NSDateFormatterShortStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
     NSString *date = [formatter stringFromDate:self.event.creationDate];
-    self.dateLabel.text = date;
     
+    [self.dateLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-calendar" withTextContent:date]];
+    [self.commentLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-comment" withTextContent:self.event.comment]];
+    [self.tagsLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-tags" withTextContent:@"tags of current food"]];
     UIImage *image = [UIImage imageWithData:self.event.photo];
     self.detailPhotoView.image = image;
-    
-    self.commentLabel.text = self.event.comment;
+    [self.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:self.event.locationName]];
+    //self.commentLabel.text = self.event.comment;
     
 	// Do any additional setup after loading the view.
 }

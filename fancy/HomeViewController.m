@@ -9,6 +9,10 @@
 #import "HomeViewController.h"
 #import "Model/Events.h"
 #import "ThirdParty/SVProgressHUD/SVProgressHUD.h"
+#import "ThirdParty/DWTagList/DWTagList.h"
+#import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
+#import "NearbyVenuesController.h"
+
 #import <MobileCoreServices/UTCoreTypes.h>
 @interface HomeViewController ()
 
@@ -206,15 +210,7 @@
         UIActivityTypeAssignToContact,
         UIActivityTypePrint
     ];
-    if ([self saveEvent]) {
-        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                             message:@"Failed to save"
-                                                            delegate:nil
-                                                   cancelButtonTitle:@"OK"
-                                                   otherButtonTitles:nil];
-        [errorAlert show];
-
-    }
+    [self saveEvent];
     BOOL isRunningOniPhone =
     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone;
     if( isRunningOniPhone == YES){
@@ -277,12 +273,7 @@
 #pragma mark CLLocationManagerDelegate Methods
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     NSLog(@"didFailWithError:%@", error);
-    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                         message:@"Failed to get the location"
-                                                        delegate:nil
-                                               cancelButtonTitle:@"OK"
-                                               otherButtonTitles:nil];
-    [errorAlert show];
+    [SVProgressHUD showErrorWithStatus:@"I cannot get your current location"];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
@@ -297,6 +288,10 @@
         
         // stop when we have one location found
         [locationManager stopUpdatingLocation];
+        
+        // get nearby venues by using foursquare api
+        NSArray *nearlist = [[NearbyVenuesController sharedInstance] getNearbyVenues:currentLocation];
+        NSLog(@"Near by venues: %@", nearlist);
         
         // resolve the address
         NSLog(@"Resolve Address");

@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "Util/ALAssetsLibrary+CustomPhotoAlbum.h"
+#import "ThirdParty/FontAwesome/FAImageView.h"
 
 @interface HomeViewController : UIViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextViewDelegate,CLLocationManagerDelegate>
 {
