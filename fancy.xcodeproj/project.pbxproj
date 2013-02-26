@@ -76,6 +76,7 @@
 		A0DFC40A16DAC5380072DC0C /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0DFC40816DAC5380072DC0C /* DroidSans-Bold.ttf */; };
 		A0DFC40B16DAC5380072DC0C /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0DFC40916DAC5380072DC0C /* DroidSans.ttf */; };
 		A0DFC40F16DAC9660072DC0C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0DFC40E16DAC9660072DC0C /* FontAwesome.ttf */; };
+		A0DFC41316DD53270072DC0C /* NSStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFC41216DD53260072DC0C /* NSStringHelper.m */; };
 		A0E852BE16AF063100976786 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852BC16AF063100976786 /* location.png */; };
 		A0E852BF16AF063100976786 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852BD16AF063100976786 /* location@2x.png */; };
 		A0E852C316AF088E00976786 /* photo_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C116AF088E00976786 /* photo_frame.png */; };
@@ -202,6 +203,8 @@
 		A0DFC40816DAC5380072DC0C /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSans-Bold.ttf"; sourceTree = "<group>"; };
 		A0DFC40916DAC5380072DC0C /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 		A0DFC40E16DAC9660072DC0C /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		A0DFC41116DD53260072DC0C /* NSStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringHelper.h; sourceTree = "<group>"; };
+		A0DFC41216DD53260072DC0C /* NSStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringHelper.m; sourceTree = "<group>"; };
 		A0E852BC16AF063100976786 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		A0E852BD16AF063100976786 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
 		A0E852C116AF088E00976786 /* photo_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_frame.png; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 		A091648916ABCC01009FBF5F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A0DFC41016DD52A20072DC0C /* Helpers */,
 				A091648B16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				A091648C16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m */,
 				A09164A416AC85CD009FBF5F /* Utility.h */,
@@ -492,6 +496,15 @@
 			path = ThirdParty/Foursquare2;
 			sourceTree = "<group>";
 		};
+		A0DFC41016DD52A20072DC0C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A0DFC41116DD53260072DC0C /* NSStringHelper.h */,
+				A0DFC41216DD53260072DC0C /* NSStringHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		A0E852C816AF20A700976786 /* test */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +669,7 @@
 				A0C5345616D47DBB005C8F2B /* FSRequester.m in Sources */,
 				A0C5345716D47DBB005C8F2B /* FSTargetCallback.m in Sources */,
 				A0C5345816D47DBB005C8F2B /* FSWebLogin.m in Sources */,
+				A0DFC41316DD53270072DC0C /* NSStringHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
