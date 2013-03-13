@@ -13,6 +13,8 @@
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
 #import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
 #import "ThirdParty/SORelativeDateTransformer/SORelativeDateTransformer.h"
+#import "NSStringHelper.h"
+
 @interface FoodieListViewController ()
 
 @end
@@ -123,20 +125,20 @@
     NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
     NSLog(@"date: %@, loc: %@",[event valueForKey:@"creationDate"], [event valueForKey:@"locationName"]);
     
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
-//    [formatter setDateStyle:NSDateFormatterShortStyle];
-//    [formatter setTimeStyle:NSDateFormatterNoStyle];
-//    NSString *date = [formatter stringFromDate:[event valueForKey:@"creationDate"]];
     
     SORelativeDateTransformer *relativeDateTransformer = [[SORelativeDateTransformer alloc] init];
     NSString *relativeDate = [relativeDateTransformer transformedValue:[event valueForKey:@"creationDate"]];
     NSMutableAttributedString *dateWithIcon = [NSString stringWithFontAwesomeIcon:@"icon-time" withTextContent:relativeDate];
+    [cell.dateLabel setAttributedText:dateWithIcon];
     
     NSString *location = [event valueForKey:@"locationName"];
-    [cell.dateLabel setAttributedText:dateWithIcon];
-
-    [cell.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:location]];
+    if ([NSString isEmpty:location]) {
+        [cell.locationLabel setText:@"Not Provided"];
+        NSLog(@"Not Provided");
+    }else{
+        [cell.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:location]];
+    }
+    
     NSManagedObject *photoBlob = [event valueForKey:@"photoBlob"];
     UIImage *image = [UIImage imageWithData:[photoBlob valueForKey:@"bytes"]];
     cell.photoView.image = image;

@@ -53,7 +53,7 @@ enum {
 /*
  * Checks to see if the string is empty
  */
-- (BOOL)isEmpty:(NSString *)aString;
++ (BOOL)isEmpty:(NSString *)aString;
 /*
  * Checks to see if the string contains the given string, case insenstive
  */

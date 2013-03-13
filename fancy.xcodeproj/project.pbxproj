@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A06E434316DD6AAD00342DB4 /* Names.m in Sources */ = {isa = PBXBuildFile; fileRef = A06E433F16DD6AAC00342DB4 /* Names.m */; };
+		A06E434416DD6AAD00342DB4 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = A06E434016DD6AAD00342DB4 /* README.markdown */; };
+		A06E434516DD6AAD00342DB4 /* TITokenField.m in Sources */ = {isa = PBXBuildFile; fileRef = A06E434216DD6AAD00342DB4 /* TITokenField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A08D750F16AB138E00AD22B7 /* SharingActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A08D750E16AB138E00AD22B7 /* SharingActivity.m */; };
 		A08D751816AB529400AD22B7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08D751716AB529400AD22B7 /* AssetsLibrary.framework */; };
 		A091648D16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = A091648C16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
@@ -97,9 +100,16 @@
 		A0E852EC16AF44A100976786 /* common_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852E316AF44A100976786 /* common_bg@2x.png */; };
 		A0E852EE16AF4D9200976786 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E852ED16AF4D9100976786 /* MapKit.framework */; };
 		A0E852F116AF4EA400976786 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852F016AF4EA300976786 /* SearchViewController.m */; };
+		A0FB9BD316F01A7C008B6712 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FB9BD216F01A7C008B6712 /* BButton.m */; };
+		A0FB9BD716F01D59008B6712 /* BButton+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FB9BD616F01D59008B6712 /* BButton+FontAwesome.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A06E433E16DD6AAC00342DB4 /* Names.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Names.h; sourceTree = "<group>"; };
+		A06E433F16DD6AAC00342DB4 /* Names.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Names.m; sourceTree = "<group>"; };
+		A06E434016DD6AAD00342DB4 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		A06E434116DD6AAD00342DB4 /* TITokenField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TITokenField.h; sourceTree = "<group>"; };
+		A06E434216DD6AAD00342DB4 /* TITokenField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TITokenField.m; sourceTree = "<group>"; };
 		A08D750D16AB138E00AD22B7 /* SharingActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingActivity.h; sourceTree = "<group>"; };
 		A08D750E16AB138E00AD22B7 /* SharingActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingActivity.m; sourceTree = "<group>"; };
 		A08D751716AB529400AD22B7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -230,6 +240,10 @@
 		A0E852ED16AF4D9100976786 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A0E852EF16AF4EA200976786 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		A0E852F016AF4EA300976786 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		A0FB9BD116F01A7C008B6712 /* BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BButton.h; path = ThirdParty/BButton/BButton.h; sourceTree = "<group>"; };
+		A0FB9BD216F01A7C008B6712 /* BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BButton.m; path = ThirdParty/BButton/BButton.m; sourceTree = "<group>"; };
+		A0FB9BD516F01D59008B6712 /* BButton+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BButton+FontAwesome.h"; path = "ThirdParty/BButton/BButton+FontAwesome.h"; sourceTree = "<group>"; };
+		A0FB9BD616F01D59008B6712 /* BButton+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BButton+FontAwesome.m"; path = "ThirdParty/BButton/BButton+FontAwesome.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +266,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A06E433D16DD6AAC00342DB4 /* TITokenField */ = {
+			isa = PBXGroup;
+			children = (
+				A06E433E16DD6AAC00342DB4 /* Names.h */,
+				A06E433F16DD6AAC00342DB4 /* Names.m */,
+				A06E434016DD6AAD00342DB4 /* README.markdown */,
+				A06E434116DD6AAD00342DB4 /* TITokenField.h */,
+				A06E434216DD6AAD00342DB4 /* TITokenField.m */,
+			);
+			name = TITokenField;
+			path = ThirdParty/TITokenField;
+			sourceTree = "<group>";
+		};
 		A091648916ABCC01009FBF5F /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +450,8 @@
 		A0A0373C16D06FEF004FD29E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A0FB9BD416F01A86008B6712 /* BButton */,
+				A06E433D16DD6AAC00342DB4 /* TITokenField */,
 				A0C5344916D47DBB005C8F2B /* Foursquare2 */,
 				A09C641D16D19F7D00746777 /* MGBox */,
 				A09C641C16D19E1700746777 /* SORelativeDateTransformer */,
@@ -528,6 +557,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		A0FB9BD416F01A86008B6712 /* BButton */ = {
+			isa = PBXGroup;
+			children = (
+				A0FB9BD116F01A7C008B6712 /* BButton.h */,
+				A0FB9BD216F01A7C008B6712 /* BButton.m */,
+				A0FB9BD516F01D59008B6712 /* BButton+FontAwesome.h */,
+				A0FB9BD616F01D59008B6712 /* BButton+FontAwesome.m */,
+			);
+			name = BButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -625,6 +665,7 @@
 				A0DFC40A16DAC5380072DC0C /* DroidSans-Bold.ttf in Resources */,
 				A0DFC40B16DAC5380072DC0C /* DroidSans.ttf in Resources */,
 				A0DFC40F16DAC9660072DC0C /* FontAwesome.ttf in Resources */,
+				A06E434416DD6AAD00342DB4 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +711,10 @@
 				A0C5345716D47DBB005C8F2B /* FSTargetCallback.m in Sources */,
 				A0C5345816D47DBB005C8F2B /* FSWebLogin.m in Sources */,
 				A0DFC41316DD53270072DC0C /* NSStringHelper.m in Sources */,
+				A06E434316DD6AAD00342DB4 /* Names.m in Sources */,
+				A06E434516DD6AAD00342DB4 /* TITokenField.m in Sources */,
+				A0FB9BD316F01A7C008B6712 /* BButton.m in Sources */,
+				A0FB9BD716F01D59008B6712 /* BButton+FontAwesome.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +784,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

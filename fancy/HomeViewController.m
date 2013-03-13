@@ -11,6 +11,7 @@
 #import "ThirdParty/SVProgressHUD/SVProgressHUD.h"
 #import "ThirdParty/DWTagList/DWTagList.h"
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
+#import "ThirdParty/BButton/BButton.h"
 #import "NearbyVenuesController.h"
 
 #import <MobileCoreServices/UTCoreTypes.h>
@@ -46,7 +47,15 @@
     self.commentTextField = (UITextView *)[self.view viewWithTag:101];
     self.commentTextField.delegate = self;
     self.commentTextField.text = @"Comments on current dish";
+    BButton *btn1 = (BButton *)[self.view viewWithTag:103];
+    //[btn1 setTitle:@"Login" forState:UIControlStateNormal]; // Set the button title
+    //[btn1 addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [btn1 setType:BButtonTypePrimary];
     
+    //btn1.color = [UIColor purpleColor]; // Set purple color
+    BButton *btn2 = (BButton *)[self.view viewWithTag:104];
+    [btn2 setType:BButtonTypeInfo];
+    //btn2.color = [UIColor purpleColor];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

@@ -9,6 +9,7 @@
 #import "FoodieDetailViewController.h"
 #import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
+#import "NSStringHelper.h"
 @interface FoodieDetailViewController ()
 
 @end
@@ -45,7 +46,13 @@
     [self.tagsLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-tags" withTextContent:@"tags of current food"]];
     UIImage *image = [UIImage imageWithData:self.event.photo];
     self.detailPhotoView.image = image;
-    [self.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:self.event.locationName]];
+    
+    if ([NSString isEmpty:self.event.locationName]) {
+        [self.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:@"Unknown"]];
+        NSLog(@"Not Provided");
+    }else{
+        [self.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:self.event.locationName]];
+    }
     //self.commentLabel.text = self.event.comment;
     
 	// Do any additional setup after loading the view.

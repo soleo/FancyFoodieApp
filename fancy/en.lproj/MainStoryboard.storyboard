@@ -4,20 +4,19 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home View Controller - Fancy-->
         <scene sceneID="6H2-VA-z5l">
             <objects>
                 <viewController id="8em-sp-U1M" customClass="HomeViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NXb-Wn-pME">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-Ik-iOV">
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-Ik-iOV" customClass="BButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="WBI-0c-xa4"/>
+                                    <constraint firstAttribute="height" constant="41" id="aOV-Lo-snq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Save but Skip Sharing" backgroundImage="Default.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save but Skip Sharing">
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
@@ -40,14 +39,13 @@
                                     <outlet property="delegate" destination="8em-sp-U1M" id="71Y-4I-cTj"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRj-3K-82d">
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRj-3K-82d" customClass="BButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="UFR-O7-iKo"/>
+                                    <constraint firstAttribute="height" constant="47" id="3X9-y9-Mh3"/>
                                     <constraint firstAttribute="width" constant="277" id="pwN-py-YFK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Sharing with Your friends" backgroundImage="Default.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sharing with Your friends">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -101,23 +99,24 @@
                             <constraint firstItem="0RW-ZG-m4H" firstAttribute="top" secondItem="4ei-0y-Pl9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5vE-Fc-Ldh"/>
                             <constraint firstItem="oDL-8E-7GR" firstAttribute="top" secondItem="NXb-Wn-pME" secondAttribute="top" constant="5" id="EGG-6q-Kvs"/>
                             <constraint firstItem="oDL-8E-7GR" firstAttribute="leading" secondItem="NXb-Wn-pME" secondAttribute="leading" constant="15" id="GGh-Oh-ZH5"/>
+                            <constraint firstItem="8cd-Ik-iOV" firstAttribute="top" secondItem="fRj-3K-82d" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ikw-3T-VSt"/>
                             <constraint firstItem="dcZ-DF-oYs" firstAttribute="trailing" secondItem="fRj-3K-82d" secondAttribute="trailing" type="default" id="KhL-QW-O4A"/>
                             <constraint firstAttribute="trailing" secondItem="oDL-8E-7GR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="La2-P4-fAd"/>
                             <constraint firstItem="fRj-3K-82d" firstAttribute="top" secondItem="NXb-Wn-pME" secondAttribute="top" constant="347" id="NNR-rH-iIF"/>
                             <constraint firstItem="fRj-3K-82d" firstAttribute="leading" secondItem="8cd-Ik-iOV" secondAttribute="leading" type="default" id="Otx-dy-Afl"/>
                             <constraint firstItem="8cd-Ik-iOV" firstAttribute="centerX" secondItem="NXb-Wn-pME" secondAttribute="centerX" type="default" id="Txz-rz-tEO"/>
-                            <constraint firstAttribute="bottom" secondItem="8cd-Ik-iOV" secondAttribute="bottom" constant="11" id="XUE-df-sr6"/>
                             <constraint firstItem="qRD-sy-d6R" firstAttribute="leading" secondItem="NXb-Wn-pME" secondAttribute="leading" constant="28" id="cvx-tx-RgU"/>
                             <constraint firstItem="4ei-0y-Pl9" firstAttribute="leading" secondItem="NXb-Wn-pME" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dZQ-bh-nP2"/>
                             <constraint firstItem="4ei-0y-Pl9" firstAttribute="top" secondItem="NXb-Wn-pME" secondAttribute="top" constant="191" id="l9V-j1-eS7"/>
                             <constraint firstItem="dcZ-DF-oYs" firstAttribute="centerY" secondItem="0RW-ZG-m4H" secondAttribute="centerY" type="default" id="pOH-oX-CQM"/>
                             <constraint firstItem="dcZ-DF-oYs" firstAttribute="trailing" secondItem="4ei-0y-Pl9" secondAttribute="trailing" type="default" id="ptx-JP-S0d"/>
-                            <constraint firstItem="8cd-Ik-iOV" firstAttribute="top" secondItem="NXb-Wn-pME" secondAttribute="top" constant="402" id="t3A-4c-b4k"/>
                             <constraint firstItem="0RW-ZG-m4H" firstAttribute="leading" secondItem="fRj-3K-82d" secondAttribute="leading" type="default" id="vBk-3N-098"/>
                             <constraint firstItem="fRj-3K-82d" firstAttribute="trailing" secondItem="8cd-Ik-iOV" secondAttribute="trailing" type="default" id="vHF-sS-d0Z"/>
+                            <constraint firstAttribute="bottom" secondItem="8cd-Ik-iOV" secondAttribute="bottom" constant="12" id="weT-iC-lOy"/>
                         </constraints>
                     </scrollView>
-                    <navigationItem key="navigationItem" id="4NY-iw-fca">
+                    <navigationItem key="navigationItem" title="Fancy" id="4NY-iw-fca">
+                        <barButtonItem key="backBarButtonItem" title="Info" id="4Dl-0M-9yB"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="eyi-6v-0np">
                             <connections>
                                 <action selector="choosePhoto:" destination="8em-sp-U1M" id="s5E-mx-epq"/>
@@ -493,13 +492,68 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Default.png" width="320" height="480"/>
         <image name="creme_brelee.jpg" width="560" height="350"/>
         <image name="first" width="16" height="16"/>
         <image name="location.png" width="35" height="35"/>
         <image name="photo_frame.png" width="297" height="199"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="BButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BButton.h"/>
+        </class>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+        </class>
+        <class className="FoodieDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="commentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailPhotoView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tagsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FoodieListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="FoodieListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListViewController.h"/>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="choosePhoto:"/>
+                <relationship kind="action" name="getCurrentLocation:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="action" name="sharing:"/>
+                <relationship kind="outlet" name="commentTextField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="imageViewField" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+        </class>
+        <class className="UIRefreshControl" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

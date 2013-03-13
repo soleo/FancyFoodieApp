@@ -46,7 +46,7 @@ int const GGCharacterIsNotADigit = 10;
 	return [self containsString:string options:NSCaseInsensitiveSearch];
 }
 
-- (BOOL)isEmpty:(NSString *)aString{
++ (BOOL)isEmpty:(NSString *)aString{
     if ((NSNull *) aString == [NSNull null]) {
         return YES;
     }
