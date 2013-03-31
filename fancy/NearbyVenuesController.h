@@ -9,14 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ThirdParty/Foursquare2/Foursquare2.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface NearbyVenuesController : NSObject
+@interface NearbyVenuesController : NSObject<CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
+}
+@property (strong,nonatomic) NSDictionary* selected;
+@property (strong,nonatomic) NSArray* nearbyVenues;
+@property (strong,nonatomic) CLLocation *currentLocation;
 
-@property (strong,nonatomic)NSDictionary* selected;
-@property (strong,nonatomic)NSArray* nearbyVenues;
-
-+ (id) sharedInstance;
-
-+ (NSArray *)getNearbyVenues:(CLLocation *)location;
-
+- (void) startSearchingCurrentLocation;
+- (NSArray *)getNearbyVenues:(CLLocation *)location;
+- (NSArray *)getDefaultVenues;
 @end

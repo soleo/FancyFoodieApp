@@ -37,6 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     // Location setup
     locationManager = [[CLLocationManager alloc] init];
     geocoder = [[CLGeocoder alloc] init];
@@ -102,7 +104,7 @@
         [SVProgressHUD showErrorWithStatus:@"Failed to Save!"];
     }
     [SVProgressHUD showSuccessWithStatus:@"Added a New Event"];
-    NSLog(@" added a new event");
+    NSLog(@"Added a new event");
     
     //[self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -299,8 +301,8 @@
         [locationManager stopUpdatingLocation];
         
         // get nearby venues by using foursquare api
-        NSArray *nearlist = [[NearbyVenuesController sharedInstance] getNearbyVenues:currentLocation];
-        NSLog(@"Near by venues: %@", nearlist);
+  //      NSArray *nearlist = [[NearbyVenuesController sharedInstance] getNearbyVenues:currentLocation];
+  //      NSLog(@"Near by venues: %@", nearlist);
         
         // resolve the address
         NSLog(@"Resolve Address");
