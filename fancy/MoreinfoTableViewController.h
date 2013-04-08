@@ -19,6 +19,8 @@
 @property (nonatomic, strong) FKFormModel *formModel;
 @property (nonatomic, strong) aEvent *event;
 @property (nonatomic, strong) CLLocation *currentLocation;
-@property (nonatomic, copy) NSArray *nearbyVenues;
+@property (nonatomic, weak) NSArray *nearbyVenues;
 -(void)getVenuesForLocation:(CLLocation*)location;
+-(IBAction)saveEvent:(id)sender;
+
 @end

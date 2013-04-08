@@ -20,7 +20,7 @@
 @property (strong,nonatomic) NSDictionary* selected;
 @property (strong,nonatomic) NSArray* nearbyVenues;
 @property (strong,nonatomic) CLLocation *currentLocation;
-
+- (void) increaseProgress;
 - (void) startSearchingCurrentLocation;
 - (NSArray *)getNearbyVenues:(CLLocation *)location;
 - (NSArray *)getDefaultVenues;

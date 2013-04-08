@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "Util/ALAssetsLibrary+CustomPhotoAlbum.h"
-#import "ThirdParty/TITokenField/TITokenField.h"
+
 
 @interface HomeViewController : UIViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextViewDelegate,CLLocationManagerDelegate>
 {

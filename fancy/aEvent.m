@@ -26,8 +26,8 @@
 
 - (NSString *)description {
     return [NSString stringWithFormat:
-            @"place = %@, otherplace = %@, comment = %@, publishDate = %@, rate = %@, tags = %@, photo = %@ ",
-            self.place, self.otherplace, self.comment, self.publishDate, self.rate, self.tags, self.photo];
+            @"place = %@, otherplace = %@, comment = %@, publishDate = %@, rate = %@, tags = %@, photo = %@ , latitude = %@, longitude = %@, thumbnail = %@",
+            self.place, self.otherplace, self.comment, self.publishDate, self.rate, self.tags, self.photo, self.latitude, self.longitude, self.thumbnail];
 }
 
 @end

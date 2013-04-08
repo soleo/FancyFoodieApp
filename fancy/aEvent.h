@@ -22,6 +22,9 @@
 @property (nonatomic, retain) NSString *tags;
 //@property (nonatomic, retain) NSNumber *rate;
 @property (nonatomic, strong) NSData *photo;
+@property (nonatomic, retain) NSData *thumbnail;
+@property (nonatomic, retain) NSNumber *longitude;
+@property (nonatomic, retain) NSNumber *latitude;
 
 + (id)initWithPhoto:(NSData *)newPhoto ;
 @end

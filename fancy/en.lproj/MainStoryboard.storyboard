@@ -160,7 +160,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bhh-Ok-L3n" kind="push" id="yly-9l-ZEC"/>
+                                    <segue destination="bhh-Ok-L3n" kind="push" identifier="passPhotoSegue" id="yly-9l-ZEC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -215,7 +215,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="More Info" id="ZP4-r3-1ej">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pnR-Mn-0xn"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pnR-Mn-0xn">
+                            <connections>
+                                <action selector="saveEvent:" destination="bhh-Ok-L3n" id="4br-mL-h65"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQl-hh-kpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -587,72 +591,6 @@
         <image name="photo_frame.png" width="297" height="199"/>
         <image name="second" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="BButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BButton.h"/>
-        </class>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-        </class>
-        <class className="FoodieDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="commentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailPhotoView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tagsLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FoodieListCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="FoodieListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListViewController.h"/>
-        </class>
-        <class className="HomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="choosePhoto:"/>
-                <relationship kind="action" name="getCurrentLocation:"/>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="action" name="sharing:"/>
-                <relationship kind="outlet" name="commentTextField" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="imageViewField" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MoreinfoTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreinfoTableViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PickphotoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PickphotoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="BButton"/>
-            </relationships>
-        </class>
-        <class className="SearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="SettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-        </class>
-        <class className="UIRefreshControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

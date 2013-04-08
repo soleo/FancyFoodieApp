@@ -11,10 +11,12 @@
 
 @implementation NearbyVenuesController
 
-- (NSArray *)getNearbyVenues:(CLLocation *)location 
+- (NSArray *)getNearbyVenues:(CLLocation *)location
 {
     //NearbyVenuesController *c = [[NearbyVenuesController alloc] init];
     //NSArray *venues = nil;
+    
+    //[SVProgressHUD showProgress:0 status:@"Loading..." maskType:SVProgressHUDMaskTypeBlack];
     [Foursquare2 searchVenuesNearByLatitude:@(location.coordinate.latitude)
                                   longitude:@(location.coordinate.longitude)
                                  accuracyLL:nil
@@ -25,6 +27,7 @@
                                      intent:nil
                                      radius:@(500)
                                    callback:^(BOOL success, id result) {
+                                       
                                        if(success){
                                            NSDictionary *dic = result;
                                            //NSArray *venues = [[dic valueForKey:@"response"] valueForKey:@"venues"];
@@ -33,8 +36,9 @@
                                            //FSConverter *converter = [[FSConverter alloc]init];
                                            //self.nearbyVenues = [converter convertToObjects:venues];
                                            self.nearbyVenues = venues;
-                                           NSLog(@"Venues: %@", self.nearbyVenues);
                                            
+                                           NSLog(@"Venues: %@", self.nearbyVenues);
+                                           //[SVProgressHUD showProgress:1.0 status:@"Loading..." maskType:SVProgressHUDMaskTypeBlack];
                                        }
     }];
     

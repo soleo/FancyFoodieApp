@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A043C9E7170A825500504320 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E1170A825400504320 /* UIImage+Resize.m */; };
+		A043C9E8170A825500504320 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E2170A825400504320 /* UIImage+Alpha.m */; };
+		A043C9E9170A825500504320 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */; };
 		A063F67216FFD5D70004E0EE /* XJPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A063F67116FFD5D60004E0EE /* XJPhotoPickerController.m */; };
 		A06E434316DD6AAD00342DB4 /* Names.m in Sources */ = {isa = PBXBuildFile; fileRef = A06E433F16DD6AAC00342DB4 /* Names.m */; };
 		A06E434416DD6AAD00342DB4 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = A06E434016DD6AAD00342DB4 /* README.markdown */; };
@@ -151,6 +154,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A043C9E1170A825400504320 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Util/UIImage+Resize.m"; sourceTree = "<group>"; };
+		A043C9E2170A825400504320 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "Util/UIImage+Alpha.m"; sourceTree = "<group>"; };
+		A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedCorner.m"; path = "Util/UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		A043C9E4170A825500504320 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RoundedCorner.h"; path = "Util/UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		A043C9E5170A825500504320 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "Util/UIImage+Resize.h"; sourceTree = "<group>"; };
+		A043C9E6170A825500504320 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Alpha.h"; path = "Util/UIImage+Alpha.h"; sourceTree = "<group>"; };
 		A063F67016FFD5D60004E0EE /* XJPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPhotoPickerController.h; sourceTree = "<group>"; };
 		A063F67116FFD5D60004E0EE /* XJPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPhotoPickerController.m; sourceTree = "<group>"; };
 		A06E433E16DD6AAC00342DB4 /* Names.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Names.h; sourceTree = "<group>"; };
@@ -428,6 +437,12 @@
 		A091648916ABCC01009FBF5F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A043C9E1170A825400504320 /* UIImage+Resize.m */,
+				A043C9E2170A825400504320 /* UIImage+Alpha.m */,
+				A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */,
+				A043C9E4170A825500504320 /* UIImage+RoundedCorner.h */,
+				A043C9E5170A825500504320 /* UIImage+Resize.h */,
+				A043C9E6170A825500504320 /* UIImage+Alpha.h */,
 				A0DFC41016DD52A20072DC0C /* Helpers */,
 				A091648B16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				A0C6114B1708044C002F1180 /* FSConverter.h */,
@@ -1073,6 +1088,9 @@
 				A0C611491707B7BA002F1180 /* PrettyTabBar.m in Sources */,
 				A0C6114A1707B7BA002F1180 /* PrettyToolbar.m in Sources */,
 				A0C6114D1708045B002F1180 /* FSConverter.m in Sources */,
+				A043C9E7170A825500504320 /* UIImage+Resize.m in Sources */,
+				A043C9E8170A825500504320 /* UIImage+Alpha.m in Sources */,
+				A043C9E9170A825500504320 /* UIImage+RoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
