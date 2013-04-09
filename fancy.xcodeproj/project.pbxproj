@@ -10,8 +10,6 @@
 		55D673BD17139BC80005394E /* NavBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BC17139BC80005394E /* NavBg.png */; };
 		55D673BF17139C9C0005394E /* NavigationButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BE17139C9C0005394E /* NavigationButtonBG.png */; };
 		55D673C117139CA60005394E /* NavigationButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C017139CA60005394E /* NavigationButtonBG@2x.png */; };
-		55D673C617139E450005394E /* NavigationBarBG-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C217139E450005394E /* NavigationBarBG-568h.png */; };
-		55D673C717139E450005394E /* NavigationBarBG-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C317139E450005394E /* NavigationBarBG-568h@2x.png */; };
 		55D673C817139E450005394E /* NavigationBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C417139E450005394E /* NavigationBarBG.png */; };
 		55D673C917139E450005394E /* NavigationBarBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C517139E450005394E /* NavigationBarBG@2x.png */; };
 		A043C9E7170A825500504320 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E1170A825400504320 /* UIImage+Resize.m */; };
@@ -164,8 +162,6 @@
 		55D673BC17139BC80005394E /* NavBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBg.png; sourceTree = "<group>"; };
 		55D673BE17139C9C0005394E /* NavigationButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationButtonBG.png; sourceTree = "<group>"; };
 		55D673C017139CA60005394E /* NavigationButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationButtonBG@2x.png"; sourceTree = "<group>"; };
-		55D673C217139E450005394E /* NavigationBarBG-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBarBG-568h.png"; sourceTree = "<group>"; };
-		55D673C317139E450005394E /* NavigationBarBG-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBarBG-568h@2x.png"; sourceTree = "<group>"; };
 		55D673C417139E450005394E /* NavigationBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBarBG.png; sourceTree = "<group>"; };
 		55D673C517139E450005394E /* NavigationBarBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBarBG@2x.png"; sourceTree = "<group>"; };
 		A043C9E1170A825400504320 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Util/UIImage+Resize.m"; sourceTree = "<group>"; };
@@ -563,8 +559,6 @@
 				A093F1AC16A7FEFC00EFF4BD /* AppDelegate.h */,
 				A093F1AD16A7FEFC00EFF4BD /* AppDelegate.m */,
 				55D673BC17139BC80005394E /* NavBg.png */,
-				55D673C217139E450005394E /* NavigationBarBG-568h.png */,
-				55D673C317139E450005394E /* NavigationBarBG-568h@2x.png */,
 				55D673C417139E450005394E /* NavigationBarBG.png */,
 				55D673C517139E450005394E /* NavigationBarBG@2x.png */,
 				55D673C017139CA60005394E /* NavigationButtonBG@2x.png */,
@@ -1017,8 +1011,6 @@
 				55D673BD17139BC80005394E /* NavBg.png in Resources */,
 				55D673BF17139C9C0005394E /* NavigationButtonBG.png in Resources */,
 				55D673C117139CA60005394E /* NavigationButtonBG@2x.png in Resources */,
-				55D673C617139E450005394E /* NavigationBarBG-568h.png in Resources */,
-				55D673C717139E450005394E /* NavigationBarBG-568h@2x.png in Resources */,
 				55D673C817139E450005394E /* NavigationBarBG.png in Resources */,
 				55D673C917139E450005394E /* NavigationBarBG@2x.png in Resources */,
 			);

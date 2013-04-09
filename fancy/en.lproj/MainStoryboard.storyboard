@@ -643,9 +643,6 @@
         <class className="PickphotoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PickphotoViewController.h"/>
             <relationships>
-                <relationship kind="action" name="didCancel:"/>
-                <relationship kind="action" name="didChoose:"/>
-                <relationship kind="action" name="takePicture:"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="nextButton" candidateClass="BButton"/>
             </relationships>
