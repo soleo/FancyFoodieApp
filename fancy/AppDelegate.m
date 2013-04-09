@@ -14,10 +14,22 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (void)initSettings
 {
-    // Override point for customization after application launch.
+    
+}
+- (void)initAppearance
+{
+    // Change Navigation Bar Style
+    UIImage *navBarBtn = [[UIImage imageNamed:@"NavigationButtonBG.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(14, 6, 14, 6)];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBarBG.png"]
+                                       forBarMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:navBarBtn
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setBackgroundImage:navBarBtn
+                                                                                        forState:UIControlStateNormal
+                                                                                      barMetrics:UIBarMetricsDefault];
     // Assign tab bar item with titles
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -47,22 +59,29 @@
     
     [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar_bg"]];
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selection"]];
-
+    
     NSDictionary *normalState = @{
-    UITextAttributeTextColor : [UIColor colorWithWhite:0.213 alpha:1.000],
-UITextAttributeTextShadowColor: [UIColor whiteColor],
-UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
-    };
+                                  UITextAttributeTextColor : [UIColor colorWithWhite:0.213 alpha:1.000],
+                                  UITextAttributeTextShadowColor: [UIColor whiteColor],
+                                  UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
+                                  };
     
     NSDictionary *selectedState = @{
-    UITextAttributeTextColor : [UIColor blackColor],
-UITextAttributeTextShadowColor: [UIColor whiteColor],
-UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
-    };
+                                    UITextAttributeTextColor : [UIColor blackColor],
+                                    UITextAttributeTextShadowColor: [UIColor whiteColor],
+                                    UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
+                                    };
     
     [[UITabBarItem appearance] setTitleTextAttributes:normalState forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:selectedState forState:UIControlStateSelected];
+}
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    [self initAppearance];
+    [self initSettings];
     
     return YES;
 }
