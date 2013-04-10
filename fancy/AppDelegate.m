@@ -8,16 +8,36 @@
 
 #import "AppDelegate.h"
 #import "Util/Utility.h"
-
+#import "NearbyVenuesController.h"
+#import "ThirdParty/BaseKit/Code/LocationManager/BaseKitLocationManager.h"
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
 - (void)initSettings
 {
     
 }
+
+- (void)initLocationManager
+{
+    BKLocationManager *manager = [BKLocationManager sharedManager];
+    [manager setDidUpdateLocationBlock:^(CLLocationManager *manager, CLLocation *newLocation, CLLocation *oldLocation) {
+        NSLog(@"didUpateLocation");
+        NearbyVenuesController *nvc = [NearbyVenuesController sharedManager];
+        [nvc getNearbyVenues:newLocation];
+        NSLog(@"%@", nvc.nearbyVenues);
+        //[manager stopUpdatingLocation];
+    }];
+    [manager setDidFailBlock:^(CLLocationManager *manager, NSError *error) {
+        NSLog(@"didFailUpdateLocation");
+    }];
+    [manager startUpdatingLocationWithAccuracy:kCLLocationAccuracyHundredMeters];
+    
+}
+
 - (void)initAppearance
 {
     // Change Navigation Bar Style
@@ -82,7 +102,7 @@
     // Override point for customization after application launch.
     [self initAppearance];
     [self initSettings];
-    
+    [self initLocationManager];
     return YES;
 }
 							

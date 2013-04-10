@@ -13,18 +13,12 @@
 @property (nonatomic, retain) NSString *otherplace;
 @property (nonatomic, retain) NSString *comment;
 @property (nonatomic, retain) NSDate *publishDate;
-//@property (nonatomic, retain) NSNumber *numberOfActor;
-//@property (nonatomic, retain) NSNumber *suitAllAges;
-//@property (nonatomic, retain) Genre *genre;
-//@property (nonatomic, retain) NSString *password;
-//@property (nonatomic, retain) NSString *shortName;
 @property (nonatomic, retain) NSString *rate;
 @property (nonatomic, retain) NSString *tags;
-//@property (nonatomic, retain) NSNumber *rate;
 @property (nonatomic, strong) NSData *photo;
 @property (nonatomic, retain) NSData *thumbnail;
 @property (nonatomic, retain) NSNumber *longitude;
 @property (nonatomic, retain) NSNumber *latitude;
 
-+ (id)initWithPhoto:(NSData *)newPhoto ;
++ (id)initWithPhoto:(NSData *)newPhoto;
 @end

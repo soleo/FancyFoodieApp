@@ -77,11 +77,6 @@
 }
 
 
-//- (IBAction)goBack:(id)sender
-//{
-//    //[self dismissViewControllerAnimated:YES completion:nil];
-//    [self.pickPhotoController cancel];
-//}
 
 #pragma mark - UIViewController
 
@@ -100,20 +95,13 @@
 #pragma mark - Segue method
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"passPhotoSegue"]) {
-        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
         MoreinfoTableViewController *destViewController = segue.destinationViewController;
-        //NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
+        
         aEvent *passEvent = [aEvent new];
-//        passEvent.locationName = [event valueForKey:@"locationName"];
         passEvent.photo = (NSData *)self.imageView.image;
-//        passEvent.creationDate = [event valueForKey:@"creationDate"];
-//        passEvent.comment = [event valueForKey:@"comment"];
         destViewController.event = passEvent;
-        //        destViewController.event.locationName = [event valueForKey:@"locationName"];
-        //        destViewController.event.photo = [event valueForKey:@"photo"];
-        //        destViewController.event.creationDate = [event valueForKey:@"creationDate"];
-        //        destViewController.event.comment = [event valueForKey:@"comment"];
-        //        NSLog(@"prepareForSegue: %@",  destViewController.event);
+    
     }
 }
 

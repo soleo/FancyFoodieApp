@@ -12,15 +12,12 @@
 @class FKFormModel;
 @class aEvent;
 
-@interface MoreinfoTableViewController : UITableViewController<CLLocationManagerDelegate>
-{
-     CLLocationManager *locationManager;
-}
+@interface MoreinfoTableViewController : UITableViewController
+
 @property (nonatomic, strong) FKFormModel *formModel;
 @property (nonatomic, strong) aEvent *event;
 @property (nonatomic, strong) CLLocation *currentLocation;
-@property (nonatomic, weak) NSArray *nearbyVenues;
--(void)getVenuesForLocation:(CLLocation*)location;
--(IBAction)saveEvent:(id)sender;
 
+- (IBAction)saveEvent:(id)sender;
+- (void)initForm;
 @end

@@ -125,7 +125,7 @@ static float progress = 0.0f;
     [self.navigationController popToRootViewControllerAnimated:YES];
     //[self dismissViewControllerAnimated:YES completion:nil];
 }
-- (void)initFormWithVenues:(NSArray *)venues
+- (void)initForm
 {
     self.formModel = [FKFormModel formTableModelForTableView:self.tableView
                                         navigationController:self.navigationController];
@@ -180,17 +180,13 @@ static float progress = 0.0f;
                      showInPicker:NO
                 selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
                     *selectedValueIndex = 0;
-                    
-                    progress = 0.0f;
-                    [SVProgressHUD showProgress:0 status:@"Loading" maskType:SVProgressHUDMaskTypeBlack];
-                    [self performSelector:@selector(increaseProgress) withObject:nil afterDelay:0.3];
-                    NSLog(@"venues = %@", venues);
+                    NearbyVenuesController *nvc = [NearbyVenuesController sharedManager];
                     
                     //NSLog(@"current = %@", self.currentLocation);
                     self.event.longitude   = [NSNumber numberWithDouble:self.currentLocation.coordinate.longitude];
                     self.event.latitude    = [NSNumber numberWithDouble:self.currentLocation.coordinate.latitude];
-                    return venues;
-                    //return self.nearbyVenues;//[NSArray arrayWithObjects:@"Place 1", @"Place 2", @"Place 3",nil];
+                    return nvc.nearbyVenues;
+                    
                     
                 } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {
                     //NSLog(@"Object = %@", object);
@@ -275,10 +271,10 @@ static float progress = 0.0f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self getCurrentLocation];
-    [self initFormWithVenues:self.nearbyVenues];
-    [self getVenuesForLocation:self.currentLocation];
+    [self initForm];
+    //[self getCurrentLocation];
+    //[self initFormWithVenues:self.nearbyVenues];
+    //[self getVenuesForLocation:self.currentLocation];
     
 }
 - (void)viewDidUnload {
@@ -288,76 +284,8 @@ static float progress = 0.0f;
     self.event = nil;
 }
 
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return YES;
 }
-#pragma mark Location related functions
-- (void)getCurrentLocation
-{
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [locationManager startUpdatingLocation];
-}
--(void)getVenuesForLocation:(CLLocation*)location
-{
-    
-    [Foursquare2 searchVenuesNearByLatitude:@(location.coordinate.latitude)
-								  longitude:@(location.coordinate.longitude)
-								 accuracyLL:nil
-								   altitude:nil
-								accuracyAlt:nil
-									  query:nil
-									  limit:@(30)
-									 intent:nil
-                                     radius:@(500)
-								   callback:^(BOOL success, id result){
-                                       NSLog(@"Success = %@, result = %@", success, result);
-									   if (success) {
-										   NSDictionary *dic = result;
-										   NSArray* venues = [dic valueForKeyPath:@"response.venues"];
-                                           FSConverter *converter = [[FSConverter alloc]init];
-                                           self.nearbyVenues =  [converter convertToObjects:venues];
-                                           //[self.tableView insertSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
-                                           //[self proccessAnnotations];
-                                           if (self.nearbyVenues == nil && location != nil){
-                                               [self getVenuesForLocation:location];
-                                           }
-                                           [self initFormWithVenues:self.nearbyVenues];
-                                           
-									   }else{
-                                           //[self getVenuesForLocation:location];
-                                           //[self initFormWithVenues:self.nearbyVenues];
-                                       }
-                                       
-								   }];
-    
-    
-    
-}
 
-#pragma mark CLLocationManagerDelegate Methods
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    NSLog(@"didFailWithError:%@", error);
-    [SVProgressHUD showErrorWithStatus:@"I cannot get your current location"];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    NSLog(@"locationManager: didUpdateLocations: ");
-    
-    if (locations != nil && [locations count] > 0) {
-        // get location
-        CLLocation *currentLocation = [locations lastObject];
-        
-        self.currentLocation = currentLocation;
-        NSLog(@"%@", self.currentLocation);
-        // stop when we have one location found
-        [locationManager stopUpdatingLocation];
-    }
-    
-    
-}
 @end

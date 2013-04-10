@@ -9,15 +9,10 @@
 #import "aEvent.h"
 
 @implementation aEvent
-//@synthesize title, content, releaseDate, numberOfActor, suitAllAges, password, shortName, choice, rate;
-
 
 
 + (id)initWithPhoto:(NSData *)newPhoto{
     aEvent *event = [[aEvent alloc] init];
-    
-    //event.title = newTitle;
-    //event.content = newContent;
     event.photo = newPhoto;
     return event;
 }
