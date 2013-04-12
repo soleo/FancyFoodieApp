@@ -33,9 +33,11 @@
     
     if (navigationController) {
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:viewController()];
-        [self presentModalViewController:nc animated:animated];
+        [self presentViewController:nc animated:animated completion:nil];
+        //[self presentModalViewController:nc animated:animated];
     } else {
-        [self presentModalViewController:viewController() animated:animated];
+        [self presentViewController:viewController() animated:animated completion:nil];
+        //[self presentModalViewController:viewController() animated:animated];
     }
 }
 
