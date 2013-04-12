@@ -10,5 +10,5 @@
 
 @interface PickphotoViewController : UIViewController
 
-- (void)setImage:(UIImage *)anImage chooseBlock:(dispatch_block_t)chooseBlock cancelBlock:(dispatch_block_t)cancelBlock;
+
 @end

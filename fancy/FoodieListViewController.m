@@ -13,9 +13,12 @@
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
 #import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
 #import "ThirdParty/SORelativeDateTransformer/SORelativeDateTransformer.h"
+#import "ThirdParty/BButton/BButton.h"
+#import "ThirdParty/BButton/BButton+FontAwesome.h"
 #import "NSStringHelper.h"
 
 @interface FoodieListViewController ()
+- (NSManagedObjectContext *)managedObjectContext;
 
 @end
 
@@ -68,7 +71,12 @@
     
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Events" ];
-    self.events = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creationDate"
+                                                                   ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    self.events = [[context executeFetchRequest:fetchRequest  error:nil] mutableCopy];
     NSLog(@"events array %@", self.events);
     
     [self.tableView reloadData];
@@ -138,11 +146,15 @@
     }else{
         [cell.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:location]];
     }
+    [cell.menuButton makeAwesomeWithIcon:FAIconShareAlt];
+    [cell.menuButton setType:BButtonTypeSuccess];
+    [cell setupMenuInCell];
     
-    NSManagedObject *photoBlob = [event valueForKey:@"photoBlob"];
-    UIImage *image = [UIImage imageWithData:[photoBlob valueForKey:@"bytes"]];
-    cell.photoView.image = image;
-    
+    //NSManagedObject *photoBlob = [event valueForKey:@"photoBlob"];
+    //UIImage *image = [UIImage imageWithData:[photoBlob valueForKey:@"bytes"]];
+    //cell.photoView.image = image;
+    UIImage *thumbnail = [UIImage imageWithData:[event valueForKey:@"thumbnail"]];
+    cell.photoView.image = thumbnail;
     // more to show on the table
     return cell;
 }
@@ -154,8 +166,6 @@
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-
-
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -219,12 +229,8 @@
         passEvent.photo = [[event valueForKey:@"photoBlob"] valueForKey:@"bytes"];
         passEvent.creationDate = [event valueForKey:@"creationDate"];
         passEvent.comment = [event valueForKey:@"comment"];
+        
         destViewController.event = passEvent;
-//        destViewController.event.locationName = [event valueForKey:@"locationName"];
-//        destViewController.event.photo = [event valueForKey:@"photo"];
-//        destViewController.event.creationDate = [event valueForKey:@"creationDate"];
-//        destViewController.event.comment = [event valueForKey:@"comment"];
-//        NSLog(@"prepareForSegue: %@",  destViewController.event);
     }
 }
 

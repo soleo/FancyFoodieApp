@@ -7,38 +7,42 @@
 //
 #import <QuartzCore/QuartzCore.h>
 #import "PickphotoViewController.h"
-#import "XJPhotoPickerController.h"
 #import "ThirdParty/BButton/BButton.h"
 #import "MoreinfoTableViewController.h"
 #import "aEvent.h"
+#import "ThirdParty/CZPhotoPickerController/CZPhotoPickerController.h"
 
 @interface PickphotoViewController ()
-@property(nonatomic,copy) dispatch_block_t cancelBlock;
-@property(nonatomic,copy) dispatch_block_t chooseBlock;
+
 @property(nonatomic,weak) IBOutlet UIImageView *imageView;
 @property(nonatomic,weak) IBOutlet BButton *nextButton;
-@property(nonatomic,strong) XJPhotoPickerController *pickPhotoController;
+@property(nonatomic,strong) CZPhotoPickerController *pickPhotoController;
+
 @end
 
 @implementation PickphotoViewController
 
-#pragma mark - Methods
 
-- (XJPhotoPickerController *)photoController
+- (CZPhotoPickerController *)photoController
 {
     __weak typeof(self) weakSelf = self;
     
-    return [[XJPhotoPickerController alloc] initWithPresentingViewController:self withCompletionBlock:^(UIImagePickerController *imagePickerController, NSDictionary *imageInfoDict) {
+    return [[CZPhotoPickerController alloc] initWithPresentingViewController:self withCompletionBlock:^(UIImagePickerController *imagePickerController, NSDictionary *imageInfoDict) {
         if (imagePickerController.allowsEditing) {
             weakSelf.imageView.image = imageInfoDict[UIImagePickerControllerEditedImage];
         }
         else {
             weakSelf.imageView.image = imageInfoDict[UIImagePickerControllerOriginalImage];
         }
-        
+#if defined(__IPHONE_6_0) &&  __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
         if (weakSelf.modalViewController) {
             [weakSelf dismissViewControllerAnimated:YES completion:nil];
         }
+#else
+        if (weakSelf.modalPresentationStyle){
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        }
+#endif
         
         weakSelf.pickPhotoController = nil;
     }];
@@ -51,33 +55,6 @@
     [self.pickPhotoController showFromBarButtonItem:sender];
 }
 
-- (void)setImage:(UIImage *)anImage chooseBlock:(dispatch_block_t)chooseBlock cancelBlock:(dispatch_block_t)cancelBlock
-{
-    NSParameterAssert(chooseBlock);
-    NSParameterAssert(cancelBlock);
-    
-    //self = [super initWithNibName:nil bundle:nil];
-    
-    if (self) {
-        self.cancelBlock = cancelBlock;
-        self.chooseBlock = chooseBlock;
-        self.imageView.image = anImage;
-        self.title = NSLocalizedString(@"Choose Photo", nil);
-    }
-    
-    //return self;
-}
-- (IBAction)didCancel:(id)sender
-{
-    self.cancelBlock();
-}
-- (IBAction)didChoose:(id)sender
-{
-    self.chooseBlock();
-}
-
-
-
 #pragma mark - UIViewController
 
 - (void)viewDidLoad
@@ -85,13 +62,15 @@
     [super viewDidLoad];
     
     self.imageView.clipsToBounds = YES;
-    //self.nextButton.currentTitle
-    [self.nextButton setType:BButtonTypePrimary];
-    //self.imageView.layer.borderWidth = 1.0;
-    //self.imageView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.layer.borderWidth = 1.0;
+    self.imageView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.view.backgroundColor = [UIColor blackColor];
+    self.imageView.layer.cornerRadius = 5.0;
     
-    //self.imageView.layer.cornerRadius = 5.0;
+    [self.nextButton setType:BButtonTypePrimary];
 }
+
 #pragma mark - Segue method
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"passPhotoSegue"]) {

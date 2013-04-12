@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong) FKFormModel *formModel;
 @property (nonatomic, strong) aEvent *event;
-@property (nonatomic, strong) CLLocation *currentLocation;
 
 - (IBAction)saveEvent:(id)sender;
 - (void)initForm;

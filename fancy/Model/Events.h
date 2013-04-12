@@ -2,7 +2,7 @@
 //  Events.h
 //  fancy
 //
-//  Created by shaoxinjiang on 2/16/13.
+//  Created by Xinjiang Shao on 4/11/13.
 //  Copyright (c) 2013 Xinjiang Shao. All rights reserved.
 //
 
@@ -15,11 +15,13 @@
 
 @property (nonatomic, retain) NSString * comment;
 @property (nonatomic, retain) NSDate * creationDate;
+@property (nonatomic, retain) NSString * label;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSString * locationName;
 @property (nonatomic, retain) NSNumber * longitude;
-@property (nonatomic, retain) NSString * label;
 @property (nonatomic, retain) NSData * thumbnail;
+@property (nonatomic, retain) NSString * rate;
+@property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) PhotoBlob *photoBlob;
 @property (nonatomic, retain) NSSet *tags;
 @end

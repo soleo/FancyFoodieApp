@@ -33,30 +33,23 @@
 
 + (id)itemWithTitle:(NSString *)title target:(id)target action:(SEL)action
 {
-    self = [[[self alloc] initWithTitle:title target:target action:action] autorelease];
-    
-    return self;
+    return [[self alloc] initWithTitle:title target:target action:action] ;
 }
 
 + (id)itemWithImage:(UIImage *)image target:(id)target action:(SEL)action
 {
-    self = [[[self alloc] initWithImage:image target:target action:action] autorelease];
-    
-    return self;
+    return [[self alloc] initWithImage:image target:target action:action] ;
 }
 
 + (id)itemWithTitle:(NSString *)title image:(UIImage *)image target:(id)target action:(SEL)action
 {
-    self = [[[self alloc] initWithTitle:title image:image target:target action:action] autorelease];
+    return [[self alloc] initWithTitle:title image:image target:target action:action] ;
     
-    return self;
 }
 
 + (id)itemWithCustomView:(UIView *)customView target:(id)target action:(SEL)action
 {
-    self = [[[self alloc] initWithCustomView:customView target:target action:action] autorelease];
-    
-    return self;
+    return [[self alloc] initWithCustomView:customView target:target action:action] ;
 }
 
 - (id)initWithTitle:(NSString *)title target:(id)target action:(SEL)action
@@ -106,16 +99,7 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [_title release];
-    [_image release];
-    [_customView release];
-    
-    [_font release];
-    
-    [super dealloc];
-}
+
 
 
 #pragma mark -

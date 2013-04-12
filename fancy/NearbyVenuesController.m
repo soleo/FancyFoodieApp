@@ -33,7 +33,7 @@
 
 - (NSArray *)getNearbyVenues:(CLLocation *)location
 {
-    
+    self.currentLocation = location;
     [Foursquare2 searchVenuesNearByLatitude:@(location.coordinate.latitude)
                                   longitude:@(location.coordinate.longitude)
                                  accuracyLL:nil
@@ -51,7 +51,7 @@
 										   NSArray* venues = [dic valueForKeyPath:@"response.venues"];
                                            FSConverter *converter = [[FSConverter alloc]init];
                                            self.nearbyVenues =  [converter convertToObjects:venues];
-                                           NSLog(@"Venues: %@", self.nearbyVenues);
+                                           //NSLog(@"Venues: %@", self.nearbyVenues);
                                            
                                        }
     }];

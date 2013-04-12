@@ -2,7 +2,7 @@
 //  Events.m
 //  fancy
 //
-//  Created by shaoxinjiang on 2/16/13.
+//  Created by Xinjiang Shao on 4/11/13.
 //  Copyright (c) 2013 Xinjiang Shao. All rights reserved.
 //
 
@@ -15,11 +15,13 @@
 
 @dynamic comment;
 @dynamic creationDate;
+@dynamic label;
 @dynamic latitude;
 @dynamic locationName;
 @dynamic longitude;
-@dynamic label;
 @dynamic thumbnail;
+@dynamic rate;
+@dynamic address;
 @dynamic photoBlob;
 @dynamic tags;
 

@@ -17,10 +17,10 @@
 #import "Model/Events.h"
 
 @interface MoreinfoTableViewController ()
+
 - (void) sharingWithContent:(NSString *)text image:(UIImage *)foodiePhoto;
-- (void) customizeNavBar;
-- (void) getCurrentLocation;
 - (NSManagedObjectContext *)managedObjectContext;
+
 @end
 
 #define start_color [UIColor colorWithHex:0xEEEEEE]
@@ -31,21 +31,8 @@
 @synthesize formModel;
 @synthesize event = _event;
 
-static float progress = 0.0f;
-- (void)increaseProgress {
-    progress+=0.1f;
-    [SVProgressHUD showProgress:progress status:@"Loading"];
-    
-    if(progress < 1.0f)
-        [self performSelector:@selector(increaseProgress) withObject:nil afterDelay:0.3];
-    else
-        [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.4f];
-}
-- (void)dismiss {
-	[SVProgressHUD dismiss];
-}
 
-- (NSManagedObjectContext *)managedObjectContext
+- (NSManagedObjectContext *) managedObjectContext
 {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
@@ -98,10 +85,11 @@ static float progress = 0.0f;
     }
     return self;
 }
+
 - (IBAction)saveEvent:(id)sender{
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    NSManagedObject *newEvent =
+    Events *newEvent =
     [NSEntityDescription insertNewObjectForEntityForName:@"Events"
                                   inManagedObjectContext:context];
     [newEvent setValue:self.event.comment forKey:@"comment"];
@@ -110,12 +98,20 @@ static float progress = 0.0f;
     NSManagedObject *photoBlob = [NSEntityDescription insertNewObjectForEntityForName:@"PhotoBlob" inManagedObjectContext:newEvent.managedObjectContext];
     [photoBlob setValue:imageData forKey:@"bytes"];
     [newEvent setValue:photoBlob forKey:@"photoBlob"];
-    
-    //[newEvent setValue:imageData forKey:@"photoBlob"];
+
     [newEvent setValue:self.event.publishDate forKey:@"creationDate"];
     [newEvent setValue:self.event.latitude forKey:@"latitude"];
     [newEvent setValue:self.event.longitude forKey:@"longitude"];
     [newEvent setValue:self.event.place forKey:@"locationName"];
+    [newEvent setValue:self.event.rate forKey:@"rate"];
+    [newEvent setValue:self.event.otherplace forKey:@"address"];
+    
+    NSData *thumbnailData = UIImagePNGRepresentation((UIImage *)self.event.thumbnail);
+    [newEvent setValue:thumbnailData forKey:@"thumbnail"];
+    NSSet *tags = [[NSSet alloc]init] ;
+    [tags setByAddingObjectsFromArray:[self.event.tags componentsSeparatedByString:@","]];
+    //NSLog(@"tags = %@", tags);
+    [newEvent addTags:tags];
     
     NSError *error = nil;
     // Save the object to persistent store
@@ -140,7 +136,7 @@ static float progress = 0.0f;
                         identifier:@"custom"
                          rowHeight:300
               willDisplayCellBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
-                  //cell.textLabel.text = @"";
+                  
                   UIImage *newImage = (UIImage *)self.event.photo;
                   self.event.thumbnail = (NSData *)[newImage thumbnailImage:80
                                                           transparentBorder:3
@@ -148,7 +144,7 @@ static float progress = 0.0f;
                                                        interpolationQuality:kCGInterpolationNone];
                   
                   
-                  cell.imageView.image = [newImage thumbnailImage:300
+                  cell.imageView.image = [newImage thumbnailImage:320
                                                 transparentBorder:3
                                                      cornerRadius:10
                                              interpolationQuality:kCGInterpolationNone];
@@ -164,8 +160,6 @@ static float progress = 0.0f;
                   placeholderText:@"Chinese, Bun, Pork"
                              type:FKFormAttributeMappingTypeText];
         
-        //        [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:FKFormAttributeMappingTypeDate dateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        
         [formMapping mappingForAttribute:@"publishDate"
                                    title:@"When"
                                     type:FKFormAttributeMappingTypeDate
@@ -174,22 +168,20 @@ static float progress = 0.0f;
                             mapping.dateFormat = @"dd MMM YYYY";
                         }];
         
-        //[formMapping mapAttribute:@"place" title:@"Where" type:FKFormAttributeMappingTypeBoolean];
         [formMapping mapAttribute:@"place"
                             title:@"Where"
                      showInPicker:NO
                 selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
                     *selectedValueIndex = 0;
-                    NearbyVenuesController *nvc = [NearbyVenuesController sharedManager];
                     
+                    NearbyVenuesController *nvc = [NearbyVenuesController sharedManager];
                     //NSLog(@"current = %@", self.currentLocation);
-                    self.event.longitude   = [NSNumber numberWithDouble:self.currentLocation.coordinate.longitude];
-                    self.event.latitude    = [NSNumber numberWithDouble:self.currentLocation.coordinate.latitude];
+                    self.event.longitude   = [NSNumber numberWithDouble:nvc.currentLocation.coordinate.longitude];
+                    self.event.latitude    = [NSNumber numberWithDouble:nvc.currentLocation.coordinate.latitude];
                     return nvc.nearbyVenues;
                     
-                    
                 } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {
-                    //NSLog(@"Object = %@", object);
+                    
                     return value;
                     
                 } labelValueBlock:^id(id value, id object) {
@@ -201,20 +193,17 @@ static float progress = 0.0f;
                             title:@"Address"
                   placeholderText:@"If you didn't see your option above, input here"
                              type:FKFormAttributeMappingTypeText];
-        // [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:FKFormAttributeMappingTypeInteger];
-        [formMapping mapAttribute:@"comment" title:@"Comment" type:FKFormAttributeMappingTypeBigText];
         
-        //        Doesn't work very good now
-        //        [formMapping mapSliderAttribute:@"rate" title:@"Rate" minValue:0 maxValue:10 valueBlock:^NSString *(id value) {
-        //            return [NSString stringWithFormat:@"%.1f", [value floatValue]];
-        //        }];
+        [formMapping mapAttribute:@"comment"
+                            title:@"Comment"
+                             type:FKFormAttributeMappingTypeBigText];
         
         [formMapping mapAttribute:@"rate"
                             title:@"Rate"
                      showInPicker:NO
                 selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
                     *selectedValueIndex = 0;
-                    return [NSArray arrayWithObjects:@"Excellent", @"Just so so", @"Really bad",nil];
+                    return [NSArray arrayWithObjects:@"Excellent", @"Just OK", @"Really bad",nil];
                     
                 } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {
                     return value;
@@ -226,29 +215,29 @@ static float progress = 0.0f;
         
 
         
-        [formMapping sectionWithTitle:@"Actions" identifier:@"saveButton"];
-        
-        
-        [formMapping buttonSave:@"Save" handler:^{
-            NSLog(@"save pressed");
-            NSLog(@"%@", self.event);
-            [self.formModel save];
-            [self.navigationController popToRootViewControllerAnimated:YES];
-        }];
-        
-        [formMapping button:@"Share with friends"
-                 identifier:@"share"
-                    handler:^(id object) {
-                        NSLog(@"save pressed");
-                        NSLog(@"%@", object);
-                        [self sharingWithContent:self.event.comment
-                                           image:(UIImage *)self.event.photo];
-                        
-                    }
-               accesoryType:UITableViewCellAccessoryNone];
+//        [formMapping sectionWithTitle:@"Actions" identifier:@"saveButton"];
+//        
+//        
+//        [formMapping buttonSave:@"Save" handler:^{
+//            NSLog(@"save pressed");
+//            NSLog(@"%@", self.event);
+//            [self.formModel save];
+//            [self.navigationController popToRootViewControllerAnimated:YES];
+//        }];
+//        
+//        [formMapping button:@"Share with friends"
+//                 identifier:@"share"
+//                    handler:^(id object) {
+//                        NSLog(@"save pressed");
+//                        NSLog(@"%@", object);
+//                        [self sharingWithContent:self.event.comment
+//                                           image:(UIImage *)self.event.photo];
+//                        
+//                    }
+//               accesoryType:UITableViewCellAccessoryNone];
         
         [formMapping validationForAttribute:@"tags" validBlock:^BOOL(NSString *value, id object) {
-            return value.length < 10;
+            return value.length < 256;
             
         } errorMessageBlock:^NSString *(id value, id object) {
             return @"Text is too long.";
@@ -272,10 +261,6 @@ static float progress = 0.0f;
 {
     [super viewDidLoad];
     [self initForm];
-    //[self getCurrentLocation];
-    //[self initFormWithVenues:self.nearbyVenues];
-    //[self getVenuesForLocation:self.currentLocation];
-    
 }
 - (void)viewDidUnload {
     [super viewDidUnload];

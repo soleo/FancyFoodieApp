@@ -127,7 +127,7 @@
                     imageView.autoresizingMask = UIViewAutoresizingNone;
                     
                     [self addSubview:imageView];
-                    [imageView release];
+                    //[imageView release];
                     
                     // Title
                     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(itemOffset, middle, itemSize.width, middle)];
@@ -139,7 +139,7 @@
                     titleLabel.autoresizingMask = UIViewAutoresizingNone;
                     
                     [self addSubview:titleLabel];
-                    [titleLabel release];
+                    //[titleLabel release];
                 } else if(item.title) {
                     // Title
                     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(itemOffset, 0, itemSize.width, frameSize.height)];
@@ -151,7 +151,7 @@
                     titleLabel.autoresizingMask = UIViewAutoresizingNone;
                     
                     [self addSubview:titleLabel];
-                    [titleLabel release];
+                   // [titleLabel release];
                 } else if(item.image) {
                     // Image
                     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(itemOffset, 4, itemSize.width, frameSize.height - 4)];
@@ -161,7 +161,7 @@
                     imageView.autoresizingMask = UIViewAutoresizingNone;
                     
                     [self addSubview:imageView];
-                    [imageView release];
+                    //[imageView release];
                 }
             }
             
@@ -170,12 +170,7 @@
     }
 }
 
-- (void)dealloc
-{
-    [_items release];
-    
-    [super dealloc];
-}
+
 
 
 #pragma mark -
@@ -198,7 +193,7 @@
     overlayView.popupMenu = self;
     
     self.overlayView = overlayView;
-    [overlayView release];
+    //[overlayView release];
     
     // 影を点ける
     self.layer.shadowOpacity = 0.5;
