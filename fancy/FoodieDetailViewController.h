@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Event.h"
+@class aEvent;
 @interface FoodieDetailViewController : UIViewController
 
-@property (nonatomic, strong) Event *event;
+@property (nonatomic, strong) aEvent *event;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;

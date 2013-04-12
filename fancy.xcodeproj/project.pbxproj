@@ -80,7 +80,6 @@
 		A093F1B416A7FEFC00EFF4BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A093F1B316A7FEFC00EFF4BD /* Default-568h@2x.png */; };
 		A093F1B716A7FEFC00EFF4BD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A093F1B516A7FEFC00EFF4BD /* MainStoryboard.storyboard */; };
 		A093F1BA16A7FEFC00EFF4BD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1B916A7FEFC00EFF4BD /* FirstViewController.m */; };
-		A093F1C116A7FEFC00EFF4BD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1C016A7FEFC00EFF4BD /* SecondViewController.m */; };
 		A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */; };
 		A093F1E116A810C400EFF4BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E016A810C400EFF4BD /* CoreData.framework */; };
 		A093F1E316A810CA00EFF4BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E216A810CA00EFF4BD /* CoreLocation.framework */; };
@@ -159,7 +158,6 @@
 		A0E852C416AF088E00976786 /* photo_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C216AF088E00976786 /* photo_frame@2x.png */; };
 		A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852C616AF101F00976786 /* FoodieDetailViewController.m */; };
 		A0E852CA16AF20C300976786 /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C916AF20C300976786 /* creme_brelee.jpg */; };
-		A0E852CD16AF2A1900976786 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852CC16AF2A1900976786 /* Event.m */; };
 		A0E852D016AF350400976786 /* Configs.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852CF16AF350300976786 /* Configs.m */; };
 		A0E852D416AF386A00976786 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852D316AF386900976786 /* SettingsViewController.m */; };
 		A0E852E416AF44A100976786 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DB16AF44A100976786 /* cell_bottom.png */; };
@@ -304,8 +302,6 @@
 		A093F1B616A7FEFC00EFF4BD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A093F1B816A7FEFC00EFF4BD /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		A093F1B916A7FEFC00EFF4BD /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		A093F1BF16A7FEFC00EFF4BD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		A093F1C016A7FEFC00EFF4BD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A093F1D716A80B0200EFF4BD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fancyModel.xcdatamodel; sourceTree = "<group>"; };
 		A093F1E016A810C400EFF4BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -451,8 +447,6 @@
 		A0E852C516AF101F00976786 /* FoodieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodieDetailViewController.h; sourceTree = "<group>"; };
 		A0E852C616AF101F00976786 /* FoodieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodieDetailViewController.m; sourceTree = "<group>"; };
 		A0E852C916AF20C300976786 /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
-		A0E852CB16AF2A1900976786 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		A0E852CC16AF2A1900976786 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		A0E852CE16AF350300976786 /* Configs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configs.h; path = Model/Configs.h; sourceTree = "<group>"; };
 		A0E852CF16AF350300976786 /* Configs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Configs.m; path = Model/Configs.m; sourceTree = "<group>"; };
 		A0E852D216AF386900976786 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -751,10 +745,8 @@
 				A0C476DB16F6753000D08404 /* PickphotoViewController.m */,
 				A0C610CE17079A32002F1180 /* MoreinfoTableViewController.h */,
 				A0C610CF17079A32002F1180 /* MoreinfoTableViewController.m */,
-				A0E852CB16AF2A1900976786 /* Event.h */,
 				A09C642E16D1A5E300746777 /* NearbyVenuesController.h */,
 				A09C642F16D1A5E300746777 /* NearbyVenuesController.m */,
-				A0E852CC16AF2A1900976786 /* Event.m */,
 				A091648E16AC6563009FBF5F /* FoodieListViewController.h */,
 				A091648F16AC6563009FBF5F /* FoodieListViewController.m */,
 				A093F1AC16A7FEFC00EFF4BD /* AppDelegate.h */,
@@ -762,8 +754,6 @@
 				A093F1B516A7FEFC00EFF4BD /* MainStoryboard.storyboard */,
 				A093F1B816A7FEFC00EFF4BD /* FirstViewController.h */,
 				A093F1B916A7FEFC00EFF4BD /* FirstViewController.m */,
-				A093F1BF16A7FEFC00EFF4BD /* SecondViewController.h */,
-				A093F1C016A7FEFC00EFF4BD /* SecondViewController.m */,
 				A093F1A416A7FEFC00EFF4BD /* Supporting Files */,
 				A08D750D16AB138E00AD22B7 /* SharingActivity.h */,
 				A08D750E16AB138E00AD22B7 /* SharingActivity.m */,
@@ -1187,14 +1177,12 @@
 				A093F1AA16A7FEFC00EFF4BD /* main.m in Sources */,
 				A093F1AE16A7FEFC00EFF4BD /* AppDelegate.m in Sources */,
 				A093F1BA16A7FEFC00EFF4BD /* FirstViewController.m in Sources */,
-				A093F1C116A7FEFC00EFF4BD /* SecondViewController.m in Sources */,
 				A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */,
 				A08D750F16AB138E00AD22B7 /* SharingActivity.m in Sources */,
 				A091648D16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				A091649016AC6563009FBF5F /* FoodieListViewController.m in Sources */,
 				A09164B116ACAA65009FBF5F /* FoodieListCell.m in Sources */,
 				A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */,
-				A0E852CD16AF2A1900976786 /* Event.m in Sources */,
 				A0E852D016AF350400976786 /* Configs.m in Sources */,
 				A0E852D416AF386A00976786 /* SettingsViewController.m in Sources */,
 				A0E852F116AF4EA400976786 /* SearchViewController.m in Sources */,

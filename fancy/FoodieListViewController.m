@@ -16,6 +16,7 @@
 #import "ThirdParty/BButton/BButton.h"
 #import "ThirdParty/BButton/BButton+FontAwesome.h"
 #import "NSStringHelper.h"
+#import "aEvent.h"
 
 @interface FoodieListViewController ()
 - (NSManagedObjectContext *)managedObjectContext;
@@ -223,13 +224,17 @@
     if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         FoodieDetailViewController *destViewController = segue.destinationViewController;
-        NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
-        Event *passEvent = [Event new];
-        passEvent.locationName = [event valueForKey:@"locationName"];
+        Events *event = [self.events objectAtIndex:indexPath.row];
+        aEvent *passEvent = [aEvent new];
+        passEvent.place = [event valueForKey:@"locationName"];
         passEvent.photo = [[event valueForKey:@"photoBlob"] valueForKey:@"bytes"];
-        passEvent.creationDate = [event valueForKey:@"creationDate"];
+        passEvent.publishDate = [event valueForKey:@"creationDate"];
         passEvent.comment = [event valueForKey:@"comment"];
-        
+        passEvent.otherplace = [event valueForKey:@"address"];
+        passEvent.rate = [event valueForKey:@"rate"];
+        NSSet *tempTags = [event valueForKey:@"tags"];
+        passEvent.tags = [[tempTags allObjects] componentsJoinedByString:@","];
+        NSLog(@"tags = %@", passEvent.tags);
         destViewController.event = passEvent;
     }
 }

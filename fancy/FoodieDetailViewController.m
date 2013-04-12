@@ -10,6 +10,7 @@
 #import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
 #import "NSStringHelper.h"
+#import "aEvent.h"
 @interface FoodieDetailViewController ()
 
 @end
@@ -33,13 +34,13 @@
     //self.locationLabel   = (UILabel *)[self.view viewWithTag:102];
     //self.commentLabel    = (UILabel *)[self.view viewWithTag:103];
 
-    NSLog(@"Event passed: %@", self.event);
+    //NSLog(@"Event passed: %@", self.event);
     //self.locationLabel.text = self.event.locationName;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
     [formatter setDateStyle:NSDateFormatterShortStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
-    NSString *date = [formatter stringFromDate:self.event.creationDate];
+    NSString *date = [formatter stringFromDate:self.event.publishDate];
     
     [self.dateLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-calendar" withTextContent:date]];
     [self.commentLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-comment" withTextContent:self.event.comment]];
@@ -47,11 +48,11 @@
     UIImage *image = [UIImage imageWithData:self.event.photo];
     self.detailPhotoView.image = image;
     
-    if ([NSString isEmpty:self.event.locationName]) {
+    if ([NSString isEmpty:self.event.place]) {
         [self.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:@"Unknown"]];
         NSLog(@"Not Provided");
     }else{
-        [self.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:self.event.locationName]];
+        [self.locationLabel setAttributedText:[NSString stringWithFontAwesomeIcon:@"icon-food" withTextContent:self.event.place]];
     }
     //self.commentLabel.text = self.event.comment;
     
