@@ -62,7 +62,7 @@
         NSLog(@"Found event : %@ %@", [event valueForKey:@"longitude"], [event valueForKey:@"latitude"]);
         MKPointAnnotation *eventpoint = [[MKPointAnnotation alloc] init];
         eventpoint.coordinate = CLLocationCoordinate2DMake([[event valueForKey:@"latitude"] doubleValue],[[event valueForKey:@"longitude"] doubleValue]);
-        eventpoint.title = @"fancy";
+        eventpoint.title = [event valueForKey:@"locationName"];
         eventpoint.subtitle = [event valueForKey:@"comment"];
         [self.mapView addAnnotation:eventpoint];
         eventpoint = nil;

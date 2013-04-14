@@ -8,13 +8,13 @@
 
 #import "MoreinfoTableViewController.h"
 #import "ThirdParty/FormKit/FormKit.h"
-#import "ThirdParty/PrettyKit/PrettyKit.h"
 #import "ThirdParty/SVProgressHUD/SVProgressHUD.h"
 #import "aEvent.h"
 #import "NearbyVenuesController.h"
 #import "FSConverter.h"
 #import "Util/UIImage+Resize.h"
 #import "Model/Events.h"
+#import "Model/Settings.h"
 
 @interface MoreinfoTableViewController ()
 
@@ -88,7 +88,19 @@
 
 - (IBAction)saveEvent:(id)sender{
     NSManagedObjectContext *context = [self managedObjectContext];
-    
+    // save ablum if user need
+    if ([Settings isSaveToAlbum]) {
+        if (! self.assetsLibrary)
+            _assetsLibrary = [[ALAssetsLibrary alloc] init];
+        [self.assetsLibrary saveImage:(UIImage *)self.event.photo
+                              toAlbum:@"Fancy Foodie Photos"
+                  withCompletionBlock:^(NSError *error) {
+                      // @TODO: if failed , need to deal with it,too.
+                      NSLog(@"Save to album");
+                  }];
+       
+    }
+    // save event to database
     Events *newEvent =
     [NSEntityDescription insertNewObjectForEntityForName:@"Events"
                                   inManagedObjectContext:context];

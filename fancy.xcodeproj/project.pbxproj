@@ -12,7 +12,6 @@
 		552281931717BB8A0010B9B8 /* CZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522818F1717BB8A0010B9B8 /* CZPhotoPickerController.m */; };
 		552281941717BB8A0010B9B8 /* CZPhotoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281911717BB8A0010B9B8 /* CZPhotoPreviewViewController.m */; };
 		552281951717BB8A0010B9B8 /* CZPhotoPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552281921717BB8A0010B9B8 /* CZPhotoPreviewViewController.xib */; };
-		552281981717C9DD0010B9B8 /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281971717C9DC0010B9B8 /* Events.m */; };
 		552281A01717D2E00010B9B8 /* QBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522819B1717D2E00010B9B8 /* QBPopupMenu.m */; };
 		552281A11717D2E00010B9B8 /* QBPopupMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522819D1717D2E00010B9B8 /* QBPopupMenuItem.m */; };
 		552281A21717D2E00010B9B8 /* QBPopupMenuOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5522819F1717D2E00010B9B8 /* QBPopupMenuOverlayView.m */; };
@@ -41,6 +40,8 @@
 		552281F71717D3F50010B9B8 /* UIView+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281DC1717D3F50010B9B8 /* UIView+BaseKit.m */; };
 		552281F81717D3F50010B9B8 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281DE1717D3F50010B9B8 /* UIView+Debug.m */; };
 		552281F91717D3F50010B9B8 /* UIViewController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281E01717D3F50010B9B8 /* UIViewController+BaseKit.m */; };
+		556BDE18171B3048002A37BD /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE17171B3047002A37BD /* Settings.m */; };
+		556BDE1B171B4005002A37BD /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE1A171B4004002A37BD /* Events.m */; };
 		55D673BD17139BC80005394E /* NavBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BC17139BC80005394E /* NavBg.png */; };
 		55D673BF17139C9C0005394E /* NavigationButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BE17139C9C0005394E /* NavigationButtonBG.png */; };
 		55D673C117139CA60005394E /* NavigationButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C017139CA60005394E /* NavigationButtonBG@2x.png */; };
@@ -158,7 +159,6 @@
 		A0E852C416AF088E00976786 /* photo_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C216AF088E00976786 /* photo_frame@2x.png */; };
 		A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852C616AF101F00976786 /* FoodieDetailViewController.m */; };
 		A0E852CA16AF20C300976786 /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0E852C916AF20C300976786 /* creme_brelee.jpg */; };
-		A0E852D016AF350400976786 /* Configs.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852CF16AF350300976786 /* Configs.m */; };
 		A0E852D416AF386A00976786 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E852D316AF386900976786 /* SettingsViewController.m */; };
 		A0E852E416AF44A100976786 /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DB16AF44A100976786 /* cell_bottom.png */; };
 		A0E852E516AF44A100976786 /* cell_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E852DC16AF44A100976786 /* cell_bottom@2x.png */; };
@@ -183,8 +183,6 @@
 		552281901717BB8A0010B9B8 /* CZPhotoPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZPhotoPreviewViewController.h; sourceTree = "<group>"; };
 		552281911717BB8A0010B9B8 /* CZPhotoPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZPhotoPreviewViewController.m; sourceTree = "<group>"; };
 		552281921717BB8A0010B9B8 /* CZPhotoPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZPhotoPreviewViewController.xib; sourceTree = "<group>"; };
-		552281961717C9DB0010B9B8 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Events.h; path = Model/Events.h; sourceTree = "<group>"; };
-		552281971717C9DC0010B9B8 /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = Model/Events.m; sourceTree = "<group>"; };
 		5522819A1717D2E00010B9B8 /* QBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBPopupMenu.h; sourceTree = "<group>"; };
 		5522819B1717D2E00010B9B8 /* QBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBPopupMenu.m; sourceTree = "<group>"; };
 		5522819C1717D2E00010B9B8 /* QBPopupMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBPopupMenuItem.h; sourceTree = "<group>"; };
@@ -248,6 +246,10 @@
 		552281DE1717D3F50010B9B8 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
 		552281DF1717D3F50010B9B8 /* UIViewController+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BaseKit.h"; sourceTree = "<group>"; };
 		552281E01717D3F50010B9B8 /* UIViewController+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BaseKit.m"; sourceTree = "<group>"; };
+		556BDE16171B3047002A37BD /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Model/Settings.h; sourceTree = "<group>"; };
+		556BDE17171B3047002A37BD /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Model/Settings.m; sourceTree = "<group>"; };
+		556BDE19171B4004002A37BD /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Events.h; path = Model/Events.h; sourceTree = "<group>"; };
+		556BDE1A171B4004002A37BD /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = Model/Events.m; sourceTree = "<group>"; };
 		55D673BC17139BC80005394E /* NavBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBg.png; sourceTree = "<group>"; };
 		55D673BE17139C9C0005394E /* NavigationButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationButtonBG.png; sourceTree = "<group>"; };
 		55D673C017139CA60005394E /* NavigationButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationButtonBG@2x.png"; sourceTree = "<group>"; };
@@ -447,8 +449,6 @@
 		A0E852C516AF101F00976786 /* FoodieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodieDetailViewController.h; sourceTree = "<group>"; };
 		A0E852C616AF101F00976786 /* FoodieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodieDetailViewController.m; sourceTree = "<group>"; };
 		A0E852C916AF20C300976786 /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
-		A0E852CE16AF350300976786 /* Configs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configs.h; path = Model/Configs.h; sourceTree = "<group>"; };
-		A0E852CF16AF350300976786 /* Configs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Configs.m; path = Model/Configs.m; sourceTree = "<group>"; };
 		A0E852D216AF386900976786 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		A0E852D316AF386900976786 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		A0E852DB16AF44A100976786 /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
@@ -1034,16 +1034,16 @@
 		A0E852D116AF351100976786 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				552281961717C9DB0010B9B8 /* Events.h */,
-				552281971717C9DC0010B9B8 /* Events.m */,
+				556BDE19171B4004002A37BD /* Events.h */,
+				556BDE1A171B4004002A37BD /* Events.m */,
 				A0A0373916D05C7F004FD29E /* PhotoBlob.h */,
 				A0A0373A16D05C7F004FD29E /* PhotoBlob.m */,
 				A0A0373316D05C7D004FD29E /* Tag.h */,
 				A0A0373416D05C7D004FD29E /* Tag.m */,
-				A0E852CE16AF350300976786 /* Configs.h */,
-				A0E852CF16AF350300976786 /* Configs.m */,
 				A0C610D117079A89002F1180 /* aEvent.h */,
 				A0C610D217079A89002F1180 /* aEvent.m */,
+				556BDE16171B3047002A37BD /* Settings.h */,
+				556BDE17171B3047002A37BD /* Settings.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1183,7 +1183,6 @@
 				A091649016AC6563009FBF5F /* FoodieListViewController.m in Sources */,
 				A09164B116ACAA65009FBF5F /* FoodieListCell.m in Sources */,
 				A0E852C716AF101F00976786 /* FoodieDetailViewController.m in Sources */,
-				A0E852D016AF350400976786 /* Configs.m in Sources */,
 				A0E852D416AF386A00976786 /* SettingsViewController.m in Sources */,
 				A0E852F116AF4EA400976786 /* SearchViewController.m in Sources */,
 				A0A0373516D05C7D004FD29E /* Tag.m in Sources */,
@@ -1251,7 +1250,6 @@
 				A043C9E9170A825500504320 /* UIImage+RoundedCorner.m in Sources */,
 				552281931717BB8A0010B9B8 /* CZPhotoPickerController.m in Sources */,
 				552281941717BB8A0010B9B8 /* CZPhotoPreviewViewController.m in Sources */,
-				552281981717C9DD0010B9B8 /* Events.m in Sources */,
 				552281A01717D2E00010B9B8 /* QBPopupMenu.m in Sources */,
 				552281A11717D2E00010B9B8 /* QBPopupMenuItem.m in Sources */,
 				552281A21717D2E00010B9B8 /* QBPopupMenuOverlayView.m in Sources */,
@@ -1277,6 +1275,8 @@
 				552281F71717D3F50010B9B8 /* UIView+BaseKit.m in Sources */,
 				552281F81717D3F50010B9B8 /* UIView+Debug.m in Sources */,
 				552281F91717D3F50010B9B8 /* UIViewController+BaseKit.m in Sources */,
+				556BDE18171B3048002A37BD /* Settings.m in Sources */,
+				556BDE1B171B4005002A37BD /* Events.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

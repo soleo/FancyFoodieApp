@@ -10,6 +10,7 @@
 #import "Util/Utility.h"
 #import "NearbyVenuesController.h"
 #import "ThirdParty/BaseKit/Code/LocationManager/BaseKitLocationManager.h"
+#import "Model/Settings.h"
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -18,7 +19,13 @@
 
 - (void)initSettings
 {
+    Settings *settings = [Settings shared];
     
+    if (nil == settings.saveToAlbum)
+        settings.saveToAlbum = BK_BOOLEAN(YES);
+    //for testing purpose
+    //settings.saveToAlbum = BK_BOOLEAN(NO);
+    //NSLog(@"Settings = %@", settings.saveToAlbum);
 }
 
 - (void)initLocationManager

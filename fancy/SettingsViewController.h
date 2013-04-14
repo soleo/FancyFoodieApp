@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Util/Utility.h"
 @interface SettingsViewController : UITableViewController
+@property (nonatomic) NSUInteger saveToAlbum;
+@property (nonatomic) NSUInteger lang;
+@property (nonatomic, weak) IBOutlet UISwitch *saveSwitch;
+- (IBAction)switchToggled:(UISwitch *)sender;
 
 @end

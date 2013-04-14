@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ThirdParty/Foursquare2/Foursquare2.h"
+#import "ALAssetsLibrary+CustomPhotoAlbum.h"
 @class FKFormModel;
 @class aEvent;
 
@@ -16,7 +17,7 @@
 
 @property (nonatomic, strong) FKFormModel *formModel;
 @property (nonatomic, strong) aEvent *event;
-
+@property (nonatomic, retain) ALAssetsLibrary * assetsLibrary;
 - (IBAction)saveEvent:(id)sender;
 - (void)initForm;
 @end

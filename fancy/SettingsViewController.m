@@ -7,7 +7,7 @@
 //
 
 #import "SettingsViewController.h"
-
+#import "Model/Settings.h"
 @interface SettingsViewController ()
 
 @end
@@ -24,11 +24,21 @@
     return self;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[Settings shared] save];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.tableView setSeparatorColor:[UIColor clearColor]];
+    self.saveToAlbum = [[NSUserDefaults standardUserDefaults] integerForKey:@"saveToAlbum"];
+//    if (nil == [[NSUserDefaults standardUserDefaults] objectForKey:@"lang"]) {
+//        [[NSUserDefaults standardUserDefaults] setObject:@"English" forKey:@"lang"];
+//    }
+//    self.lang = [[NSUserDefaults standardUserDefaults] integerForKey:@"lang"];
+    //[self.tableView setSeparatorColor:[UIColor clearColor]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -43,76 +53,39 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    // Return the number of sections.
-    return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-
-    // Return the number of rows in the section.
-    switch (section) {
-        case (0):
-            return 1;
-            break;
-        case (1):
-            return 3;
-            break;
-        default:
-            break;
-    }
-    return 0;
-}
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    switch (section) {
-    	case (0):
-    		return @"Settings";
-    		break;
-    	case (1):
-    		return @"About";
-    		break;
-    }
-    return nil;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"ConfigCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    switch (indexPath.section) {
+    UITableViewCell *cell = [super tableView:tableView
+                       cellForRowAtIndexPath:indexPath];
+    
+    
+    NSUInteger section = [indexPath section];
+    NSUInteger row = [indexPath row];
+    //NSLog(@"section = %@, row = %@", (unsigned int)section, (unsigned int)row );
+    switch (section)
+    {
         case 0:
-            cell.textLabel.text = @"Dummy";
-            cell.detailTextLabel.text = @"Yummy";
-            break;
-        case 1:
-            switch (indexPath.row) {
-                case 0:
-                    cell.textLabel.text = @"Version";
-                    cell.detailTextLabel.text = @"1.0";
-                    break;
-                case 1:
-                    cell.textLabel.text = @"Author";
-                    cell.detailTextLabel.text = @"Xinjiang";
-                    break;
-                case 2:
-                    cell.textLabel.text = @"E-mail";
-                    cell.detailTextLabel.text = @"shaoxinjiang@gmail.com";
-                    break;
-                default:
-                    break;
+            if (row == self.saveToAlbum)
+            {
+                //Get Setting here
+                
+                self.saveSwitch.on = [Settings isSaveToAlbum];
+               
             }
-        default:
             break;
     }
-    
-    // Configure the cell...
-    
+        
+
     return cell;
 }
+- (IBAction)switchToggled:(UISwitch *)sender
+{
+    //NSLog(@"Switched Toggle = %@", sender);
+    Settings *settings = [Settings shared];
+    [settings setSaveToAlbum:[NSNumber numberWithBool:sender.on]];
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -155,6 +128,7 @@
 
 #pragma mark - Table view delegate
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
@@ -164,6 +138,21 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    NSUInteger section = [indexPath section];
+    NSUInteger row = [indexPath row];
+    switch (section) {
+        case 0:
+            if (row == self.lang ) {
+                NSLog(@"lang = %lu", (unsigned long)self.lang);
+            }
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self.tableView reloadData];
+    
 }
 
 @end

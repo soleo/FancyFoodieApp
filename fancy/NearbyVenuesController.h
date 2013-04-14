@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+
 #import "ThirdParty/Foursquare2/Foursquare2.h"
 #import "FSConverter.h"
-#import <CoreLocation/CoreLocation.h>
+
 
 @interface NearbyVenuesController : NSObject
 
 @property (strong,nonatomic) NSDictionary* selected;
 @property (strong,nonatomic) NSArray* nearbyVenues;
 @property (strong,nonatomic) CLLocation *currentLocation;
+
 
 + (id) sharedManager;
 
