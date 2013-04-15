@@ -15,12 +15,11 @@
 #import "Util/UIImage+Resize.h"
 #import "Model/Events.h"
 #import "Model/Settings.h"
-
+#import "Model/Tag.h"
 @interface MoreinfoTableViewController ()
 
-- (void) sharingWithContent:(NSString *)text image:(UIImage *)foodiePhoto;
 - (NSManagedObjectContext *)managedObjectContext;
-- (void) addTag:(NSString *)tag;
+
 @end
 
 #define start_color [UIColor colorWithHex:0xEEEEEE]
@@ -42,6 +41,32 @@
     return context;
 }
 
+- (void) fetchTagsArray{
+    // Put the fetched tags into a mutable array.
+	NSManagedObjectContext *context = [self managedObjectContext];
+	
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tag"
+											  inManagedObjectContext:context];
+	[fetchRequest setEntity:entity];
+	
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"label"
+																   ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	[fetchRequest setSortDescriptors:sortDescriptors];
+	
+	NSError *error;
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	if (fetchedObjects == nil) {
+		// Handle the error.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
+	
+	NSMutableArray *mutableArray = [fetchedObjects mutableCopy];
+	self.tagsArray = mutableArray;
+
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -53,9 +78,7 @@
     }
     return self;
 }
-- (void) addTag:(NSString *)tag{
-    
-}
+
 - (IBAction)saveEvent:(id)sender{
     NSManagedObjectContext *context = [self managedObjectContext];
     // save ablum if user need
@@ -92,7 +115,20 @@
     [newEvent setValue:thumbnailData forKey:@"thumbnail"];
     //NSSet *tags = [[NSSet alloc]init] ;
     //[tags setByAddingObjectsFromArray:[self.event.tags componentsSeparatedByString:@","]];
-    NSLog(@"tags = %@", self.event.tags);
+    
+    NSArray *tags = [self.event.tags componentsSeparatedByString:@","];
+    [self fetchTagsArray];
+    NSLog(@"already have tags = %@", self.tagsArray);
+    for (NSString *tag in tags) {
+        NSLog(@"tag = %@", tag);
+        
+        Tag *aTag = [NSEntityDescription insertNewObjectForEntityForName:@"Tag" inManagedObjectContext:[newEvent managedObjectContext]];
+        aTag.label = tag;
+        [aTag addPhotosObject:newEvent];
+        // Presumably the tag was added for the current event, so relate it to the event.
+        [newEvent addTagsObject:aTag];
+    }
+    
     //[newEvent addTags:tags];
     
     NSError *error = nil;

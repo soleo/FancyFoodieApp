@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) FKFormModel *formModel;
 @property (nonatomic, strong) aEvent *event;
+@property (nonatomic, strong) NSMutableArray *tagsArray;
 @property (nonatomic, retain) ALAssetsLibrary * assetsLibrary;
 - (IBAction)saveEvent:(id)sender;
 - (void)initForm;

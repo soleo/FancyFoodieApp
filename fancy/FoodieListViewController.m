@@ -8,6 +8,7 @@
 
 #import "FoodieListViewController.h"
 #import "Model/Events.h"
+#import "Model/Tag.h"
 #import "FoodieListCell.h"
 #import "FoodieDetailViewController.h"
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
@@ -20,7 +21,7 @@
 
 @interface FoodieListViewController ()
 - (NSManagedObjectContext *)managedObjectContext;
-
+@property (nonatomic,strong) NSMutableArray *tagsArray;
 @end
 
 @implementation FoodieListViewController
@@ -35,6 +36,7 @@
     }
     return context;
 }
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -162,6 +164,9 @@
     UIImage *thumbnail = [UIImage imageWithData:[event valueForKey:@"thumbnail"]];
     cell.photoView.image = thumbnail;
     // more to show on the table
+    //get Tags Array
+    //[self fetchTagsArray];
+    
     return cell;
 }
 
@@ -237,8 +242,17 @@
         passEvent.comment = [event valueForKey:@"comment"];
         passEvent.otherplace = [event valueForKey:@"address"];
         passEvent.rate = [event valueForKey:@"rate"];
-        NSSet *tempTags = [event valueForKey:@"tags"];
-        passEvent.tags = [[tempTags allObjects] componentsJoinedByString:@","];
+        //NSSet *tempTags = [event valueForKey:@"tags"];
+        NSMutableArray *eventTagNames = [NSMutableArray array];
+        for (Tag *tag in event.tags) {
+            [eventTagNames addObject:tag.label];
+        }
+        
+        NSString *tagsString = @"";
+        if ([eventTagNames count] > 0) {
+            tagsString = [eventTagNames componentsJoinedByString:@", "];
+        }
+        passEvent.tags = tagsString;
         NSLog(@"tags = %@", passEvent.tags);
         destViewController.event = passEvent;
     }

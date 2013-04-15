@@ -13,8 +13,10 @@
 #import "ThirdParty/MGBox/MGBoxLine.h"
 #import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
-@interface StatsViewController ()
+#import "Model/Tag.h"
 
+@interface StatsViewController ()
+@property (nonatomic,strong) NSMutableArray *tagsArray;
 @end
 
 @implementation StatsViewController
@@ -38,6 +40,47 @@
     return context;
 }
 
+- (void) fetchTagsArray{
+    // Put the fetched tags into a mutable array.
+	NSManagedObjectContext *context = [self managedObjectContext];
+	
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tag"
+											  inManagedObjectContext:context];
+	[fetchRequest setEntity:entity];
+	
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"label"
+																   ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	[fetchRequest setSortDescriptors:sortDescriptors];
+	
+	NSError *error;
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+	if (fetchedObjects == nil) {
+		// Handle the error.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
+	
+	NSMutableArray *mutableArray = [fetchedObjects mutableCopy];
+	self.tagsArray = mutableArray;
+    
+}
+
+- (NSInteger *)getRatesWithCondition:(NSString *)rate{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Events" inManagedObjectContext:[self managedObjectContext]];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setIncludesPropertyValues:NO];
+    [fetchRequest setIncludesSubentities:NO];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY %K == %@", @"rate", rate];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSInteger count = [[self managedObjectContext] countForFetchRequest:fetchRequest error:&error];
+    NSLog(@"fetch results count = %i", count);
+    return count;
+}
 - (NSInteger *)getCountWithEntityName:(NSString *)entityName{
     int entityCount = 0;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
@@ -65,6 +108,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self fetchTagsArray];
     
     MGScrollView *scroller = [[MGScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
     [self.view addSubview:scroller];
@@ -106,32 +150,32 @@
     excellentLabel.backgroundColor = [UIColor clearColor];
 	excellentLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
     excellentLabel.text = [NSString fontAwesomeIconStringForIconIdentifier:@"icon-thumbs-up"];
-    MGBoxLine *excellentCount = [MGBoxLine lineWithLeft:@"Excellent: 0" right:excellentLabel];
+    NSInteger excellentCountNum= [self getRatesWithCondition:@"Excellent"];
+    MGBoxLine *excellentCount = [MGBoxLine lineWithLeft:[[NSString alloc]
+                                                         initWithFormat:@"Excellent: %i", excellentCountNum]
+                                                  right:excellentLabel];
     [rateBox.topLines addObject:excellentCount];
     
     UILabel *badLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 20.0f, 20.0f)];
     badLabel.backgroundColor = [UIColor clearColor];
 	badLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
     badLabel.text = [NSString fontAwesomeIconStringForIconIdentifier:@"icon-thumbs-down"];
-    MGBoxLine *badCount = [MGBoxLine lineWithLeft:@"Really Bad: 0" right:badLabel];
+    NSInteger badCountNum= [self getRatesWithCondition:@"Really bad"];
+    MGBoxLine *badCount = [MGBoxLine lineWithLeft:[[NSString alloc]
+                                                   initWithFormat:@"Really bad: %i", badCountNum]
+                                            right:badLabel];
     [rateBox.topLines addObject:badCount];
     
     UILabel *normalLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 20.0f, 20.0f)];
     normalLabel.backgroundColor = [UIColor clearColor];
 	normalLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
     normalLabel.text = [NSString fontAwesomeIconStringForIconIdentifier:@"icon-leaf"];
-    MGBoxLine *normalCount = [MGBoxLine lineWithLeft:@"Just so so: 0" right:normalLabel];
+    NSInteger normalCountNum= [self getRatesWithCondition:@"Just OK"];
+    MGBoxLine *normalCount = [MGBoxLine lineWithLeft:[[NSString alloc]
+                                                      initWithFormat:@"Just OK: %i", normalCountNum]
+                                               right:normalLabel];
     [rateBox.topLines addObject:normalCount];
     
-    // create a second box
-    //MGStyledBox *box2 = [MGStyledBox box];
-    //[scroller.boxes addObject:box2];
-    
-    // add a line with multiline text
-    NSString *blah = @"Multiline content is automatically sized and formatted "
-    "given an NSString, UIFont, and desired padding.";
-    MGBoxLine *multiline = [MGBoxLine multilineWithText:blah font:nil padding:24];
-    [rateBox.topLines addObject:multiline];
     
     // create another box for tags
     MGStyledBox *tagsBox = [MGStyledBox box];
@@ -140,7 +184,19 @@
     header = [MGBoxLine lineWithLeft:@"My Tags" right:nil];
     header.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
     [tagsBox.topLines addObject:header];
-    [self addLineForBox:tagsBox withInfo:@"11,23,344" withIcon:@"icon-tags"];
+    
+    NSMutableArray *eventTagNames = [NSMutableArray array];
+    for (Tag *tag in _tagsArray) {
+        [eventTagNames addObject:tag.label];
+    }
+    
+    NSString *tagsString = @"";
+    if ([eventTagNames count] > 0) {
+        tagsString = [eventTagNames componentsJoinedByString:@", "];
+    }
+    //NSLog(@"Tags = %@", self.tagsArray);
+    
+    [self addLineForBox:tagsBox withInfo:tagsString withIcon:@"icon-tags"];
     //[scroller.boxes addObject:tagsBox];
     
     [scroller drawBoxesWithSpeed:0.6];
