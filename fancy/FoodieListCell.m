@@ -84,7 +84,7 @@
     popupMenu.items = [NSArray arrayWithObjects:shareItem, commentItem, nil];
     
     self.popupMenu = popupMenu;
-    NSLog(@"Set up Menu In cell");
+    //NSLog(@"Set up Menu In cell");
     [self.menuButton addTarget:self action:@selector(showPopupMenu:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -105,10 +105,6 @@
     
 }
 
-- (IBAction)didUpdateComment:(id)sender
-{
-    NSLog(@"didUpdateComment");
-}
 - (IBAction)updateComment:(id)sender
 {
     NSLog(@"Update Comment Action");

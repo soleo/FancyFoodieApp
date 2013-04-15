@@ -33,6 +33,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   // change background
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_bg"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+   // get some info
     self.saveToAlbum = [[NSUserDefaults standardUserDefaults] integerForKey:@"saveToAlbum"];
 //    if (nil == [[NSUserDefaults standardUserDefaults] objectForKey:@"lang"]) {
 //        [[NSUserDefaults standardUserDefaults] setObject:@"English" forKey:@"lang"];

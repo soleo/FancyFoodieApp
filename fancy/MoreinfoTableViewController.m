@@ -20,7 +20,7 @@
 
 - (void) sharingWithContent:(NSString *)text image:(UIImage *)foodiePhoto;
 - (NSManagedObjectContext *)managedObjectContext;
-
+- (void) addTag:(NSString *)tag;
 @end
 
 #define start_color [UIColor colorWithHex:0xEEEEEE]
@@ -53,7 +53,9 @@
     }
     return self;
 }
-
+- (void) addTag:(NSString *)tag{
+    
+}
 - (IBAction)saveEvent:(id)sender{
     NSManagedObjectContext *context = [self managedObjectContext];
     // save ablum if user need
@@ -88,10 +90,10 @@
     
     NSData *thumbnailData = UIImagePNGRepresentation((UIImage *)self.event.thumbnail);
     [newEvent setValue:thumbnailData forKey:@"thumbnail"];
-    NSSet *tags = [[NSSet alloc]init] ;
-    [tags setByAddingObjectsFromArray:[self.event.tags componentsSeparatedByString:@","]];
-    //NSLog(@"tags = %@", tags);
-    [newEvent addTags:tags];
+    //NSSet *tags = [[NSSet alloc]init] ;
+    //[tags setByAddingObjectsFromArray:[self.event.tags componentsSeparatedByString:@","]];
+    NSLog(@"tags = %@", self.event.tags);
+    //[newEvent addTags:tags];
     
     NSError *error = nil;
     // Save the object to persistent store

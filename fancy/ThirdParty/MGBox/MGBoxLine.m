@@ -123,8 +123,8 @@
     label.font = right && rightFont ? rightFont : font;
     label.textColor = textColor;
     label.lineBreakMode = right
-            ? UILineBreakModeHeadTruncation
-            : UILineBreakModeTailTruncation;
+            ? NSLineBreakByTruncatingHead 
+            : NSLineBreakByTruncatingTail;
     label.shadowColor = [UIColor whiteColor];
     label.shadowOffset = CGSizeMake(0, 1);
     CGSize size = [label.text sizeWithFont:label.font];
@@ -243,7 +243,7 @@
         if ([piece isKindOfClass:[NSString class]]) {
             x -= itemPadding; // right pad labels
             UILabel *label = [self makeLabel:(NSString *)piece right:YES];
-            label.textAlignment = UITextAlignmentRight;
+            label.textAlignment = NSTextAlignmentRight;
             CGSize size = label.frame.size;
             if (x - size.width < minX) { // needs slimming
                 size.width = x - minX > 0 ? x - minX : 0;

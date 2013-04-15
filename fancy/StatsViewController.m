@@ -97,7 +97,7 @@
     MGStyledBox *rateBox = [MGStyledBox box];
     [scroller.boxes addObject:rateBox];
     
-    header = [MGBoxLine lineWithLeft:@"My rates" right:nil];
+    header = [MGBoxLine lineWithLeft:@"My Rates" right:nil];
     header.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
     [rateBox.topLines addObject:header];
     
