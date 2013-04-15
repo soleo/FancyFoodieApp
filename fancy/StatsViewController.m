@@ -195,8 +195,10 @@
         tagsString = [eventTagNames componentsJoinedByString:@", "];
     }
     //NSLog(@"Tags = %@", self.tagsArray);
-    
-    [self addLineForBox:tagsBox withInfo:tagsString withIcon:@"icon-tags"];
+    [self addLineForBox:tagsBox withInfo:[[NSString alloc] initWithFormat:@"Tags in total: %i",
+                                          [eventTagNames count]]
+                                withIcon:@"icon-tags"];
+    [self addLineForBox:tagsBox withInfo:tagsString withIcon:@"icon-tag"];
     //[scroller.boxes addObject:tagsBox];
     
     [scroller drawBoxesWithSpeed:0.6];
