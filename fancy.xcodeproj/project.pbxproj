@@ -66,6 +66,8 @@
 		55E1FE54171BCE6D00CBE16C /* TRTextFieldExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE4E171BCE6D00CBE16C /* TRTextFieldExtensions.m */; };
 		55E1FE57171BD62300CBE16C /* LocationAutocomplete.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE56171BD62300CBE16C /* LocationAutocomplete.m */; };
 		55E1FE5A171BDC8F00CBE16C /* XJWebviewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE59171BDC8F00CBE16C /* XJWebviewControllerViewController.m */; };
+		55E1FE5C171BEC1D00CBE16C /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E1FE5B171BEC1D00CBE16C /* AddressBookUI.framework */; };
+		55E1FE5F171BF8B000CBE16C /* XJLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE5E171BF8B000CBE16C /* XJLocation.m */; };
 		A043C9E7170A825500504320 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E1170A825400504320 /* UIImage+Resize.m */; };
 		A043C9E8170A825500504320 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E2170A825400504320 /* UIImage+Alpha.m */; };
 		A043C9E9170A825500504320 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */; };
@@ -314,6 +316,9 @@
 		55E1FE56171BD62300CBE16C /* LocationAutocomplete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAutocomplete.m; sourceTree = "<group>"; };
 		55E1FE58171BDC8F00CBE16C /* XJWebviewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJWebviewControllerViewController.h; sourceTree = "<group>"; };
 		55E1FE59171BDC8F00CBE16C /* XJWebviewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJWebviewControllerViewController.m; sourceTree = "<group>"; };
+		55E1FE5B171BEC1D00CBE16C /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		55E1FE5D171BF8B000CBE16C /* XJLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJLocation.h; sourceTree = "<group>"; };
+		55E1FE5E171BF8B000CBE16C /* XJLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJLocation.m; sourceTree = "<group>"; };
 		A043C9E1170A825400504320 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Util/UIImage+Resize.m"; sourceTree = "<group>"; };
 		A043C9E2170A825400504320 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "Util/UIImage+Alpha.m"; sourceTree = "<group>"; };
 		A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedCorner.m"; path = "Util/UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
@@ -531,6 +536,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E1FE5C171BEC1D00CBE16C /* AddressBookUI.framework in Frameworks */,
 				A0A0375316D07448004FD29E /* QuartzCore.framework in Frameworks */,
 				A0E852EE16AF4D9200976786 /* MapKit.framework in Frameworks */,
 				A08D751816AB529400AD22B7 /* AssetsLibrary.framework in Frameworks */,
@@ -859,6 +865,7 @@
 		A093F19C16A7FEFC00EFF4BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55E1FE5B171BEC1D00CBE16C /* AddressBookUI.framework */,
 				A0A0375216D07448004FD29E /* QuartzCore.framework */,
 				A0E852ED16AF4D9100976786 /* MapKit.framework */,
 				A08D751716AB529400AD22B7 /* AssetsLibrary.framework */,
@@ -1166,6 +1173,8 @@
 				A0C610D217079A89002F1180 /* aEvent.m */,
 				556BDE16171B3047002A37BD /* Settings.h */,
 				556BDE17171B3047002A37BD /* Settings.m */,
+				55E1FE5D171BF8B000CBE16C /* XJLocation.h */,
+				55E1FE5E171BF8B000CBE16C /* XJLocation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1417,6 +1426,7 @@
 				55E1FE54171BCE6D00CBE16C /* TRTextFieldExtensions.m in Sources */,
 				55E1FE57171BD62300CBE16C /* LocationAutocomplete.m in Sources */,
 				55E1FE5A171BDC8F00CBE16C /* XJWebviewControllerViewController.m in Sources */,
+				55E1FE5F171BF8B000CBE16C /* XJLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
