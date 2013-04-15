@@ -49,6 +49,23 @@
 		55D673C117139CA60005394E /* NavigationButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C017139CA60005394E /* NavigationButtonBG@2x.png */; };
 		55D673C817139E450005394E /* NavigationBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C417139E450005394E /* NavigationBarBG.png */; };
 		55D673C917139E450005394E /* NavigationBarBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C517139E450005394E /* NavigationBarBG@2x.png */; };
+		55E1FE37171BCE5500CBE16C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE25171BCE5500CBE16C /* AFHTTPClient.m */; };
+		55E1FE38171BCE5500CBE16C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE27171BCE5500CBE16C /* AFHTTPRequestOperation.m */; };
+		55E1FE39171BCE5500CBE16C /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE29171BCE5500CBE16C /* AFImageRequestOperation.m */; };
+		55E1FE3A171BCE5500CBE16C /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE2B171BCE5500CBE16C /* AFJSONRequestOperation.m */; };
+		55E1FE3B171BCE5500CBE16C /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE2D171BCE5500CBE16C /* AFNetworkActivityIndicatorManager.m */; };
+		55E1FE3C171BCE5500CBE16C /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE30171BCE5500CBE16C /* AFPropertyListRequestOperation.m */; };
+		55E1FE3D171BCE5500CBE16C /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE32171BCE5500CBE16C /* AFURLConnectionOperation.m */; };
+		55E1FE3E171BCE5500CBE16C /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE34171BCE5500CBE16C /* AFXMLRequestOperation.m */; };
+		55E1FE3F171BCE5500CBE16C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE36171BCE5500CBE16C /* UIImageView+AFNetworking.m */; };
+		55E1FE4F171BCE6D00CBE16C /* TRAutocompleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE43171BCE6D00CBE16C /* TRAutocompleteView.m */; };
+		55E1FE50171BCE6D00CBE16C /* TRGoogleMapsAutocompleteItemsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE46171BCE6D00CBE16C /* TRGoogleMapsAutocompleteItemsSource.m */; };
+		55E1FE51171BCE6D00CBE16C /* TRGoogleMapsAutocompletionCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE48171BCE6D00CBE16C /* TRGoogleMapsAutocompletionCellFactory.m */; };
+		55E1FE52171BCE6D00CBE16C /* TRGoogleMapsSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE4A171BCE6D00CBE16C /* TRGoogleMapsSuggestion.m */; };
+		55E1FE53171BCE6D00CBE16C /* TRStringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE4C171BCE6D00CBE16C /* TRStringExtensions.m */; };
+		55E1FE54171BCE6D00CBE16C /* TRTextFieldExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE4E171BCE6D00CBE16C /* TRTextFieldExtensions.m */; };
+		55E1FE57171BD62300CBE16C /* LocationAutocomplete.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE56171BD62300CBE16C /* LocationAutocomplete.m */; };
+		55E1FE5A171BDC8F00CBE16C /* XJWebviewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E1FE59171BDC8F00CBE16C /* XJWebviewControllerViewController.m */; };
 		A043C9E7170A825500504320 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E1170A825400504320 /* UIImage+Resize.m */; };
 		A043C9E8170A825500504320 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E2170A825400504320 /* UIImage+Alpha.m */; };
 		A043C9E9170A825500504320 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */; };
@@ -260,6 +277,43 @@
 		55D673C017139CA60005394E /* NavigationButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationButtonBG@2x.png"; sourceTree = "<group>"; };
 		55D673C417139E450005394E /* NavigationBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBarBG.png; sourceTree = "<group>"; };
 		55D673C517139E450005394E /* NavigationBarBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBarBG@2x.png"; sourceTree = "<group>"; };
+		55E1FE24171BCE5500CBE16C /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		55E1FE25171BCE5500CBE16C /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		55E1FE26171BCE5500CBE16C /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		55E1FE27171BCE5500CBE16C /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		55E1FE28171BCE5500CBE16C /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		55E1FE29171BCE5500CBE16C /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		55E1FE2A171BCE5500CBE16C /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		55E1FE2B171BCE5500CBE16C /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		55E1FE2C171BCE5500CBE16C /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		55E1FE2D171BCE5500CBE16C /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		55E1FE2E171BCE5500CBE16C /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		55E1FE2F171BCE5500CBE16C /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		55E1FE30171BCE5500CBE16C /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		55E1FE31171BCE5500CBE16C /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		55E1FE32171BCE5500CBE16C /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		55E1FE33171BCE5500CBE16C /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		55E1FE34171BCE5500CBE16C /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		55E1FE35171BCE5500CBE16C /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		55E1FE36171BCE5500CBE16C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		55E1FE41171BCE6D00CBE16C /* TRAutocompleteItemsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompleteItemsSource.h; sourceTree = "<group>"; };
+		55E1FE42171BCE6D00CBE16C /* TRAutocompleteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompleteView.h; sourceTree = "<group>"; };
+		55E1FE43171BCE6D00CBE16C /* TRAutocompleteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAutocompleteView.m; sourceTree = "<group>"; };
+		55E1FE44171BCE6D00CBE16C /* TRAutocompletionCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompletionCellFactory.h; sourceTree = "<group>"; };
+		55E1FE45171BCE6D00CBE16C /* TRGoogleMapsAutocompleteItemsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGoogleMapsAutocompleteItemsSource.h; sourceTree = "<group>"; };
+		55E1FE46171BCE6D00CBE16C /* TRGoogleMapsAutocompleteItemsSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGoogleMapsAutocompleteItemsSource.m; sourceTree = "<group>"; };
+		55E1FE47171BCE6D00CBE16C /* TRGoogleMapsAutocompletionCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGoogleMapsAutocompletionCellFactory.h; sourceTree = "<group>"; };
+		55E1FE48171BCE6D00CBE16C /* TRGoogleMapsAutocompletionCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGoogleMapsAutocompletionCellFactory.m; sourceTree = "<group>"; };
+		55E1FE49171BCE6D00CBE16C /* TRGoogleMapsSuggestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGoogleMapsSuggestion.h; sourceTree = "<group>"; };
+		55E1FE4A171BCE6D00CBE16C /* TRGoogleMapsSuggestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGoogleMapsSuggestion.m; sourceTree = "<group>"; };
+		55E1FE4B171BCE6D00CBE16C /* TRStringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRStringExtensions.h; sourceTree = "<group>"; };
+		55E1FE4C171BCE6D00CBE16C /* TRStringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRStringExtensions.m; sourceTree = "<group>"; };
+		55E1FE4D171BCE6D00CBE16C /* TRTextFieldExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTextFieldExtensions.h; sourceTree = "<group>"; };
+		55E1FE4E171BCE6D00CBE16C /* TRTextFieldExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTextFieldExtensions.m; sourceTree = "<group>"; };
+		55E1FE55171BD62300CBE16C /* LocationAutocomplete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationAutocomplete.h; sourceTree = "<group>"; };
+		55E1FE56171BD62300CBE16C /* LocationAutocomplete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationAutocomplete.m; sourceTree = "<group>"; };
+		55E1FE58171BDC8F00CBE16C /* XJWebviewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJWebviewControllerViewController.h; sourceTree = "<group>"; };
+		55E1FE59171BDC8F00CBE16C /* XJWebviewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJWebviewControllerViewController.m; sourceTree = "<group>"; };
 		A043C9E1170A825400504320 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Util/UIImage+Resize.m"; sourceTree = "<group>"; };
 		A043C9E2170A825400504320 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "Util/UIImage+Alpha.m"; sourceTree = "<group>"; };
 		A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedCorner.m"; path = "Util/UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
@@ -624,6 +678,84 @@
 			name = BaseKit;
 			sourceTree = "<group>";
 		};
+		55E1FE22171BCCBD00CBE16C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A093F1D716A80B0200EFF4BD /* HomeViewController.h */,
+				A0A0375816D0A10E004FD29E /* HomeViewController.m */,
+				A0C476DA16F6753000D08404 /* PickphotoViewController.h */,
+				A0C476DB16F6753000D08404 /* PickphotoViewController.m */,
+				A0C610CE17079A32002F1180 /* MoreinfoTableViewController.h */,
+				A0C610CF17079A32002F1180 /* MoreinfoTableViewController.m */,
+				A091648E16AC6563009FBF5F /* FoodieListViewController.h */,
+				A091648F16AC6563009FBF5F /* FoodieListViewController.m */,
+				556BDE1F171B8333002A37BD /* XJLongTextViewController.h */,
+				556BDE20171B8337002A37BD /* XJLongTextViewController.m */,
+				A0E852C516AF101F00976786 /* FoodieDetailViewController.h */,
+				A0E852C616AF101F00976786 /* FoodieDetailViewController.m */,
+				A09164AF16ACAA64009FBF5F /* FoodieListCell.h */,
+				A09164B016ACAA64009FBF5F /* FoodieListCell.m */,
+				556BDE1C171B4D7A002A37BD /* StatsViewController.h */,
+				556BDE1D171B4D7B002A37BD /* StatsViewController.m */,
+				A0E852EF16AF4EA200976786 /* SearchViewController.h */,
+				A0E852F016AF4EA300976786 /* SearchViewController.m */,
+				A0E852D216AF386900976786 /* SettingsViewController.h */,
+				A0E852D316AF386900976786 /* SettingsViewController.m */,
+				55E1FE58171BDC8F00CBE16C /* XJWebviewControllerViewController.h */,
+				55E1FE59171BDC8F00CBE16C /* XJWebviewControllerViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		55E1FE23171BCE5500CBE16C /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				55E1FE24171BCE5500CBE16C /* AFHTTPClient.h */,
+				55E1FE25171BCE5500CBE16C /* AFHTTPClient.m */,
+				55E1FE26171BCE5500CBE16C /* AFHTTPRequestOperation.h */,
+				55E1FE27171BCE5500CBE16C /* AFHTTPRequestOperation.m */,
+				55E1FE28171BCE5500CBE16C /* AFImageRequestOperation.h */,
+				55E1FE29171BCE5500CBE16C /* AFImageRequestOperation.m */,
+				55E1FE2A171BCE5500CBE16C /* AFJSONRequestOperation.h */,
+				55E1FE2B171BCE5500CBE16C /* AFJSONRequestOperation.m */,
+				55E1FE2C171BCE5500CBE16C /* AFNetworkActivityIndicatorManager.h */,
+				55E1FE2D171BCE5500CBE16C /* AFNetworkActivityIndicatorManager.m */,
+				55E1FE2E171BCE5500CBE16C /* AFNetworking.h */,
+				55E1FE2F171BCE5500CBE16C /* AFPropertyListRequestOperation.h */,
+				55E1FE30171BCE5500CBE16C /* AFPropertyListRequestOperation.m */,
+				55E1FE31171BCE5500CBE16C /* AFURLConnectionOperation.h */,
+				55E1FE32171BCE5500CBE16C /* AFURLConnectionOperation.m */,
+				55E1FE33171BCE5500CBE16C /* AFXMLRequestOperation.h */,
+				55E1FE34171BCE5500CBE16C /* AFXMLRequestOperation.m */,
+				55E1FE35171BCE5500CBE16C /* UIImageView+AFNetworking.h */,
+				55E1FE36171BCE5500CBE16C /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = ThirdParty/AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		55E1FE40171BCE6D00CBE16C /* TRAutocomplete */ = {
+			isa = PBXGroup;
+			children = (
+				55E1FE41171BCE6D00CBE16C /* TRAutocompleteItemsSource.h */,
+				55E1FE42171BCE6D00CBE16C /* TRAutocompleteView.h */,
+				55E1FE43171BCE6D00CBE16C /* TRAutocompleteView.m */,
+				55E1FE44171BCE6D00CBE16C /* TRAutocompletionCellFactory.h */,
+				55E1FE45171BCE6D00CBE16C /* TRGoogleMapsAutocompleteItemsSource.h */,
+				55E1FE46171BCE6D00CBE16C /* TRGoogleMapsAutocompleteItemsSource.m */,
+				55E1FE47171BCE6D00CBE16C /* TRGoogleMapsAutocompletionCellFactory.h */,
+				55E1FE48171BCE6D00CBE16C /* TRGoogleMapsAutocompletionCellFactory.m */,
+				55E1FE49171BCE6D00CBE16C /* TRGoogleMapsSuggestion.h */,
+				55E1FE4A171BCE6D00CBE16C /* TRGoogleMapsSuggestion.m */,
+				55E1FE4B171BCE6D00CBE16C /* TRStringExtensions.h */,
+				55E1FE4C171BCE6D00CBE16C /* TRStringExtensions.m */,
+				55E1FE4D171BCE6D00CBE16C /* TRTextFieldExtensions.h */,
+				55E1FE4E171BCE6D00CBE16C /* TRTextFieldExtensions.m */,
+			);
+			name = TRAutocomplete;
+			path = ThirdParty/TRAutocomplete;
+			sourceTree = "<group>";
+		};
 		A06E433D16DD6AAC00342DB4 /* TITokenField */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +772,12 @@
 		A091648916ABCC01009FBF5F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				55E1FE55171BD62300CBE16C /* LocationAutocomplete.h */,
+				55E1FE56171BD62300CBE16C /* LocationAutocomplete.m */,
+				A08D750D16AB138E00AD22B7 /* SharingActivity.h */,
+				A08D750E16AB138E00AD22B7 /* SharingActivity.m */,
+				A09C642E16D1A5E300746777 /* NearbyVenuesController.h */,
+				A09C642F16D1A5E300746777 /* NearbyVenuesController.m */,
 				A043C9E1170A825400504320 /* UIImage+Resize.m */,
 				A043C9E2170A825400504320 /* UIImage+Alpha.m */,
 				A043C9E3170A825500504320 /* UIImage+RoundedCorner.m */,
@@ -704,7 +842,6 @@
 		A093F18E16A7FEFC00EFF4BD = {
 			isa = PBXGroup;
 			children = (
-				A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */,
 				A093F1A316A7FEFC00EFF4BD /* fancy */,
 				A093F19C16A7FEFC00EFF4BD /* Frameworks */,
 				A093F19A16A7FEFC00EFF4BD /* Products */,
@@ -742,34 +879,11 @@
 				A0E852D116AF351100976786 /* Model */,
 				A091649116AC8116009FBF5F /* Resources */,
 				A091648916ABCC01009FBF5F /* Util */,
-				A093F1D716A80B0200EFF4BD /* HomeViewController.h */,
-				A0A0375816D0A10E004FD29E /* HomeViewController.m */,
-				556BDE1C171B4D7A002A37BD /* StatsViewController.h */,
-				556BDE1D171B4D7B002A37BD /* StatsViewController.m */,
-				A0C476DA16F6753000D08404 /* PickphotoViewController.h */,
-				A0C476DB16F6753000D08404 /* PickphotoViewController.m */,
-				A0C610CE17079A32002F1180 /* MoreinfoTableViewController.h */,
-				A0C610CF17079A32002F1180 /* MoreinfoTableViewController.m */,
-				A09C642E16D1A5E300746777 /* NearbyVenuesController.h */,
-				A09C642F16D1A5E300746777 /* NearbyVenuesController.m */,
-				A091648E16AC6563009FBF5F /* FoodieListViewController.h */,
-				A091648F16AC6563009FBF5F /* FoodieListViewController.m */,
+				55E1FE22171BCCBD00CBE16C /* ViewControllers */,
 				A093F1AC16A7FEFC00EFF4BD /* AppDelegate.h */,
 				A093F1AD16A7FEFC00EFF4BD /* AppDelegate.m */,
 				A093F1B516A7FEFC00EFF4BD /* MainStoryboard.storyboard */,
 				A093F1A416A7FEFC00EFF4BD /* Supporting Files */,
-				A08D750D16AB138E00AD22B7 /* SharingActivity.h */,
-				A08D750E16AB138E00AD22B7 /* SharingActivity.m */,
-				556BDE1F171B8333002A37BD /* XJLongTextViewController.h */,
-				556BDE20171B8337002A37BD /* XJLongTextViewController.m */,
-				A09164AF16ACAA64009FBF5F /* FoodieListCell.h */,
-				A09164B016ACAA64009FBF5F /* FoodieListCell.m */,
-				A0E852C516AF101F00976786 /* FoodieDetailViewController.h */,
-				A0E852C616AF101F00976786 /* FoodieDetailViewController.m */,
-				A0E852D216AF386900976786 /* SettingsViewController.h */,
-				A0E852D316AF386900976786 /* SettingsViewController.m */,
-				A0E852EF16AF4EA200976786 /* SearchViewController.h */,
-				A0E852F016AF4EA300976786 /* SearchViewController.m */,
 				A0A0375A16D0A3F6004FD29E /* Settings.bundle */,
 			);
 			path = fancy;
@@ -821,6 +935,8 @@
 		A0A0373C16D06FEF004FD29E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				55E1FE40171BCE6D00CBE16C /* TRAutocomplete */,
+				55E1FE23171BCE5500CBE16C /* AFNetworking */,
 				552281FA1717D42D0010B9B8 /* BaseKit */,
 				552281991717D2DF0010B9B8 /* QBPopupMenu */,
 				5522818C1717BB8A0010B9B8 /* CZPhotoPickerController */,
@@ -1039,6 +1155,7 @@
 		A0E852D116AF351100976786 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */,
 				556BDE19171B4004002A37BD /* Events.h */,
 				556BDE1A171B4004002A37BD /* Events.m */,
 				A0A0373916D05C7F004FD29E /* PhotoBlob.h */,
@@ -1283,6 +1400,23 @@
 				556BDE1B171B4005002A37BD /* Events.m in Sources */,
 				556BDE1E171B4D7D002A37BD /* StatsViewController.m in Sources */,
 				556BDE21171B833A002A37BD /* XJLongTextViewController.m in Sources */,
+				55E1FE37171BCE5500CBE16C /* AFHTTPClient.m in Sources */,
+				55E1FE38171BCE5500CBE16C /* AFHTTPRequestOperation.m in Sources */,
+				55E1FE39171BCE5500CBE16C /* AFImageRequestOperation.m in Sources */,
+				55E1FE3A171BCE5500CBE16C /* AFJSONRequestOperation.m in Sources */,
+				55E1FE3B171BCE5500CBE16C /* AFNetworkActivityIndicatorManager.m in Sources */,
+				55E1FE3C171BCE5500CBE16C /* AFPropertyListRequestOperation.m in Sources */,
+				55E1FE3D171BCE5500CBE16C /* AFURLConnectionOperation.m in Sources */,
+				55E1FE3E171BCE5500CBE16C /* AFXMLRequestOperation.m in Sources */,
+				55E1FE3F171BCE5500CBE16C /* UIImageView+AFNetworking.m in Sources */,
+				55E1FE4F171BCE6D00CBE16C /* TRAutocompleteView.m in Sources */,
+				55E1FE50171BCE6D00CBE16C /* TRGoogleMapsAutocompleteItemsSource.m in Sources */,
+				55E1FE51171BCE6D00CBE16C /* TRGoogleMapsAutocompletionCellFactory.m in Sources */,
+				55E1FE52171BCE6D00CBE16C /* TRGoogleMapsSuggestion.m in Sources */,
+				55E1FE53171BCE6D00CBE16C /* TRStringExtensions.m in Sources */,
+				55E1FE54171BCE6D00CBE16C /* TRTextFieldExtensions.m in Sources */,
+				55E1FE57171BD62300CBE16C /* LocationAutocomplete.m in Sources */,
+				55E1FE5A171BDC8F00CBE16C /* XJWebviewControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1415,8 +1549,7 @@
 				A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */,
 			);
 			currentVersion = A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */;
-			name = fancyModel.xcdatamodeld;
-			path = fancy/fancyModel.xcdatamodeld;
+			path = fancyModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

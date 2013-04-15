@@ -8,11 +8,13 @@
 
 #import "SettingsViewController.h"
 #import "Model/Settings.h"
+#import "XJWebviewControllerViewController.h"
 @interface SettingsViewController ()
 
 @end
 
 @implementation SettingsViewController
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -77,6 +79,14 @@
                 self.saveSwitch.on = [Settings isSaveToAlbum];
                
             }
+            break;
+        case 1:
+            if ( 2 == row){
+                NSLog(@"Set Up author Link");
+            }else if( 3 ==  row){
+                NSLog(@"Set Up app Link");
+            }
+            
             break;
     }
         
@@ -150,7 +160,19 @@
                 NSLog(@"lang = %lu", (unsigned long)self.lang);
             }
             break;
+        case 1:
+            if ( 2 == row){
+                NSLog(@"Called  author Link");
+                XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://shaosidea.com"];
+                [self.navigationController pushViewController:xjwebcontroller animated:YES];
+            }else if( 3 ==  row){
+                NSLog(@"Called app Link");
+                XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://shaosidea.com/fancy"];
+                [self.navigationController pushViewController:xjwebcontroller animated:YES];
+            }
             
+            break;
+
         default:
             break;
     }
