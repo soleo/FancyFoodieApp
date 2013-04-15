@@ -198,7 +198,9 @@
     [self addLineForBox:tagsBox withInfo:[[NSString alloc] initWithFormat:@"Tags in total: %i",
                                           [eventTagNames count]]
                                 withIcon:@"icon-tags"];
-    [self addLineForBox:tagsBox withInfo:tagsString withIcon:@"icon-tag"];
+    MGBoxLine *tagsLine = [MGBoxLine multilineWithText:tagsString font:nil padding:16.0f];
+    [tagsBox.topLines addObject:tagsLine];
+    //[self addLineForBox:tagsBox withInfo:tagsString withIcon:@"icon-tag"];
     //[scroller.boxes addObject:tagsBox];
     
     [scroller drawBoxesWithSpeed:0.6];

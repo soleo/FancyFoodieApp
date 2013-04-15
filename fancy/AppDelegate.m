@@ -49,7 +49,7 @@
 {
     // Change Navigation Bar Style
     UIImage *navBarBtn = [[UIImage imageNamed:@"NavigationButtonBG.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(14, 6, 14, 6)];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBarBG.png"]
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"NavigationBarBG.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(14, 6, 14, 6)]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:navBarBtn
                                                       forState:UIControlStateNormal

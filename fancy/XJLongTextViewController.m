@@ -24,6 +24,7 @@
         self.navigationItem.title = @"Comment";
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonSystemItemCancel target:self action:@selector(dismiss:)];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done:)];
+        [self.textView setFont:[UIFont boldSystemFontOfSize:30]];
         NSLog(@"init Text");
         
     }

@@ -11,6 +11,7 @@
 #import "MoreinfoTableViewController.h"
 #import "aEvent.h"
 #import "ThirdParty/CZPhotoPickerController/CZPhotoPickerController.h"
+#import "ThirdParty/SVProgressHUD/SVProgressHUD.h"
 
 @interface PickphotoViewController ()
 
@@ -69,11 +70,28 @@
     self.imageView.layer.cornerRadius = 5.0;
     
     [self.nextButton setType:BButtonTypePrimary];
+    [self.nextButton addTarget:self action:@selector(checkPhoto:) forControlEvents:UIControlEventAllTouchEvents];
 }
 
+- (IBAction)checkPhoto:(id)sender{
+    BButton *btn = (BButton *)sender;
+    NSLog(@"touched event");
+    if (btn ==  self.nextButton) {
+        //check photo
+    }
+    
+}
 #pragma mark - Segue method
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if (self.imageView.image == nil && [identifier isEqualToString:@"passPhotoSegue"]) {
+        [SVProgressHUD showErrorWithStatus:@"Please Choose a Photo First"];
+        return NO;
+    }
+    return YES;
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"passPhotoSegue"]) {
+    
+    if ([segue.identifier isEqualToString:@"passPhotoSegue"] ) {
         
         MoreinfoTableViewController *destViewController = segue.destinationViewController;
         
