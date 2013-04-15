@@ -9,11 +9,27 @@
 #import "FoodieListCell.h"
 #import "ThirdParty/BButton/BButton.h"
 #import "ThirdParty/QBPopupMenu/QBPopupMenu.h"
+#import "XJLongTextViewController.h"
+#import "ThirdParty/BaseKit/Code/View/UIViewController+BaseKit.h"
 
 @interface FoodieListCell ()
-
+@property (nonatomic, strong) UIImage* photo;
+@property (nonatomic, strong) NSString* comment;
+@property (nonatomic, strong) UIViewController* viewController;
+@property (nonatomic, strong) BWLongTextViewController* vc;
+@property (nonatomic, strong) UINavigationController* nc;
 @end
 @implementation FoodieListCell
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -51,6 +67,27 @@
     NSLog(@"Set up Menu In cell");
     [self.menuButton addTarget:self action:@selector(showPopupMenu:) forControlEvents:UIControlEventTouchUpInside];
 }
+- (void)setupMenuInCellWithComment:(NSString *)comment andWithPhoto:(UIImage *)photo andWithEvent:(Events*)event presentViewController:(UIViewController *)viewController
+{
+    self.viewController = viewController;
+    self.comment = comment;
+    self.photo   = photo;
+    self.event   = event;
+    // popupMenu
+    QBPopupMenu *popupMenu = [[QBPopupMenu alloc] init];
+    
+    QBPopupMenuItem *shareItem = [QBPopupMenuItem itemWithTitle:@"Share" target:self action:@selector(share:)];
+    
+    QBPopupMenuItem *commentItem = [QBPopupMenuItem itemWithTitle:@"Comment" target:self action:@selector(updateComment:)];
+    //commentItem.enabled = NO;
+    
+    popupMenu.items = [NSArray arrayWithObjects:shareItem, commentItem, nil];
+    
+    self.popupMenu = popupMenu;
+    NSLog(@"Set up Menu In cell");
+    [self.menuButton addTarget:self action:@selector(showPopupMenu:) forControlEvents:UIControlEventTouchUpInside];
+}
+
 
 - (IBAction)showPopupMenu:(id)sender
 {
@@ -61,11 +98,73 @@
 
 - (IBAction)share:(id)sender
 {
-    NSLog(@"Share Action");
+    //QBPopupMenuItem *item = (QBPopupMenuItem *)sender;
+    NSLog(@"share: %@", [sender class]);
+    //NSLog(@"Share Action = %@", item);
+    [self sharingWithContent:self.comment image:self.photo];
+    
 }
 
+- (IBAction)didUpdateComment:(id)sender
+{
+    NSLog(@"didUpdateComment");
+}
 - (IBAction)updateComment:(id)sender
 {
     NSLog(@"Update Comment Action");
+
+    [self.viewController presentModalViewControllerWithBlock:^UIViewController *{
+        //NSLog(@"pre");
+        self.vc = [[XJLongTextViewController alloc] initWithText:self.comment
+                                                   withDoneBlock:^{
+                                                       NSLog(@"Done Block , comment = %@", self.vc.textView.text);
+                                                       NSManagedObjectContext *context = [self managedObjectContext];
+                                                       [self.event setComment:self.vc.textView.text];
+                                                       NSError *error = nil;
+                                                       // Save the object to persistent store
+                                                       if (![context save:&error]) {
+                                                           NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                                                       }
+        }
+                                                 withCancelBlock:^{
+                                                     NSLog(@"Cancel block");
+        }];
+        return self.vc;
+        
+    } navigationController:YES animated:YES];
+   
+}
+
+#pragma mark Activity Action methods
+- (void) sharingWithContent:(NSString *)text image:(UIImage *)foodiePhoto
+{
+    NSArray *activityItems =
+    @[
+      text,
+      foodiePhoto
+      ];
+    NSArray *applicationActivities =
+    @[
+      [[UIActivity alloc] init]
+      ];
+    UIActivityViewController *activityViewController =
+    [[UIActivityViewController alloc] initWithActivityItems:activityItems
+                                      applicationActivities:applicationActivities];
+    
+    activityViewController.excludedActivityTypes =
+    @[
+      UIActivityTypeCopyToPasteboard,
+      UIActivityTypeSaveToCameraRoll,
+      UIActivityTypeAssignToContact,
+      UIActivityTypePrint
+      ];
+    
+    BOOL isRunningOniPhone =
+    UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone;
+    if( isRunningOniPhone == YES){
+        [self.viewController presentViewController:activityViewController
+                           animated:YES
+                         completion:nil];
+    }
 }
 @end

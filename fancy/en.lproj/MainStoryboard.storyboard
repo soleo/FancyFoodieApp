@@ -125,20 +125,36 @@
             </objects>
             <point key="canvasLocation" x="738" y="-936"/>
         </scene>
-        <!--First View Controller - First-->
-        <scene sceneID="11">
+        <!--Stats View Controller - Stats-->
+        <scene sceneID="Yse-7o-lZG">
             <objects>
-                <viewController title="First" id="2" customClass="FirstViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController id="Cn8-ui-mxE" customClass="StatsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="owr-xE-bOJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <navigationItem key="navigationItem" title="Stats" id="U3M-lu-Rfb"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6W-fS-JAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="426"/>
+            <point key="canvasLocation" x="1197" y="420"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="ida-I1-m8B">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="oO2-bo-siJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="SNX-5o-0bP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ocS-wX-ggQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Cn8-ui-mxE" kind="relationship" relationship="rootViewController" id="pGM-3h-1hV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bkb-Rw-Lst" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="731" y="420"/>
         </scene>
         <!--Foodie List View Controller - Foodie List-->
         <scene sceneID="jNI-I1-PCK">
@@ -240,8 +256,8 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="photo_frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="4wm-Yc-1et">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="222" id="3tV-rw-N1O"/>
-                                    <constraint firstAttribute="width" constant="282" id="ONB-RY-Ued"/>
+                                    <constraint firstAttribute="width" constant="300" id="k28-i3-SHX"/>
+                                    <constraint firstAttribute="height" constant="300" id="x0S-6I-UED"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="when" lineBreakMode="tailTruncation" numberOfLines="101" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="R6p-WH-q1F">
@@ -264,8 +280,8 @@
                             </label>
                             <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Af-ct-G7P">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="261" id="fJ9-of-Zpb"/>
-                                    <constraint firstAttribute="height" constant="191" id="trN-sc-ads"/>
+                                    <constraint firstAttribute="height" constant="260" id="ZMa-XK-mSW"/>
+                                    <constraint firstAttribute="width" constant="260" id="jsG-00-ka3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="104" contentMode="left" text="Tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOm-RE-1Bj">
@@ -280,29 +296,33 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LM9-FD-Iic" firstAttribute="width" secondItem="4dY-hA-y1Y" secondAttribute="width" type="user" id="0rP-GW-8eD"/>
-                            <constraint firstItem="R6p-WH-q1F" firstAttribute="top" secondItem="2U9-ma-vFK" secondAttribute="top" constant="226" id="4hh-5E-c7Z"/>
+                            <constraint firstItem="4wm-Yc-1et" firstAttribute="centerX" secondItem="2U9-ma-vFK" secondAttribute="centerX" type="default" id="29X-xI-wC3"/>
+                            <constraint firstItem="R6p-WH-q1F" firstAttribute="top" secondItem="2U9-ma-vFK" secondAttribute="top" constant="302" id="7As-Go-vC6"/>
+                            <constraint firstItem="4dY-hA-y1Y" firstAttribute="centerX" secondItem="6Af-ct-G7P" secondAttribute="centerX" type="default" id="8BF-H3-fYJ"/>
                             <constraint firstItem="LM9-FD-Iic" firstAttribute="width" secondItem="4dY-hA-y1Y" secondAttribute="width" type="user" id="8VS-5d-lIp"/>
-                            <constraint firstItem="4dY-hA-y1Y" firstAttribute="top" secondItem="XOm-RE-1Bj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BaI-cz-Ejb"/>
+                            <constraint firstItem="4dY-hA-y1Y" firstAttribute="leading" secondItem="2U9-ma-vFK" secondAttribute="leading" constant="22" id="BdL-Hd-k7b"/>
+                            <constraint firstItem="R6p-WH-q1F" firstAttribute="centerX" secondItem="4wm-Yc-1et" secondAttribute="centerX" type="default" id="C7d-62-XXw"/>
                             <constraint firstItem="LM9-FD-Iic" firstAttribute="leading" secondItem="2U9-ma-vFK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ISj-fw-TgF"/>
-                            <constraint firstItem="6Af-ct-G7P" firstAttribute="centerX" secondItem="R6p-WH-q1F" secondAttribute="centerX" type="default" id="O0c-17-CHa"/>
+                            <constraint firstItem="LM9-FD-Iic" firstAttribute="top" secondItem="R6p-WH-q1F" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="O3Q-1s-C8Y"/>
                             <constraint firstItem="4wm-Yc-1et" firstAttribute="top" secondItem="2U9-ma-vFK" secondAttribute="top" constant="12" id="P6a-yu-dWG"/>
+                            <constraint firstAttribute="trailing" secondItem="R6p-WH-q1F" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UWm-dC-Ik3"/>
+                            <constraint firstAttribute="bottom" secondItem="4dY-hA-y1Y" secondAttribute="bottom" constant="-32" id="Ugn-dO-Gl3"/>
                             <constraint firstItem="LM9-FD-Iic" firstAttribute="width" secondItem="XOm-RE-1Bj" secondAttribute="width" type="user" id="VB9-uM-My7"/>
-                            <constraint firstAttribute="bottom" secondItem="4dY-hA-y1Y" secondAttribute="bottom" constant="36" id="VqX-o5-JQm"/>
-                            <constraint firstItem="XOm-RE-1Bj" firstAttribute="top" secondItem="LM9-FD-Iic" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WUV-Tz-SZ3"/>
+                            <constraint firstItem="XOm-RE-1Bj" firstAttribute="top" secondItem="2U9-ma-vFK" secondAttribute="top" constant="352" id="WL6-eh-0xS"/>
                             <constraint firstItem="XOm-RE-1Bj" firstAttribute="leading" secondItem="2U9-ma-vFK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aKe-E3-tvF"/>
                             <constraint firstItem="LM9-FD-Iic" firstAttribute="width" secondItem="R6p-WH-q1F" secondAttribute="width" type="user" id="blK-Tl-2Uu"/>
                             <constraint firstItem="R6p-WH-q1F" firstAttribute="leading" secondItem="2U9-ma-vFK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gUz-Hr-hez"/>
-                            <constraint firstItem="LM9-FD-Iic" firstAttribute="top" secondItem="R6p-WH-q1F" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j50-ur-slD"/>
                             <constraint firstItem="LM9-FD-Iic" firstAttribute="width" secondItem="R6p-WH-q1F" secondAttribute="width" type="user" id="ktE-Vg-kP7"/>
-                            <constraint firstItem="6Af-ct-G7P" firstAttribute="top" secondItem="2U9-ma-vFK" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pS9-Zt-aJ6"/>
-                            <constraint firstAttribute="trailing" secondItem="4wm-Yc-1et" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qZY-BC-AVh"/>
-                            <constraint firstItem="4dY-hA-y1Y" firstAttribute="leading" secondItem="2U9-ma-vFK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="t8z-0k-Pax"/>
-                            <constraint firstAttribute="trailing" secondItem="R6p-WH-q1F" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uhQ-0a-wFz"/>
-                            <constraint firstItem="4dY-hA-y1Y" firstAttribute="centerX" secondItem="2U9-ma-vFK" secondAttribute="centerX" type="default" id="yiA-vk-rpX"/>
+                            <constraint firstItem="4dY-hA-y1Y" firstAttribute="top" secondItem="XOm-RE-1Bj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wcT-Y6-MPk"/>
+                            <constraint firstItem="6Af-ct-G7P" firstAttribute="top" secondItem="2U9-ma-vFK" secondAttribute="top" constant="20" symbolic="YES" type="default" id="xx4-y2-KXL"/>
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" id="QIT-sg-Su7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ZWD-qa-RZ3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ZWD-qa-RZ3">
+                            <connections>
+                                <segue destination="x1Q-KV-zhx" kind="modal" id="foX-2m-eE9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="commentLabel" destination="4dY-hA-y1Y" id="x7m-yP-vEn"/>
@@ -315,6 +335,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSU-Xs-lGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1641" y="-256"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Mln-ZZ-DCm">
+            <objects>
+                <tableViewController id="x1Q-KV-zhx" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BwQ-WV-Py4">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dWv-fu-b3r">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x1Q-KV-zhx" id="G18-UJ-2tG"/>
+                            <outlet property="delegate" destination="x1Q-KV-zhx" id="LLl-j4-BSh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqK-gC-EuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011" y="-256"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="V31-eO-9nX">
@@ -572,9 +621,9 @@
                     <connections>
                         <segue destination="W8J-4u-7lf" kind="relationship" relationship="viewControllers" id="TDM-rA-Ax6"/>
                         <segue destination="1UV-Lv-KmN" kind="relationship" relationship="viewControllers" id="du8-T6-sRp"/>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="wOa-lk-G9o"/>
-                        <segue destination="wAE-lo-tRf" kind="relationship" relationship="viewControllers" id="ttW-uK-Vri"/>
-                        <segue destination="gif-o4-CXG" kind="relationship" relationship="viewControllers" id="7wx-z9-6Jt"/>
+                        <segue destination="oO2-bo-siJ" kind="relationship" relationship="viewControllers" id="A71-7d-h5B"/>
+                        <segue destination="wAE-lo-tRf" kind="relationship" relationship="viewControllers" id="GnI-C0-UPj"/>
+                        <segue destination="gif-o4-CXG" kind="relationship" relationship="viewControllers" id="fcC-4t-ZWX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -602,10 +651,78 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
         <image name="photo_frame.png" width="297" height="199"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="BButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BButton.h"/>
+        </class>
+        <class className="FoodieDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="commentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailPhotoView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tagsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FoodieListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListCell.h"/>
+            <relationships>
+                <relationship kind="action" name="share:"/>
+                <relationship kind="action" name="showPopupMenu:"/>
+                <relationship kind="action" name="updateComment:"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="menuButton" candidateClass="BButton"/>
+                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="FoodieListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListViewController.h"/>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+        </class>
+        <class className="MoreinfoTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreinfoTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveEvent:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PickphotoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PickphotoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="takePicture:"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="BButton"/>
+            </relationships>
+        </class>
+        <class className="SearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="switchToggled:" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="saveSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="StatsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsViewController.h"/>
+        </class>
+        <class className="UIRefreshControl" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

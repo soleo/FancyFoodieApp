@@ -9,8 +9,10 @@
 #import "FoodieDetailViewController.h"
 #import "ThirdParty/FontAwesome/UIFont+FontAwesome.h"
 #import "ThirdParty/FontAwesome/NSString+FontAwesome.h"
+
 #import "NSStringHelper.h"
 #import "aEvent.h"
+
 @interface FoodieDetailViewController ()
 
 @end

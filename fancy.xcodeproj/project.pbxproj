@@ -42,6 +42,8 @@
 		552281F91717D3F50010B9B8 /* UIViewController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281E01717D3F50010B9B8 /* UIViewController+BaseKit.m */; };
 		556BDE18171B3048002A37BD /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE17171B3047002A37BD /* Settings.m */; };
 		556BDE1B171B4005002A37BD /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE1A171B4004002A37BD /* Events.m */; };
+		556BDE1E171B4D7D002A37BD /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE1D171B4D7B002A37BD /* StatsViewController.m */; };
+		556BDE21171B833A002A37BD /* XJLongTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE20171B8337002A37BD /* XJLongTextViewController.m */; };
 		55D673BD17139BC80005394E /* NavBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BC17139BC80005394E /* NavBg.png */; };
 		55D673BF17139C9C0005394E /* NavigationButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BE17139C9C0005394E /* NavigationButtonBG.png */; };
 		55D673C117139CA60005394E /* NavigationButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C017139CA60005394E /* NavigationButtonBG@2x.png */; };
@@ -80,7 +82,6 @@
 		A093F1B216A7FEFC00EFF4BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A093F1B116A7FEFC00EFF4BD /* Default@2x.png */; };
 		A093F1B416A7FEFC00EFF4BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A093F1B316A7FEFC00EFF4BD /* Default-568h@2x.png */; };
 		A093F1B716A7FEFC00EFF4BD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A093F1B516A7FEFC00EFF4BD /* MainStoryboard.storyboard */; };
-		A093F1BA16A7FEFC00EFF4BD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A093F1B916A7FEFC00EFF4BD /* FirstViewController.m */; };
 		A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A093F1DA16A80FCF00EFF4BD /* fancyModel.xcdatamodeld */; };
 		A093F1E116A810C400EFF4BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E016A810C400EFF4BD /* CoreData.framework */; };
 		A093F1E316A810CA00EFF4BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A093F1E216A810CA00EFF4BD /* CoreLocation.framework */; };
@@ -250,6 +251,10 @@
 		556BDE17171B3047002A37BD /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Model/Settings.m; sourceTree = "<group>"; };
 		556BDE19171B4004002A37BD /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Events.h; path = Model/Events.h; sourceTree = "<group>"; };
 		556BDE1A171B4004002A37BD /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Events.m; path = Model/Events.m; sourceTree = "<group>"; };
+		556BDE1C171B4D7A002A37BD /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		556BDE1D171B4D7B002A37BD /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		556BDE1F171B8333002A37BD /* XJLongTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJLongTextViewController.h; sourceTree = "<group>"; };
+		556BDE20171B8337002A37BD /* XJLongTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJLongTextViewController.m; sourceTree = "<group>"; };
 		55D673BC17139BC80005394E /* NavBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBg.png; sourceTree = "<group>"; };
 		55D673BE17139C9C0005394E /* NavigationButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationButtonBG.png; sourceTree = "<group>"; };
 		55D673C017139CA60005394E /* NavigationButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationButtonBG@2x.png"; sourceTree = "<group>"; };
@@ -302,8 +307,6 @@
 		A093F1B116A7FEFC00EFF4BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A093F1B316A7FEFC00EFF4BD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A093F1B616A7FEFC00EFF4BD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A093F1B816A7FEFC00EFF4BD /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		A093F1B916A7FEFC00EFF4BD /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A093F1D716A80B0200EFF4BD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		A093F1DB16A80FCF00EFF4BD /* fancyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fancyModel.xcdatamodel; sourceTree = "<group>"; };
 		A093F1E016A810C400EFF4BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -741,6 +744,8 @@
 				A091648916ABCC01009FBF5F /* Util */,
 				A093F1D716A80B0200EFF4BD /* HomeViewController.h */,
 				A0A0375816D0A10E004FD29E /* HomeViewController.m */,
+				556BDE1C171B4D7A002A37BD /* StatsViewController.h */,
+				556BDE1D171B4D7B002A37BD /* StatsViewController.m */,
 				A0C476DA16F6753000D08404 /* PickphotoViewController.h */,
 				A0C476DB16F6753000D08404 /* PickphotoViewController.m */,
 				A0C610CE17079A32002F1180 /* MoreinfoTableViewController.h */,
@@ -752,11 +757,11 @@
 				A093F1AC16A7FEFC00EFF4BD /* AppDelegate.h */,
 				A093F1AD16A7FEFC00EFF4BD /* AppDelegate.m */,
 				A093F1B516A7FEFC00EFF4BD /* MainStoryboard.storyboard */,
-				A093F1B816A7FEFC00EFF4BD /* FirstViewController.h */,
-				A093F1B916A7FEFC00EFF4BD /* FirstViewController.m */,
 				A093F1A416A7FEFC00EFF4BD /* Supporting Files */,
 				A08D750D16AB138E00AD22B7 /* SharingActivity.h */,
 				A08D750E16AB138E00AD22B7 /* SharingActivity.m */,
+				556BDE1F171B8333002A37BD /* XJLongTextViewController.h */,
+				556BDE20171B8337002A37BD /* XJLongTextViewController.m */,
 				A09164AF16ACAA64009FBF5F /* FoodieListCell.h */,
 				A09164B016ACAA64009FBF5F /* FoodieListCell.m */,
 				A0E852C516AF101F00976786 /* FoodieDetailViewController.h */,
@@ -1176,7 +1181,6 @@
 			files = (
 				A093F1AA16A7FEFC00EFF4BD /* main.m in Sources */,
 				A093F1AE16A7FEFC00EFF4BD /* AppDelegate.m in Sources */,
-				A093F1BA16A7FEFC00EFF4BD /* FirstViewController.m in Sources */,
 				A093F1DC16A80FCF00EFF4BD /* fancyModel.xcdatamodeld in Sources */,
 				A08D750F16AB138E00AD22B7 /* SharingActivity.m in Sources */,
 				A091648D16ABCC73009FBF5F /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
@@ -1277,6 +1281,8 @@
 				552281F91717D3F50010B9B8 /* UIViewController+BaseKit.m in Sources */,
 				556BDE18171B3048002A37BD /* Settings.m in Sources */,
 				556BDE1B171B4005002A37BD /* Events.m in Sources */,
+				556BDE1E171B4D7D002A37BD /* StatsViewController.m in Sources */,
+				556BDE21171B833A002A37BD /* XJLongTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

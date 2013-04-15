@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Model/Events.h"
 @class BButton;
 @class QBPopupMenu;
 @interface FoodieListCell : UITableViewCell
@@ -15,10 +16,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet BButton *menuButton;
 @property (nonatomic, retain) QBPopupMenu *popupMenu;
-
+@property (strong) Events *event;
 
 - (IBAction) showPopupMenu:(id)sender;
 - (IBAction) share:(id)sender;
 - (IBAction) updateComment:(id)sender;
 - (void) setupMenuInCell;
+- (void)setupMenuInCellWithComment:(NSString *)comment andWithPhoto:(UIImage *)photo andWithEvent:(Events*)event presentViewController:(UIViewController *)viewController;
+
 @end

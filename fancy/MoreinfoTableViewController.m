@@ -42,38 +42,6 @@
     return context;
 }
 
-#pragma mark Activity Action methods
-- (void) sharingWithContent:(NSString *)text image:(UIImage *)foodiePhoto
-{
-    NSArray *activityItems =
-    @[
-      text,
-      foodiePhoto
-      ];
-    NSArray *applicationActivities =
-    @[
-      [[UIActivity alloc] init]
-      ];
-    UIActivityViewController *activityViewController =
-    [[UIActivityViewController alloc] initWithActivityItems:activityItems
-                                      applicationActivities:applicationActivities];
-    
-    activityViewController.excludedActivityTypes =
-    @[
-      UIActivityTypeCopyToPasteboard,
-      UIActivityTypeSaveToCameraRoll,
-      UIActivityTypeAssignToContact,
-      UIActivityTypePrint
-      ];
-   
-    BOOL isRunningOniPhone =
-    UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone;
-    if( isRunningOniPhone == YES){
-        [self presentViewController:activityViewController
-                           animated:YES
-                         completion:nil];
-    }
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

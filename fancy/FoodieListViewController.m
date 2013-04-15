@@ -24,6 +24,8 @@
 @end
 
 @implementation FoodieListViewController
+
+
 - (NSManagedObjectContext *)managedObjectContext
 {
     NSManagedObjectContext *context = nil;
@@ -131,7 +133,7 @@
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
     // data set
-    NSManagedObject *event = [self.events objectAtIndex:indexPath.row];
+    Events *event = [self.events objectAtIndex:indexPath.row];
     NSLog(@"date: %@, loc: %@",[event valueForKey:@"creationDate"], [event valueForKey:@"locationName"]);
     
     
@@ -149,8 +151,11 @@
     }
     [cell.menuButton makeAwesomeWithIcon:FAIconShareAlt];
     [cell.menuButton setType:BButtonTypeSuccess];
-    [cell setupMenuInCell];
-    
+    //[cell setupMenuInCell];
+    [cell setupMenuInCellWithComment:[event valueForKey:@"comment"]
+                        andWithPhoto:(UIImage *)[event valueForKey:@"thumbnail"]
+                        andWithEvent:event
+               presentViewController:self];
     //NSManagedObject *photoBlob = [event valueForKey:@"photoBlob"];
     //UIImage *image = [UIImage imageWithData:[photoBlob valueForKey:@"bytes"]];
     //cell.photoView.image = image;
@@ -238,5 +243,6 @@
         destViewController.event = passEvent;
     }
 }
+
 
 @end
