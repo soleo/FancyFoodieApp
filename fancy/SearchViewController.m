@@ -21,12 +21,7 @@
 @implementation SearchViewController
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-//    NSPredicate *resultPredicate = [NSPredicate
-//                                    predicateWithFormat:@"SELF contains[cd] %@",
-//                                    searchText];
-    
-    //searchResults = [recipes filteredArrayUsingPredicate:resultPredicate];
-    //searchResults =
+
     if ([searchText length] > 3) {
         [geocoder geocodeAddressString:searchText
                      completionHandler:^(NSArray* placemarks, NSError* error){
@@ -65,20 +60,9 @@ shouldReloadTableForSearchString:(NSString *)searchString
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //if (tableView == self.tableView) {
+    
         NSLog(@"Suggestion Cnt = %i", [self.suggestedLocations count]);
         return [self.suggestedLocations count];
-        
-    //} else {
-      //  return 0;
-        
-    //}
-    //if (tableView == self.tableView) {
-        //return [self.suggestedLocations count];
-    //}
-    // If necessary (if self is the data source for other table views),
-    // check whether tableView is searchController.searchResultsTableView.
-   // return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -179,7 +163,15 @@ shouldReloadTableForSearchString:(NSString *)searchString
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    if (!CLLocationCoordinate2DIsValid(userLocation.coordinate)) {
+        //do nothing, invalid regions
+        NSLog(@"co-ord fail");
+    } else if (region.span.latitudeDelta <= 0.0 || region.span.longitudeDelta <= 0.0) {
+        NSLog(@"invalid reg");
+    } else {
+        [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    }
+   
     
     // add events to the map
     for (NSManagedObject *event in self.events) {
@@ -192,8 +184,6 @@ shouldReloadTableForSearchString:(NSString *)searchString
         [self.mapView addAnnotation:eventpoint];
         eventpoint = nil;
     }
-    
-        
     
 }
 
