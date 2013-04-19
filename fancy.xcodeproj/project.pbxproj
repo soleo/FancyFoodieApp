@@ -114,7 +114,7 @@
 		A09C642D16D19F7D00746777 /* MGStyledBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A09C642816D19F7D00746777 /* MGStyledBox.m */; };
 		A09C643016D1A5E400746777 /* NearbyVenuesController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09C642F16D1A5E300746777 /* NearbyVenuesController.m */; };
 		A0A0372116D04C74004FD29E /* fancy.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A0372016D04C74004FD29E /* fancy.png */; };
-		A0A0372316D04C7C004FD29E /* fancy@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A0372216D04C7C004FD29E /* fancy@2X.png */; };
+		A0A0372316D04C7C004FD29E /* fancy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A0372216D04C7C004FD29E /* fancy@2x.png */; };
 		A0A0373516D05C7D004FD29E /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373416D05C7D004FD29E /* Tag.m */; };
 		A0A0373B16D05C7F004FD29E /* PhotoBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A0373A16D05C7F004FD29E /* PhotoBlob.m */; };
 		A0A0375016D0728B004FD29E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0A0374D16D0728B004FD29E /* SVProgressHUD.bundle */; };
@@ -388,7 +388,7 @@
 		A09C642E16D1A5E300746777 /* NearbyVenuesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVenuesController.h; sourceTree = "<group>"; };
 		A09C642F16D1A5E300746777 /* NearbyVenuesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVenuesController.m; sourceTree = "<group>"; };
 		A0A0372016D04C74004FD29E /* fancy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fancy.png; sourceTree = SOURCE_ROOT; };
-		A0A0372216D04C7C004FD29E /* fancy@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fancy@2X.png"; sourceTree = SOURCE_ROOT; };
+		A0A0372216D04C7C004FD29E /* fancy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fancy@2x.png"; sourceTree = SOURCE_ROOT; };
 		A0A0373316D05C7D004FD29E /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = Model/Tag.h; sourceTree = "<group>"; };
 		A0A0373416D05C7D004FD29E /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = Model/Tag.m; sourceTree = "<group>"; };
 		A0A0373916D05C7F004FD29E /* PhotoBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoBlob.h; path = Model/PhotoBlob.h; sourceTree = "<group>"; };
@@ -832,7 +832,7 @@
 				55D673C517139E450005394E /* NavigationBarBG@2x.png */,
 				55D673C017139CA60005394E /* NavigationButtonBG@2x.png */,
 				55D673BE17139C9C0005394E /* NavigationButtonBG.png */,
-				A0A0372216D04C7C004FD29E /* fancy@2X.png */,
+				A0A0372216D04C7C004FD29E /* fancy@2x.png */,
 				A0A0372016D04C74004FD29E /* fancy.png */,
 				A091649316AC81FD009FBF5F /* setttings@2x.png */,
 				A091649416AC81FD009FBF5F /* statistics.png */,
@@ -1273,7 +1273,7 @@
 				A0E852EB16AF44A100976786 /* common_bg.png in Resources */,
 				A0E852EC16AF44A100976786 /* common_bg@2x.png in Resources */,
 				A0A0372116D04C74004FD29E /* fancy.png in Resources */,
-				A0A0372316D04C7C004FD29E /* fancy@2X.png in Resources */,
+				A0A0372316D04C7C004FD29E /* fancy@2x.png in Resources */,
 				A0A0375016D0728B004FD29E /* SVProgressHUD.bundle in Resources */,
 				A0A0375B16D0A3F6004FD29E /* Settings.bundle in Resources */,
 				A09C641A16D19E1100746777 /* SORelativeDateTransformer.bundle in Resources */,
@@ -1506,10 +1506,12 @@
 		A093F1C916A7FEFC00EFF4BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;
@@ -1519,10 +1521,14 @@
 		A093F1CA16A7FEFC00EFF4BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;

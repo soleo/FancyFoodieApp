@@ -82,7 +82,7 @@
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     self.events = [[context executeFetchRequest:fetchRequest  error:nil] mutableCopy];
-    NSLog(@"events array %@", self.events);
+    //NSLog(@"events array %@", self.events);
     
     [self.tableView reloadData];
 }

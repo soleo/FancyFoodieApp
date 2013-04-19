@@ -80,14 +80,24 @@
     
     QBPopupMenuItem *commentItem = [QBPopupMenuItem itemWithTitle:@"Comment" target:self action:@selector(updateComment:)];
     //commentItem.enabled = NO;
-    
-    popupMenu.items = [NSArray arrayWithObjects:shareItem, commentItem, nil];
+    QBPopupMenuItem *rateItem = [QBPopupMenuItem itemWithTitle:@"Rate" target:self action:@selector(updateRate:)];
+    popupMenu.items = [NSArray arrayWithObjects:shareItem, commentItem, rateItem,  nil];
     
     self.popupMenu = popupMenu;
     //NSLog(@"Set up Menu In cell");
     [self.menuButton addTarget:self action:@selector(showPopupMenu:) forControlEvents:UIControlEventTouchUpInside];
 }
+- (IBAction)updateRate:(id)sender{
+    UIActionSheet *sheet;
+    
+    
+    sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:nil otherButtonTitles:@"Excellent", @"Just OK", @"Really Bad", nil];
+    
+    [sheet showFromTabBar:self.viewController.tabBarController.tabBar];
+    //    [sheet showFromRect:self.viewController.showFromRect inView:self.showFromViewController.view animated:YES];
+    
 
+}
 
 - (IBAction)showPopupMenu:(id)sender
 {
@@ -129,6 +139,43 @@
         
     } navigationController:YES animated:YES];
    
+}
+#pragma mark - UIActionSheetDelegate
+- (void)saveRate:(NSString *)rate{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    [self.event setRate:rate];
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+
+}
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        return;
+    }
+    
+    switch (buttonIndex) {
+        case 0:
+            // Excellent
+            [self saveRate:@"Excellent"];
+            break;
+            
+        case 1:
+            // Just OK
+            [self saveRate:@"Just OK"];
+            return;
+            
+        case 2:
+            // Really Bad
+            [self saveRate:@"Really bad"];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark Activity Action methods
