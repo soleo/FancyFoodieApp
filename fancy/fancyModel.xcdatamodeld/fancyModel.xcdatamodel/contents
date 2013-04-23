@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Events" representedClassName="Events" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="photoBlob" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoBlob" inverseName="photo" inverseEntity="PhotoBlob" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="photos" inverseEntity="Tag" syncable="YES"/>
+    </entity>
+    <entity name="PhotoBlob" representedClassName="PhotoBlob" syncable="YES">
+        <attribute name="bytes" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="photo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Events" inverseName="photoBlob" inverseEntity="Events" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Events" inverseName="tags" inverseEntity="Events" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Events" positionX="160" positionY="288" width="128" height="210"/>
+        <element name="PhotoBlob" positionX="-27" positionY="315" width="128" height="75"/>
+        <element name="Tag" positionX="331" positionY="180" width="128" height="75"/>
+    </elements>
+</model>
