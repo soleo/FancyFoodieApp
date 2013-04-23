@@ -169,6 +169,10 @@
                 NSLog(@"Called app Link");
                 XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://shaosidea.com/fancy"];
                 [self.navigationController pushViewController:xjwebcontroller animated:YES];
+            }else if( 4 == row){
+               
+                [TestFlight openFeedbackView];
+                
             }
             
             break;

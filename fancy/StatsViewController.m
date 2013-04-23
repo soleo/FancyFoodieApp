@@ -67,6 +67,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self fetchTagsArray];
+}
+
 - (NSInteger *)getRatesWithCondition:(NSString *)rate{
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Events" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];

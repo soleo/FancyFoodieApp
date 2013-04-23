@@ -18,7 +18,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2x2-jl-byH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="-945"/>
+            <point key="canvasLocation" x="3012" y="-761"/>
         </scene>
         <!--Pickphoto View Controller - Pick Photo-->
         <scene sceneID="ljz-q6-2xT">
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xln-fk-Ss0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="-953"/>
+            <point key="canvasLocation" x="3420" y="-769"/>
         </scene>
         <!--Moreinfo Table View Controller - More Info-->
         <scene sceneID="XwL-Nm-E51">
@@ -107,7 +107,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQl-hh-kpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="-945"/>
+            <point key="canvasLocation" x="3813" y="-761"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="gxJ-EQ-IUO">
@@ -123,7 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyZ-Np-vxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="-936"/>
+            <point key="canvasLocation" x="2553" y="-752"/>
         </scene>
         <!--Stats View Controller - Stats-->
         <scene sceneID="Yse-7o-lZG">
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6W-fS-JAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="412"/>
+            <point key="canvasLocation" x="3431" y="714"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="ida-I1-m8B">
@@ -154,9 +154,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkb-Rw-Lst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731" y="420"/>
+            <point key="canvasLocation" x="3012" y="704"/>
         </scene>
-        <!--Foodie List View Controller - Foodie List-->
+        <!--Foodie List View Controller - Food List-->
         <scene sceneID="jNI-I1-PCK">
             <objects>
                 <tableViewController id="no4-s8-NMA" customClass="FoodieListViewController" sceneMemberID="viewController">
@@ -237,14 +237,14 @@
                             <outlet property="delegate" destination="no4-s8-NMA" id="OZb-ZB-5ij"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Foodie List" id="d1H-yK-2jD"/>
+                    <navigationItem key="navigationItem" title="Food List" id="d1H-yK-2jD"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="W7L-qb-q20">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCp-BH-QI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="-256"/>
+            <point key="canvasLocation" x="3437" y="2"/>
         </scene>
         <!--Foodie Detail View Controller-->
         <scene sceneID="fcc-tf-iB1">
@@ -260,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSU-Xs-lGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597" y="-256"/>
+            <point key="canvasLocation" x="3833" y="2"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="V31-eO-9nX">
@@ -276,7 +276,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPS-iw-ZJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="-264"/>
+            <point key="canvasLocation" x="3012" y="-6"/>
         </scene>
         <!--Search View Controller - Search-->
         <scene sceneID="13">
@@ -314,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="1118"/>
+            <point key="canvasLocation" x="3437" y="1408"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="3On-hr-IPw">
@@ -465,13 +465,30 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fOX-O9-Va3" style="IBUITableViewCellStyleDefault" id="0Ac-Vy-znE">
-                                        <rect key="frame" x="0.0" y="335" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="335" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fOX-O9-Va3">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="SZA-Gu-gmg" style="IBUITableViewCellStyleDefault" id="AfX-Fa-58q">
+                                        <rect key="frame" x="0.0" y="379" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SZA-Gu-gmg">
                                                     <rect key="frame" x="10" y="0.0" width="260" height="43"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -492,7 +509,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPh-Kg-H1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="1822"/>
+            <point key="canvasLocation" x="3449" y="2098"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="bc7-uQ-vUt">
@@ -508,7 +525,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZp-C1-c9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723" y="1822"/>
+            <point key="canvasLocation" x="3023" y="2090"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -530,7 +547,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="68"/>
+            <point key="canvasLocation" x="2510" y="-6"/>
         </scene>
         <!--Navigation Controller - Search-->
         <scene sceneID="0jM-Kz-ZTG">
@@ -549,77 +566,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1p-DY-UCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="1106"/>
+            <point key="canvasLocation" x="3012" y="1400"/>
         </scene>
     </scenes>
     <resources>
         <image name="second" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="BButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BButton.h"/>
-        </class>
-        <class className="FoodieDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doShare:"/>
-            </relationships>
-        </class>
-        <class className="FoodieListCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListCell.h"/>
-            <relationships>
-                <relationship kind="action" name="share:"/>
-                <relationship kind="action" name="showPopupMenu:"/>
-                <relationship kind="action" name="updateComment:"/>
-                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="menuButton" candidateClass="BButton"/>
-                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="FoodieListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodieListViewController.h"/>
-        </class>
-        <class className="HomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
-        </class>
-        <class className="MoreinfoTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreinfoTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="saveEvent:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PickphotoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PickphotoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="BButton"/>
-            </relationships>
-        </class>
-        <class className="SearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-            </relationships>
-        </class>
-        <class className="SettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="switchToggled:" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="saveSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="StatsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatsViewController.h"/>
-        </class>
-        <class className="UIRefreshControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

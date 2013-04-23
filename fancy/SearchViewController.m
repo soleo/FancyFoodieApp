@@ -123,6 +123,13 @@ shouldReloadTableForSearchString:(NSString *)searchString
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Events"];
+    self.events = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

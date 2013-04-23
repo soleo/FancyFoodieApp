@@ -11,6 +11,8 @@
 #import "NearbyVenuesController.h"
 #import "ThirdParty/BaseKit/Code/LocationManager/BaseKitLocationManager.h"
 #import "Model/Settings.h"
+
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -67,7 +69,7 @@
     UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
     
     tabBarItem1.title = @"Home";
-    tabBarItem2.title = @"Foodie List";
+    tabBarItem2.title = @"Food List";
     tabBarItem3.title = @"Statistics";
     tabBarItem4.title = @"Search";
     tabBarItem5.title = @"Settings";
@@ -107,12 +109,17 @@
 {
     //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+#define TESTING 1
+#ifdef TESTING
+    [TestFlight setDeviceIdentifier:[UIDevice currentDevice].identifierForVendor.UUIDString];
+#endif
+    [TestFlight takeOff:@"518f85be-d660-4d94-a2ff-5f7e55a1bbec"];
     [self initAppearance];
     [self initSettings];
     [self initLocationManager];
     return YES;
 }
-							
+						
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

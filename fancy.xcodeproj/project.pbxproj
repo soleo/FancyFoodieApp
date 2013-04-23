@@ -21,7 +21,6 @@
 		552281E41717D3F50010B9B8 /* BKRunBlockAtDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281B01717D3F50010B9B8 /* BKRunBlockAtDealloc.m */; };
 		552281E51717D3F50010B9B8 /* BKToogleValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281B21717D3F50010B9B8 /* BKToogleValue.m */; };
 		552281E61717D3F50010B9B8 /* BKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281B41717D3F50010B9B8 /* BKUtils.m */; };
-		552281E71717D3F50010B9B8 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = 552281B51717D3F50010B9B8 /* deps */; };
 		552281E81717D3F50010B9B8 /* NSArray+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281B71717D3F50010B9B8 /* NSArray+BaseKit.m */; };
 		552281E91717D3F50010B9B8 /* NSDictionary+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281B91717D3F50010B9B8 /* NSDictionary+BaseKit.m */; };
 		552281EA1717D3F50010B9B8 /* NSMutableArray+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281BB1717D3F50010B9B8 /* NSMutableArray+BaseKit.m */; };
@@ -31,8 +30,6 @@
 		552281EE1717D3F50010B9B8 /* NSString+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281C31717D3F50010B9B8 /* NSString+BaseKit.m */; };
 		552281EF1717D3F50010B9B8 /* NSManagedObject+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281C71717D3F50010B9B8 /* NSManagedObject+BaseKit.m */; };
 		552281F01717D3F50010B9B8 /* BKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281CB1717D3F50010B9B8 /* BKLocationManager.m */; };
-		552281F11717D3F50010B9B8 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = 552281CC1717D3F50010B9B8 /* deps */; };
-		552281F21717D3F50010B9B8 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = 552281D21717D3F50010B9B8 /* deps */; };
 		552281F31717D3F50010B9B8 /* UIBarButtonItem+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281D41717D3F50010B9B8 /* UIBarButtonItem+BaseKit.m */; };
 		552281F41717D3F50010B9B8 /* UINavigationController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281D61717D3F50010B9B8 /* UINavigationController+BaseKit.m */; };
 		552281F51717D3F50010B9B8 /* UITableView+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 552281D81717D3F50010B9B8 /* UITableView+BaseKit.m */; };
@@ -44,6 +41,10 @@
 		556BDE1B171B4005002A37BD /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE1A171B4004002A37BD /* Events.m */; };
 		556BDE1E171B4D7D002A37BD /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE1D171B4D7B002A37BD /* StatsViewController.m */; };
 		556BDE21171B833A002A37BD /* XJLongTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE20171B8337002A37BD /* XJLongTextViewController.m */; };
+		55CD81DE172721CA00E06BF2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD81DA172721CA00E06BF2 /* libTestFlight.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		55CD81DF172721CA00E06BF2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55CD81DB172721CA00E06BF2 /* README.md */; };
+		55CD81E0172721CA00E06BF2 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 55CD81DC172721CA00E06BF2 /* release_notes.md */; };
+		55CD81E21727234100E06BF2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD81E11727234100E06BF2 /* libz.dylib */; };
 		55D673BD17139BC80005394E /* NavBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BC17139BC80005394E /* NavBg.png */; };
 		55D673BF17139C9C0005394E /* NavigationButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673BE17139C9C0005394E /* NavigationButtonBG.png */; };
 		55D673C117139CA60005394E /* NavigationButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D673C017139CA60005394E /* NavigationButtonBG@2x.png */; };
@@ -274,6 +275,11 @@
 		556BDE1D171B4D7B002A37BD /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		556BDE1F171B8333002A37BD /* XJLongTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJLongTextViewController.h; sourceTree = "<group>"; };
 		556BDE20171B8337002A37BD /* XJLongTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJLongTextViewController.m; sourceTree = "<group>"; };
+		55CD81DA172721CA00E06BF2 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = fancy/ThirdParty/TestFlightSDK/libTestFlight.a; sourceTree = "<group>"; };
+		55CD81DB172721CA00E06BF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		55CD81DC172721CA00E06BF2 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		55CD81DD172721CA00E06BF2 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		55CD81E11727234100E06BF2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		55D673BC17139BC80005394E /* NavBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBg.png; sourceTree = "<group>"; };
 		55D673BE17139C9C0005394E /* NavigationButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationButtonBG.png; sourceTree = "<group>"; };
 		55D673C017139CA60005394E /* NavigationButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationButtonBG@2x.png"; sourceTree = "<group>"; };
@@ -536,6 +542,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CD81E21727234100E06BF2 /* libz.dylib in Frameworks */,
 				55E1FE5C171BEC1D00CBE16C /* AddressBookUI.framework in Frameworks */,
 				A0A0375316D07448004FD29E /* QuartzCore.framework in Frameworks */,
 				A0E852EE16AF4D9200976786 /* MapKit.framework in Frameworks */,
@@ -546,6 +553,7 @@
 				A093F19E16A7FEFC00EFF4BD /* UIKit.framework in Frameworks */,
 				A093F1A016A7FEFC00EFF4BD /* Foundation.framework in Frameworks */,
 				A093F1A216A7FEFC00EFF4BD /* CoreGraphics.framework in Frameworks */,
+				55CD81DE172721CA00E06BF2 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +690,17 @@
 				552281A31717D3F50010B9B8 /* Code */,
 			);
 			name = BaseKit;
+			sourceTree = "<group>";
+		};
+		55CD81D9172721CA00E06BF2 /* TestFlightSDK */ = {
+			isa = PBXGroup;
+			children = (
+				55CD81DB172721CA00E06BF2 /* README.md */,
+				55CD81DC172721CA00E06BF2 /* release_notes.md */,
+				55CD81DD172721CA00E06BF2 /* TestFlight.h */,
+			);
+			name = TestFlightSDK;
+			path = ThirdParty/TestFlightSDK;
 			sourceTree = "<group>";
 		};
 		55E1FE22171BCCBD00CBE16C /* ViewControllers */ = {
@@ -865,6 +884,8 @@
 		A093F19C16A7FEFC00EFF4BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55CD81E11727234100E06BF2 /* libz.dylib */,
+				55CD81DA172721CA00E06BF2 /* libTestFlight.a */,
 				55E1FE5B171BEC1D00CBE16C /* AddressBookUI.framework */,
 				A0A0375216D07448004FD29E /* QuartzCore.framework */,
 				A0E852ED16AF4D9100976786 /* MapKit.framework */,
@@ -942,6 +963,7 @@
 		A0A0373C16D06FEF004FD29E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				55CD81D9172721CA00E06BF2 /* TestFlightSDK */,
 				55E1FE40171BCE6D00CBE16C /* TRAutocomplete */,
 				55E1FE23171BCE5500CBE16C /* AFNetworking */,
 				552281FA1717D42D0010B9B8 /* BaseKit */,
@@ -1292,9 +1314,8 @@
 				5522818917178E660010B9B8 /* HomeBackground.png in Resources */,
 				5522818B1717912D0010B9B8 /* HomeBackground@2x.png in Resources */,
 				552281951717BB8A0010B9B8 /* CZPhotoPreviewViewController.xib in Resources */,
-				552281E71717D3F50010B9B8 /* deps in Resources */,
-				552281F11717D3F50010B9B8 /* deps in Resources */,
-				552281F21717D3F50010B9B8 /* deps in Resources */,
+				55CD81DF172721CA00E06BF2 /* README.md in Resources */,
+				55CD81E0172721CA00E06BF2 /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1461,7 +1482,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1476,6 +1498,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1489,7 +1513,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1498,6 +1523,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1506,12 +1533,19 @@
 		A093F1C916A7FEFC00EFF4BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ARCHS = armv7;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/fancy/ThirdParty/TestFlightSDK\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;
@@ -1521,14 +1555,19 @@
 		A093F1CA16A7FEFC00EFF4BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ARCHS = armv7;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/fancy/ThirdParty/TestFlightSDK\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;
