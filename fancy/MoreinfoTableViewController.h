@@ -21,4 +21,6 @@
 @property (nonatomic, retain) ALAssetsLibrary * assetsLibrary;
 - (IBAction)saveEvent:(id)sender;
 - (void)initForm;
+- (NSManagedObjectContext *)managedObjectContext;
+- (void) fetchTagsArray;
 @end

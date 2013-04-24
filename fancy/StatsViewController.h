@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MGStyledBox;
 @interface StatsViewController : UIViewController
 
+@property (nonatomic,strong) NSMutableArray *tagsArray;
+
+- (void) fetchTagsArray;
+- (NSManagedObjectContext *)managedObjectContext;
+- (NSInteger *)getRatesWithCondition:(NSString *)rate;
+- (NSInteger *)getCountWithEntityName:(NSString *)entityName;
+- (void)addLineForBox:(MGStyledBox *)box withInfo:(NSString *)info withIcon:(NSString *)icon;
 @end

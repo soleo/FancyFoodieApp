@@ -20,8 +20,7 @@
 #import "aEvent.h"
 
 @interface FoodieListViewController ()
-- (NSManagedObjectContext *)managedObjectContext;
-@property (nonatomic,strong) NSMutableArray *tagsArray;
+
 @end
 
 @implementation FoodieListViewController
@@ -230,7 +229,8 @@
 }
 
 #pragma mark - Segue method
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         FoodieDetailViewController *destViewController = segue.destinationViewController;

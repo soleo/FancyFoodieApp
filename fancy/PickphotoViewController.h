@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BButton;
+@class CZPhotoPickerController;
 
 @interface PickphotoViewController : UIViewController
-
-
+@property(nonatomic,weak) IBOutlet UIImageView *imageView;
+@property(nonatomic,weak) IBOutlet BButton *nextButton;
+@property(nonatomic,strong) CZPhotoPickerController *pickPhotoController;
+- (IBAction)takePicture:(id)sender;
 @end

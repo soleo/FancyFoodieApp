@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "Model/Events.h"
 @interface SearchViewController : UIViewController <MKMapViewDelegate, UISearchDisplayDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) NSMutableArray *suggestedLocations;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong) NSMutableArray *events;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;

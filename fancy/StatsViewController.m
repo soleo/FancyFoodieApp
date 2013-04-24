@@ -16,7 +16,7 @@
 #import "Model/Tag.h"
 
 @interface StatsViewController ()
-@property (nonatomic,strong) NSMutableArray *tagsArray;
+
 @end
 
 @implementation StatsViewController
@@ -40,7 +40,8 @@
     return context;
 }
 
-- (void) fetchTagsArray{
+- (void) fetchTagsArray
+{
     // Put the fetched tags into a mutable array.
 	NSManagedObjectContext *context = [self managedObjectContext];
 	
@@ -72,7 +73,8 @@
     [self fetchTagsArray];
 }
 
-- (NSInteger *)getRatesWithCondition:(NSString *)rate{
+- (NSInteger *)getRatesWithCondition:(NSString *)rate
+{
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Events" inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     [fetchRequest setEntity:entity];
@@ -86,7 +88,8 @@
     NSLog(@"fetch results count = %i", count);
     return count;
 }
-- (NSInteger *)getCountWithEntityName:(NSString *)entityName{
+- (NSInteger *)getCountWithEntityName:(NSString *)entityName
+{
     int entityCount = 0;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];

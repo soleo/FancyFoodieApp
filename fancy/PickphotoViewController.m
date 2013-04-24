@@ -15,9 +15,7 @@
 
 @interface PickphotoViewController ()
 
-@property(nonatomic,weak) IBOutlet UIImageView *imageView;
-@property(nonatomic,weak) IBOutlet BButton *nextButton;
-@property(nonatomic,strong) CZPhotoPickerController *pickPhotoController;
+
 
 @end
 
@@ -73,23 +71,20 @@
     [self.nextButton addTarget:self action:@selector(checkPhoto:) forControlEvents:UIControlEventAllTouchEvents];
 }
 
-- (IBAction)checkPhoto:(id)sender{
-    BButton *btn = (BButton *)sender;
-    NSLog(@"touched event");
-    if (btn ==  self.nextButton) {
-        //check photo
-    }
-    
-}
+
 #pragma mark - Segue method
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
     if (self.imageView.image == nil && [identifier isEqualToString:@"passPhotoSegue"]) {
         [SVProgressHUD showErrorWithStatus:@"Please Choose a Photo First"];
         return NO;
     }
     return YES;
+    
 }
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     
     if ([segue.identifier isEqualToString:@"passPhotoSegue"] ) {
         

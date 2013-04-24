@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 @class aEvent;
+@class MGStyledBox;
 @interface FoodieDetailViewController : UIViewController
 
 @property (nonatomic, strong) aEvent *event;
 
 - (IBAction)doShare:(id)sender;
+- (void)addLineForBox:(MGStyledBox *)box withInfo:(NSString *)info withIcon:(NSString *)icon;
+- (void) sharingWithContent:(NSString *)text image:(UIImage *)foodiePhoto;
 @end

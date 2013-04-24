@@ -33,14 +33,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)dealloc {
+
+- (void)dealloc
+{
     self.webView = nil;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithText:(NSString *)text {
+
+- (id)initWithText:(NSString *)text
+{
     self = [self init];
     if (self) {
         self.text = text;
@@ -49,8 +51,9 @@
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)init {
+
+- (id)init
+{
     self = [super init];
     if (self) {
         self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];
@@ -59,8 +62,9 @@
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)viewDidLoad {
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -76,14 +80,16 @@
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)viewDidUnload {
+
+- (void)viewDidUnload
+{
     [super viewDidUnload];
     
     //    self.textView = nil;
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     
 }

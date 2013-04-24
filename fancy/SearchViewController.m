@@ -15,7 +15,7 @@
     NSArray *searchResults;
     CLGeocoder *geocoder;
 }
-@property (nonatomic, strong) NSMutableArray *suggestedLocations;
+
 @end
 
 @implementation SearchViewController

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FoodieListViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
-@property (strong) NSMutableArray *events;
 
+@property (strong) NSMutableArray *events;
+@property (nonatomic,strong) NSMutableArray *tagsArray;
+
+- (NSManagedObjectContext *)managedObjectContext;
 @end

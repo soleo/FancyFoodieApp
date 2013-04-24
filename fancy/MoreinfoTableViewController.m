@@ -18,7 +18,7 @@
 #import "Model/Tag.h"
 @interface MoreinfoTableViewController ()
 
-- (NSManagedObjectContext *)managedObjectContext;
+
 
 @end
 
@@ -41,7 +41,8 @@
     return context;
 }
 
-- (void) fetchTagsArray{
+- (void) fetchTagsArray
+{
     // Put the fetched tags into a mutable array.
 	NSManagedObjectContext *context = [self managedObjectContext];
 	
@@ -79,7 +80,8 @@
     return self;
 }
 
-- (IBAction)saveEvent:(id)sender{
+- (IBAction)saveEvent:(id)sender
+{
     NSManagedObjectContext *context = [self managedObjectContext];
     // save ablum if user need
     if ([Settings isSaveToAlbum]) {
@@ -139,6 +141,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
     //[self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (void)initForm
 {
     self.formModel = [FKFormModel formTableModelForTableView:self.tableView
@@ -280,7 +283,9 @@
     [super viewDidLoad];
     [self initForm];
 }
-- (void)viewDidUnload {
+
+- (void)viewDidUnload
+{
     [super viewDidUnload];
     
     self.formModel = nil;

@@ -13,11 +13,7 @@
 #import "ThirdParty/BaseKit/Code/View/UIViewController+BaseKit.h"
 #import "PhotoBlob.h"
 @interface FoodieListCell ()
-@property (nonatomic, strong) UIImage* photo;
-@property (nonatomic, strong) NSString* comment;
-@property (nonatomic, strong) UIViewController* viewController;
-@property (nonatomic, strong) BWLongTextViewController* vc;
-@property (nonatomic, strong) UINavigationController* nc;
+
 @end
 @implementation FoodieListCell
 
@@ -87,7 +83,8 @@
     //NSLog(@"Set up Menu In cell");
     [self.menuButton addTarget:self action:@selector(showPopupMenu:) forControlEvents:UIControlEventTouchUpInside];
 }
-- (IBAction)updateRate:(id)sender{
+- (IBAction)updateRate:(id)sender
+{
     UIActionSheet *sheet;
     
     
@@ -143,7 +140,8 @@
    
 }
 #pragma mark - UIActionSheetDelegate
-- (void)saveRate:(NSString *)rate{
+- (void)saveRate:(NSString *)rate
+{
     NSManagedObjectContext *context = [self managedObjectContext];
     [self.event setRate:rate];
     NSError *error = nil;

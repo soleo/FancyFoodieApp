@@ -10,6 +10,7 @@
 #import "Model/Events.h"
 @class BButton;
 @class QBPopupMenu;
+@class BWLongTextViewController;
 @interface FoodieListCell : UITableViewCell<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -18,11 +19,19 @@
 @property (nonatomic, retain) QBPopupMenu *popupMenu;
 @property (strong) Events *event;
 
+@property (nonatomic, strong) UIImage* photo;
+@property (nonatomic, strong) NSString* comment;
+@property (nonatomic, strong) UIViewController* viewController;
+@property (nonatomic, strong) BWLongTextViewController* vc;
+@property (nonatomic, strong) UINavigationController* nc;
+
 - (IBAction) showPopupMenu:(id)sender;
 - (IBAction) share:(id)sender;
 - (IBAction) updateComment:(id)sender;
-- (IBAction)updateRate:(id)sender;
+- (IBAction) updateRate:(id)sender;
+- (void) saveRate:(NSString *)rate;
 - (void) setupMenuInCell;
-- (void)setupMenuInCellWithComment:(NSString *)comment andWithPhoto:(UIImage *)photo andWithEvent:(Events*)event presentViewController:(UIViewController *)viewController;
+- (void) sharingWithContent:(NSString *)text image:(UIImage *)foodiePhoto;
+- (void) setupMenuInCellWithComment:(NSString *)comment andWithPhoto:(UIImage *)photo andWithEvent:(Events*)event presentViewController:(UIViewController *)viewController;
 
 @end
