@@ -95,15 +95,14 @@
                     cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%@ (build %@)", shortVersion, version];
                     break;
                 }
+                case 2:
+                    break;
+                case 3:
+                    break;
                 default:
                     break;
             }
-            if ( 2 == row){
-                NSLog(@"Set Up author Link");
-            }else if( 3 ==  row){
-                NSLog(@"Set Up app Link");
-            }
-            
+                        
             break;
     }
         
@@ -178,19 +177,27 @@
             }
             break;
         case 1:
-            
-           if ( 2 == row){
-                NSLog(@"Called  author Link");
-                XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://shaosidea.com"];
-                [self.navigationController pushViewController:xjwebcontroller animated:YES];
-            }else if( 3 ==  row){
-                NSLog(@"Called app Link");
-                XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://shaosidea.com/fancy"];
-                [self.navigationController pushViewController:xjwebcontroller animated:YES];
-            }else if( 4 == row){
-               
-                [TestFlight openFeedbackView];
-                
+            switch (row) {
+                case 2:
+                {
+                    NSLog(@"Called  author Link");
+                    XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://shaosidea.com"];
+                    [self.navigationController pushViewController:xjwebcontroller animated:YES];
+                    break;
+                }
+                case 3:
+                {
+                    NSLog(@"Called app Link");
+                    XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://soleo.github.io/Fancy"];
+                    [self.navigationController pushViewController:xjwebcontroller animated:YES];
+                    break;
+                }
+                case 4:
+                {
+                    [TestFlight openFeedbackView];                                                          
+                }
+                default:
+                    break;
             }
             
             break;
