@@ -41,6 +41,7 @@
 		556BDE1B171B4005002A37BD /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE1A171B4004002A37BD /* Events.m */; };
 		556BDE1E171B4D7D002A37BD /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE1D171B4D7B002A37BD /* StatsViewController.m */; };
 		556BDE21171B833A002A37BD /* XJLongTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556BDE20171B8337002A37BD /* XJLongTextViewController.m */; };
+		55CA93F517275844008DC5DA /* GenGitVersion.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55CA93F417275844008DC5DA /* GenGitVersion.sh */; };
 		55CD81DE172721CA00E06BF2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD81DA172721CA00E06BF2 /* libTestFlight.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		55CD81DF172721CA00E06BF2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55CD81DB172721CA00E06BF2 /* README.md */; };
 		55CD81E0172721CA00E06BF2 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 55CD81DC172721CA00E06BF2 /* release_notes.md */; };
@@ -275,6 +276,8 @@
 		556BDE1D171B4D7B002A37BD /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		556BDE1F171B8333002A37BD /* XJLongTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJLongTextViewController.h; sourceTree = "<group>"; };
 		556BDE20171B8337002A37BD /* XJLongTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJLongTextViewController.m; sourceTree = "<group>"; };
+		55CA93F417275844008DC5DA /* GenGitVersion.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = GenGitVersion.sh; sourceTree = "<group>"; };
+		55CA93F617275CA6008DC5DA /* InfoPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPlist.h; sourceTree = SOURCE_ROOT; };
 		55CD81DA172721CA00E06BF2 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = fancy/ThirdParty/TestFlightSDK/libTestFlight.a; sourceTree = "<group>"; };
 		55CD81DB172721CA00E06BF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		55CD81DC172721CA00E06BF2 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -867,6 +870,7 @@
 		A093F18E16A7FEFC00EFF4BD = {
 			isa = PBXGroup;
 			children = (
+				55CA93F417275844008DC5DA /* GenGitVersion.sh */,
 				A093F1A316A7FEFC00EFF4BD /* fancy */,
 				A093F19C16A7FEFC00EFF4BD /* Frameworks */,
 				A093F19A16A7FEFC00EFF4BD /* Products */,
@@ -924,6 +928,7 @@
 				A093F1A616A7FEFC00EFF4BD /* InfoPlist.strings */,
 				A093F1A916A7FEFC00EFF4BD /* main.m */,
 				A093F1AB16A7FEFC00EFF4BD /* fancy-Prefix.pch */,
+				55CA93F617275CA6008DC5DA /* InfoPlist.h */,
 				A093F1AF16A7FEFC00EFF4BD /* Default.png */,
 				A093F1B116A7FEFC00EFF4BD /* Default@2x.png */,
 				A093F1B316A7FEFC00EFF4BD /* Default-568h@2x.png */,
@@ -1316,6 +1321,7 @@
 				552281951717BB8A0010B9B8 /* CZPhotoPreviewViewController.xib in Resources */,
 				55CD81DF172721CA00E06BF2 /* README.md in Resources */,
 				55CD81E0172721CA00E06BF2 /* release_notes.md in Resources */,
+				55CA93F517275844008DC5DA /* GenGitVersion.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1534,18 +1540,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
+				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/fancy/ThirdParty/TestFlightSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;
@@ -1556,18 +1564,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = armv7;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xinjiang Shao (63YV2X6Y4E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fancy/fancy-Prefix.pch";
 				INFOPLIST_FILE = "fancy/fancy-Info.plist";
+				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/fancy/ThirdParty/TestFlightSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BB1491A7-33A8-4D0B-8B76-BED214D078E4";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VERSIONING_SYSTEM = "";
 				VERSION_INFO_BUILDER = "Xinjiang Shao";
 				WRAPPER_EXTENSION = app;

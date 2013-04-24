@@ -81,6 +81,24 @@
             }
             break;
         case 1:
+            switch (row) {
+                case 0:
+                    cell.detailTextLabel.text = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+                    break;
+                case 1:
+                {
+                    
+                    NSString *shortVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+                    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+                    
+                   // NSLog(@"Short: %@", shortVersion);
+                    NSLog(@"Version: %@", version);
+                    cell.detailTextLabel.text = shortVersion;
+                    break;
+                }
+                default:
+                    break;
+            }
             if ( 2 == row){
                 NSLog(@"Set Up author Link");
             }else if( 3 ==  row){
@@ -161,7 +179,8 @@
             }
             break;
         case 1:
-            if ( 2 == row){
+            
+           if ( 2 == row){
                 NSLog(@"Called  author Link");
                 XJWebviewControllerViewController *xjwebcontroller = [[XJWebviewControllerViewController alloc] initWithText:@"http://shaosidea.com"];
                 [self.navigationController pushViewController:xjwebcontroller animated:YES];
