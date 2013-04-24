@@ -35,13 +35,13 @@
     NSString *introStr = @"Get Started with Fancy!";
     introLabel.text = [NSString stringWithFormat: @"%@", introStr];
     
-    UILabel *addnewLabel = [ [UILabel alloc ] initWithFrame:CGRectMake((self.view.bounds.size.width / 3), (self.view.bounds.size.height/9), 200.0, 20.0) ];
+    UILabel *addnewLabel = [ [UILabel alloc ] initWithFrame:CGRectMake((self.view.bounds.size.width / 5), (self.view.bounds.size.height/9), 200.0, 20.0) ];
     addnewLabel.textAlignment =  NSTextAlignmentRight;
     addnewLabel.textColor = [UIColor blackColor];
     addnewLabel.backgroundColor = [UIColor clearColor];//[UIColor blackColor];
     addnewLabel.font = [UIFont fontWithName:@"DriodSans" size:(18.0)];
     [self.view addSubview:addnewLabel];
-    NSString *addnewStr = @"Add a New Event Here";
+    NSString *addnewStr = @"Add your Adventure Here";
     addnewLabel.text = [NSString stringWithFormat: @"%@", addnewStr];
     
     UILabel *foodieListLabel = [ [UILabel alloc ] initWithFrame:CGRectMake( 10.0, (self.view.bounds.size.height/9*6), 200.0, 20.0) ];
@@ -50,7 +50,7 @@
     foodieListLabel.backgroundColor = [UIColor clearColor];//[UIColor blackColor];
     foodieListLabel.font = [UIFont fontWithName:@"DriodSans" size:(18.0)];
     [self.view addSubview:foodieListLabel];
-    NSString *foodieListStr = @"Check Foodies Out Here";
+    NSString *foodieListStr = @"Checkout Cuisine Here";
     foodieListLabel.text = [NSString stringWithFormat: @"%@", foodieListStr];
 
 
