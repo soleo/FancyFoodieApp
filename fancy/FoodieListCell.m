@@ -11,7 +11,7 @@
 #import "ThirdParty/QBPopupMenu/QBPopupMenu.h"
 #import "XJLongTextViewController.h"
 #import "ThirdParty/BaseKit/Code/View/UIViewController+BaseKit.h"
-
+#import "PhotoBlob.h"
 @interface FoodieListCell ()
 @property (nonatomic, strong) UIImage* photo;
 @property (nonatomic, strong) NSString* comment;
@@ -111,7 +111,9 @@
     //QBPopupMenuItem *item = (QBPopupMenuItem *)sender;
     NSLog(@"share: %@", [sender class]);
     //NSLog(@"Share Action = %@", item);
-    [self sharingWithContent:self.comment image:self.photo];
+    PhotoBlob *photoBlob = self.event.photoBlob;
+    
+    [self sharingWithContent:self.comment image:(UIImage *)photoBlob.bytes];
     
 }
 
