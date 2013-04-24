@@ -90,10 +90,9 @@
                     
                     NSString *shortVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
                     NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-                    
                    // NSLog(@"Short: %@", shortVersion);
-                    NSLog(@"Version: %@", version);
-                    cell.detailTextLabel.text = shortVersion;
+                   // NSLog(@"Version: %@", version);
+                    cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%@ (build %@)", shortVersion, version];
                     break;
                 }
                 default:
