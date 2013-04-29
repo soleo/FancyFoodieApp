@@ -2,38 +2,7 @@
 
 \section{Data Model} % (fold)
 
-\subsection{Database Schema} % (fold)
-\label{sub:database_schema}
 
-	In this project, we used three table for storing all the information from users. As Figure~\ref{fig:data-schema} shows, Events is the main table in the app. It provides fields ``address'', ``comment'', ``creationDate'', ``latitude'', ``longitude'', ``locationName'', ``rate'', ``thumbnail'', ``photoBlob'' and ``tags''. ``address'' field is used when user didn't find their ``locationName'' in location List fetching from Foursquare API v2. ``Latitude'' and ``longitude'' is used for adding annotations in Map View. A 80*80 resolution thumbnail is stored for each event in order to accelerate loading in food list table. \\ 
-	
-	``photoBlob'' has one to one relationship with ``photo'' in PhotoBlob table. Using a separate table should also help speeding up when we don't need to load photo while we still need to get the meta data of the event. \\
-	
-	Field ``tags'' has many to many relationship with ``photos'' in Tag table since one photo can labeled with many tags and one tag can relate to many photos.  
-	
-\label{sec:data_model}
-\begin{figure}
-	\centering
-    \SetFigLayout{1}{1}
-    {\includegraphics[%
-    width=\figwidth, totalheight=\figheight, keepaspectratio]{./screenshots/database_schema.png}}
-    \caption{Database Schema}
-	\label{fig:data-schema}
-\end{figure}
-
-% subsection database_schema (end)
-
-\subsection{Settings Property List} % (fold)
-\label{sub:settings_list}
-
-	When developing iOS, we can also use another way to store data we need. Property List is used to store all information related to the app itself. For instance, using Property List to store App Display Name, App Version are commonly used in all apps for iPhone. \\
-	
-	``Fancy Foodie'' uses release number as main version string and git hash tag of the release as build string, so ``1.0 (build 98a9e84)'' is shown in Figure~\ref{fig:settings} which means that the main version number is 1.0 and build hash tag is 98a9e84. \\
-	 
-	 This app also use property list to store whether we need to save photo to album locally. If this option is enabled, the app will create a album  named ``Fancy Foodie Photos'' and put photos in this album as shown in Figure~\ref{fig:album}.
-	 
- 	 
-% subsection settings_list (end)
 % section data_model (end)
 \newpage
 
